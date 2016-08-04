@@ -11,7 +11,7 @@
 	<h1>상세 보기</h1>
 	
 			<div>게시글 제목 :</div>
-			<div>${noticeOne.noticeTitle}</div>
+			<div><input type="text" readonly="readonly"value="${noticeOne.noticeTitle}"/></div>
 		
 			<div>게시글 내용 :</div>
 			<div>

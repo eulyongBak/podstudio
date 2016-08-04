@@ -2,6 +2,8 @@ package com.factory.podstudio.notice.controller;
 
 import java.util.List;
 
+import javax.xml.ws.ServiceMode;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,6 +47,18 @@ public class NoticeController {
 		Notice resultNotice = noticeService.selectOneBynoticeNo(notice);
 		model.addAttribute("noticeOne", resultNotice);
 		return "Customercenter/noticeDetail";
+	}
+	//수정 화면
+	@RequestMapping(value="/modifyform", method =RequestMethod.GET)
+	public String noticeModifyForm(Model model, Notice notice){
+		model.addAttribute("noticeOne", noticeService.selectOneBynoticeNo(notice));
+		return "Customercenter/noticeModifyForm";
 		
+	}
+	//수정 하기
+	@RequestMapping(value="/noticeModify", method = RequestMethod.POST)
+	public String noticeModify(Model model , Notice notice){
+		noticeService.modifyNoticeByNoticeNo(notice);
+		return "redirect:/noticeList";
 	}
 }

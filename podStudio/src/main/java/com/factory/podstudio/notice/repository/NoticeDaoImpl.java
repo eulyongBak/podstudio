@@ -36,4 +36,9 @@ public class NoticeDaoImpl implements INoticeDao {
 		return sqlSessionTemplateNotice.selectOne(NAME_SPACE+".selectOneNotice", notice);
 	}
 
+	@Override
+	public int modifyNotice(Notice notice) {
+		return sqlSessionTemplateNotice.update(NAME_SPACE+".modifyNotice", notice);
+	}
+
 }

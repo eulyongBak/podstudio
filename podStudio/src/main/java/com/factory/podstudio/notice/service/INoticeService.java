@@ -14,7 +14,7 @@ public interface INoticeService {
 	
 	Notice selectOneBynoticeNo(Notice notice);
 	
-	void modifyNoticeByNoticeNo();
+	int modifyNoticeByNoticeNo(Notice notice);
 	
 	void deleteNoticeByNoticeNo();
 

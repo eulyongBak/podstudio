@@ -16,7 +16,7 @@ public class NoticeServiceImpl implements INoticeService {
 	private static final int LINE_PER_PAGE = 10;
 	
 	@Autowired
-	private INoticeDao noticedao;
+	private INoticeDao noticeDao;
 	
 	@Override
 	public List<Notice> selectNoticeByNoticeNo(int page, String word) {
@@ -24,27 +24,28 @@ public class NoticeServiceImpl implements INoticeService {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pageHelper", pagehelper);
 		map.put("word", word);
-		return noticedao.selectNotice(map);
+		return noticeDao.selectNotice(map);
 	}
 	@Override
 	public int getLastPage() {
-		return (int) (Math.ceil((double) noticedao.selectTotalCount() / LINE_PER_PAGE));
+		return (int) (Math.ceil((double) noticeDao.selectTotalCount() / LINE_PER_PAGE));
 	}
 	
 	@Override
 	public int insertNotice(Notice notice) {
-		return noticedao.insertNotice(notice);
+		return noticeDao.insertNotice(notice);
 	}
 	@Override
 	public Notice selectOneBynoticeNo(Notice notice) {
-		return noticedao.noticeOne(notice);
+		return noticeDao.noticeOne(notice);
 	}
 	@Override
-	public void modifyNoticeByNoticeNo() {
-		
+	public int modifyNoticeByNoticeNo(Notice notice) {
+		return noticeDao.modifyNotice(notice);
 	}
 	@Override
 	public void deleteNoticeByNoticeNo() {
 		
 	}
+	
 }
