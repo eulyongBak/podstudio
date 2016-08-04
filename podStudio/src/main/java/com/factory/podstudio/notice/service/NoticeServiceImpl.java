@@ -44,8 +44,8 @@ public class NoticeServiceImpl implements INoticeService {
 		return noticeDao.modifyNotice(notice);
 	}
 	@Override
-	public void deleteNoticeByNoticeNo() {
-		
+	public int deleteNoticeByNoticeNo(Notice notice) {
+		return noticeDao.deleteNotice(notice);
 	}
 	
 }

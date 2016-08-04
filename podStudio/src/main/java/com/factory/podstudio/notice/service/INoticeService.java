@@ -16,7 +16,7 @@ public interface INoticeService {
 	
 	int modifyNoticeByNoticeNo(Notice notice);
 	
-	void deleteNoticeByNoticeNo();
+	int deleteNoticeByNoticeNo(Notice notice);
 
 
 }

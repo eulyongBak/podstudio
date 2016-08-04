@@ -63,4 +63,9 @@
 		notice_content='${noticeContent}'
 		WHERE notice_no='${noticeNo}'
 	</update>
+	
+	<delete id="deleteNotice" parameterType="com.factory.podstudio.notice.model.Notice">
+		DELETE FROM notice 
+		WHERE notice_no='${noticeNo}'
+	</delete>
 </mapper>
