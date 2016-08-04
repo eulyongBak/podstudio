@@ -4,25 +4,25 @@ import com.factory.podstudio.category.model.Category;
 import com.factory.podstudio.user.model.User;
 
 public class StudioReservation {
-	// ½ºÆ©µğ¿À ¿¹¾à¹øÈ£
+	// ìŠ¤íŠœë””ì˜¤ ì˜ˆì•½ë²ˆí˜¸
 	private String studioReservationNo;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// ½ºÆ©µğ¿À¹øÈ£
+	// ìŠ¤íŠœë””ì˜¤ë²ˆí˜¸
 	private Studio studio;
-	// Ä«Å×°í¸®¹øÈ£ / Áö¿ª
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸ / ì§€ì—­
 	private Category category;
-	// ½ºÆ©µğ¿À¿¹¾à½ÅÃ»½Ã°£
+	// ìŠ¤íŠœë””ì˜¤ì˜ˆì•½ì‹ ì²­ì‹œê°„
 	private String studioReservationTime;
-	// ½ºÆ©µğ¿À ¿¹¾àÀÏÀÚ
+	// ìŠ¤íŠœë””ì˜¤ ì˜ˆì•½ì¼ì
 	private String studioReservationDate;
-	// ½ºÆ©µğ¿À Ãë¼ÒÀÏÀÚ
+	// ìŠ¤íŠœë””ì˜¤ ì·¨ì†Œì¼ì
 	private String studioReservationCancelDate;
-	// ½ºÆ©µğ¿À Ãë¼Ò»çÀ¯
+	// ìŠ¤íŠœë””ì˜¤ ì·¨ì†Œì‚¬ìœ 
 	private String studioReservationCancelReason;
-	// ½ºÆ©µğ¿À »ç¿ë½ÃÀÛÀÏÀÚ
+	// ìŠ¤íŠœë””ì˜¤ ì‚¬ìš©ì‹œì‘ì¼ì
 	private String studioReservationStartDate;
-	// ½ºÆ©µğ¿À »ç¿ëÁ¾·áÀÏÀÚ
+	// ìŠ¤íŠœë””ì˜¤ ì‚¬ìš©ì¢…ë£Œì¼ì
 	private String studioReservationEndDate;
 
 	public String getStudioReservationNo() {

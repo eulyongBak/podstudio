@@ -7,33 +7,33 @@ import com.factory.podstudio.show.model.Show;
 import com.factory.podstudio.studio.model.Studio;
 
 public class Banner {
-	// ¹è³Ê±¤°í ¹øÈ£
+	// ë°°ë„ˆê´‘ê³  ë²ˆí˜¸
 	private String bannerNo;
-	// ÆÌÄ³½ºÆ®¿¡¼­ ¹øÈ£¸¦ °¡Á®¿Â´Ù
+	// íŒŸìºìŠ¤íŠ¸ì—ì„œ ë²ˆí˜¸ë¥¼ ê°€ì ¸ì˜¨ë‹¤
 	private PodCast podCast;
-	// ½ºÆ©µğ¿À ¹øÈ£¸¦ °¡Á®¿Â´Ù
+	// ìŠ¤íŠœë””ì˜¤ ë²ˆí˜¸ë¥¼ ê°€ì ¸ì˜¨ë‹¤
 	private Studio studio;
-	// °ø¿¬¹øÈ£¸¦ °¡Á®¿Â´Ù
+	// ê³µì—°ë²ˆí˜¸ë¥¼ ê°€ì ¸ì˜¨ë‹¤
 	private Show show;
-	// ´Ü°¡Ç¥¹øÈ£¸¦ °¡Á®¿Â´Ù
+	// ë‹¨ê°€í‘œë²ˆí˜¸ë¥¼ ê°€ì ¸ì˜¨ë‹¤
 	private Cost cost;
-	// °áÁ¦¹øÈ£
+	// ê²°ì œë²ˆí˜¸
 	private Pay pay;
-	// ¹è³Ê±¤°í Á¦Ç°¸í
+	// ë°°ë„ˆê´‘ê³  ì œí’ˆëª…
 	private String bannerProduct;
-	// ¹è³Ê±¤°í ¾÷Ã¼¸í
+	// ë°°ë„ˆê´‘ê³  ì—…ì²´ëª…
 	private String bannerCompany;
-	// ¹è³Ê±¤°íÆÄÀÏÀÌ¸§
+	// ë°°ë„ˆê´‘ê³ íŒŒì¼ì´ë¦„
 	private String bannerFileName;
-	// ¹è³Ê±¤°í Å¬¸¯¼ö
+	// ë°°ë„ˆê´‘ê³  í´ë¦­ìˆ˜
 	private String bannerCount;
-	// µî·Ï½Ã°£
+	// ë“±ë¡ì‹œê°„
 	private String bannerDate;
-	// ¼­ºñ½º ½ÃÀÛÀÏ
+	// ì„œë¹„ìŠ¤ ì‹œì‘ì¼
 	private String bannerServiceStart;
-	// ¼­ºñ½º Á¾·áÀÏ
+	// ì„œë¹„ìŠ¤ ì¢…ë£Œì¼
 	private String bannerServiceEnd;
-	// ¼­ºñ½º »óÅÂ / Á¤»ó¼­ºñ½º / ¼­ºñ½º ÁøÇàÁß / ¼­ºñ½º ¾È·á
+	// ì„œë¹„ìŠ¤ ìƒíƒœ / ì •ìƒì„œë¹„ìŠ¤ / ì„œë¹„ìŠ¤ ì§„í–‰ì¤‘ / ì„œë¹„ìŠ¤ ì•ˆë£Œ
 	private String bannerStatus;
 
 	public String getBannerNo() {

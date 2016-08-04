@@ -5,23 +5,23 @@ import com.factory.podstudio.user.model.User;
 
 public class EpisodeReply {
 
-	// ¿¡ÇÇ¼Òµå ´ñ±Û ¹øÈ£
+	// ì—í”¼ì†Œë“œ ëŒ“ê¸€ ë²ˆí˜¸
 	private String episodeEeplyNo;
-	// ¿¡ÇÇ¼Òµå ¹øÈ£
+	// ì—í”¼ì†Œë“œ ë²ˆí˜¸
 	private Episode episode;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// ÁÁ¾Æ¿ä ¼øÀ§ ¹øÈ£
+	// ì¢‹ì•„ìš” ìˆœìœ„ ë²ˆí˜¸
 	private Good good;
-	// ´ñ±Û ³»¿ë
+	// ëŒ“ê¸€ ë‚´ìš©
 	private String episodeEeplyContent;
-	// ´ä±Û ¹øÈ£
+	// ë‹µê¸€ ë²ˆí˜¸
 	private int episodeEeplyReplyNo;
-	// ´ä±Û ±íÀÌ
+	// ë‹µê¸€ ê¹Šì´
 	private int episodeEeplyReplyDepth;
-	// ´ä±Û ¼ø¼­
+	// ë‹µê¸€ ìˆœì„œ
 	private int episodeEeplyReplyOrder;
-	// ´ñ±Û µî·Ï½Ã°£
+	// ëŒ“ê¸€ ë“±ë¡ì‹œê°„
 	private String episodeEeplyDate;
 
 	public String getEpisodeEeplyNo() {

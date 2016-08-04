@@ -1,19 +1,18 @@
 package com.factory.podstudio.notice.model;
 
-import com.factory.podstudio.user.model.User;
 
 public class Notice {
-	// °øÁö»çÇ×¹øÈ£
+	// ê³µì§€ì‚¬í•­ë²ˆí˜¸
 	private String noticeNo;
-	// È¸¿ø¹øÈ£ ( ´Ğ³×ÀÓ »ç¿ëÀ» À§ÇÑ È¸¿ø¹øÈ£)
+	// íšŒì›ë²ˆí˜¸ ( ë‹‰ë„¤ì„ ì‚¬ìš©ì„ ìœ„í•œ íšŒì›ë²ˆí˜¸)
 	private String userNo;
-	// È¸¿ø ´Ğ³×ÀÓ
+	// íšŒì› ë‹‰ë„¤ì„
 	private String userNickname;
-	// °øÁö Á¦¸ñ
+	// ê³µì§€ ì œëª©
 	private String noticeTitle;
-	// °øÁö³»¿ë
+	// ê³µì§€ë‚´ìš©
 	private String noticeContent;
-	// °øÁö ÀÛ¼ºÀÏÀÚ
+	// ê³µì§€ ì‘ì„±ì¼ì
 	private String noticeDate;
 
 	public String getNoticeNo() {
@@ -23,7 +22,6 @@ public class Notice {
 	public void setNoticeNo(String noticeNo) {
 		this.noticeNo = noticeNo;
 	}
-	
 
 	public String getUserNo() {
 		return userNo;
@@ -70,6 +68,5 @@ public class Notice {
 		return "Notice [noticeNo=" + noticeNo + ", userNo=" + userNo + ", noticeTitle=" + noticeTitle
 				+ ", noticeContent=" + noticeContent + ", noticeDate=" + noticeDate + "]";
 	}
-
 
 }

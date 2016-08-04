@@ -2,13 +2,13 @@ package com.factory.podstudio.category.model;
 
 public class Category {
 
-	// Ä«Å×°í¸®¹øÈ£
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸
 	private String categoryNo;
-	// ´ëºĞ·ù Ä«Å×°í¸®
+	// ëŒ€ë¶„ë¥˜ ì¹´í…Œê³ ë¦¬
 	private String categoryMain;
-	// ÁßºĞ·ù Ä«Å×°í¸®
+	// ì¤‘ë¶„ë¥˜ ì¹´í…Œê³ ë¦¬
 	private String categorySub;
-	// ±¸ºĞ / ÆÌÄ³½ºÆ® / °áÁ¦¹æ¹ı / ¹®ÀÇ
+	// êµ¬ë¶„ / íŒŸìºìŠ¤íŠ¸ / ê²°ì œë°©ë²• / ë¬¸ì˜
 	private String categoryPart;
 
 	public String getCategoryNo() {

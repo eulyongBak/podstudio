@@ -6,31 +6,31 @@ import com.factory.podstudio.podcast.model.PodCast;
 import com.factory.podstudio.user.model.User;
 
 public class Show {
-	// °ø¿¬¹øÈ£
+	// ê³µì—°ë²ˆí˜¸
 	private String showNo;
-	// ÆÌÄ³½ºÆ®¹øÈ£
+	// íŒŸìºìŠ¤íŠ¸ë²ˆí˜¸
 	private PodCast podCast;
-	// Ä«Å×°í¸®¹øÈ£ / ÆÌÄ³½ºÆ®
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸ / íŒŸìºìŠ¤íŠ¸
 	private Category category;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// ´Ü°¡Ç¥¹øÈ£
+	// ë‹¨ê°€í‘œë²ˆí˜¸
 	private Cost cost;
-	// °ø¿¬Á¦¸ñ
+	// ê³µì—°ì œëª©
 	private String showName;
-	// °ø¿¬ÀÏÀÚ
+	// ê³µì—°ì¼ì
 	private String showDate;
-	// °ø¿¬ ±â°£
+	// ê³µì—° ê¸°ê°„
 	private String showPeriod;
-	// °ø¿¬ Àå¼Ò
+	// ê³µì—° ì¥ì†Œ
 	private String showPlace;
-	// °ø¿¬ µî·ÏÀÏÀÚ
+	// ê³µì—° ë“±ë¡ì¼ì
 	private String showRegistrationDate;
-	// Æ¼ÄÏ°¡°İ / ´Ü¼øÈ÷ Á¤º¸¸¸ Á¦°ø
+	// í‹°ì¼“ê°€ê²© / ë‹¨ìˆœíˆ ì •ë³´ë§Œ ì œê³µ
 	private int showTicketPrice;
-	// Ãâ¿¬Áø
+	// ì¶œì—°ì§„
 	private String showCast;
-	// ¿¬¶ô¹æ¹ı
+	// ì—°ë½ë°©ë²•
 	private String showContent;
 
 	public String getShowNo() {

@@ -6,23 +6,23 @@ import com.factory.podstudio.podcast.model.PodCast;
 
 public class Episode {
 
-	// ¿¡ÇÇ¼Òµå ¹øÈ£
+	// ì—í”¼ì†Œë“œ ë²ˆí˜¸
 	private String episodeNo;
-	// ÆÌÄ³½ºÆ®¹øÈ£
+	// íŒŸìºìŠ¤íŠ¸ë²ˆí˜¸
 	private PodCast podCast;
-	// ÁÁ¾Æ¿ä ¼øÀ§¹øÈ£
+	// ì¢‹ì•„ìš” ìˆœìœ„ë²ˆí˜¸
 	private Good good;
-	// Ã»Ãë¼ö ¼øÀ§¹øÈ£
+	// ì²­ì·¨ìˆ˜ ìˆœìœ„ë²ˆí˜¸
 	private Listen listen;
-	// ¿¡ÇÇ¼Òµå Á¦¸ñ
+	// ì—í”¼ì†Œë“œ ì œëª©
 	private String episodeTitle;
-	// ¿¡ÇÇ¼Òµå ³»¿ë
+	// ì—í”¼ì†Œë“œ ë‚´ìš©
 	private String episodeContent;
-	// ¿Àµğ¿À ÆÄÀÏ
+	// ì˜¤ë””ì˜¤ íŒŒì¼
 	private String episodeAudio;
-	// ºñµğ¿ÀÆÄÀÏ
+	// ë¹„ë””ì˜¤íŒŒì¼
 	private String episodeVidio;
-	// ¿¡ÇÇ¼Òµå µî·Ï½Ã°£
+	// ì—í”¼ì†Œë“œ ë“±ë¡ì‹œê°„
 	private String episodedate;
 
 	public String getEpisodeNo() {

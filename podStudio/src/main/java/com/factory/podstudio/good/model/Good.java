@@ -6,19 +6,19 @@ import com.factory.podstudio.user.model.User;
 
 public class Good {
 
-	// ÁÁ¾Æ¿ä ¹øÈ£
+	// ì¢‹ì•„ìš” ë²ˆí˜¸
 	private String goodNo;
-	// ÆÌÄ³½ºÆ® ¹øÈ£
+	// íŒŸìºìŠ¤íŠ¸ ë²ˆí˜¸
 	private PodCast podCast;
-	// ¿¡ÇÇ¼Òµå ¹øÈ£
+	// ì—í”¼ì†Œë“œ ë²ˆí˜¸
 	private Episode episode;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// ÁÁ¾Æ¿ä ´©¸¥ È½¼ö
+	// ì¢‹ì•„ìš” ëˆ„ë¥¸ íšŸìˆ˜
 	private String goodCount;
-	// ÁÁ¾Æ¿ä µî·Ï½Ã°£
+	// ì¢‹ì•„ìš” ë“±ë¡ì‹œê°„
 	private String goodDate;
-	// IP ÁÖ¼Ò
+	// IP ì£¼ì†Œ
 	private String goodipAddress;
 
 	public String getGoodNo() {

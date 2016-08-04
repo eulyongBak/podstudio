@@ -4,21 +4,21 @@ import com.factory.podstudio.user.model.User;
 
 public class PodMeetingReply {
 
-	// ´ÜÆÌ»§ ´ñ±Û¹øÈ£
+	// ë‹¨íŒŸë¹µ ëŒ“ê¸€ë²ˆí˜¸
 	private String podMeetingReplyNo;
-	// ´ÜÆÌ»§ ¹øÈ£
+	// ë‹¨íŒŸë¹µ ë²ˆí˜¸
 	private PodMeeting podMeeting;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// ´ñ±Û³»¿ë
+	// ëŒ“ê¸€ë‚´ìš©
 	private String podMeetingReplyContent;
-	// ´ä±Û¹øÈ£
+	// ë‹µê¸€ë²ˆí˜¸
 	private int podMeetingReplyReplyNo;
-	// ´ä±Û ±íÀÌ
+	// ë‹µê¸€ ê¹Šì´
 	private int podMeetingReplyReplyDepth;
-	// ´ä±Û¼ø¼­
+	// ë‹µê¸€ìˆœì„œ
 	private int podMeetingReplyReplyOrder;
-	// µî·Ï½Ã°£
+	// ë“±ë¡ì‹œê°„
 	private String podMeetingReplyDate;
 
 	public String getPodMeetingReplyNo() {

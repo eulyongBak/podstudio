@@ -5,19 +5,19 @@ import com.factory.podstudio.user.model.User;
 
 public class PodCast {
 
-	// ÆÌÄ³½ºÆ®¹øÈ£
+	// íŒŸìºìŠ¤íŠ¸ë²ˆí˜¸
 	private String podCastNo;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// Ä«Å×°í¸®¹øÈ£1
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸1
 	private Category categoryNo1;
-	// Ä«Å×°í¸®¹øÈ£2
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸2
 	private Category categoryNo2;
-	// ÆÌÄ³½ºÆ® Á¦¸ñ
+	// íŒŸìºìŠ¤íŠ¸ ì œëª©
 	private String podCastTitle;
-	// ÆÌÄ³½ºÆ® ºÎÁ¦¸ñ
+	// íŒŸìºìŠ¤íŠ¸ ë¶€ì œëª©
 	private String podCastSubTitle;
-	// °ø°³¹æ¼Û°¡´É¿©ºÎ
+	// ê³µê°œë°©ì†¡ê°€ëŠ¥ì—¬ë¶€
 	private String podCastPublicBroadCast;
 
 	public String getPodCastNo() {

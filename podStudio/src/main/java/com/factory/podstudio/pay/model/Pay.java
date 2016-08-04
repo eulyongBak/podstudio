@@ -5,23 +5,23 @@ import com.factory.podstudio.cost.model.Cost;
 import com.factory.podstudio.user.model.User;
 
 public class Pay {
-	// °áÁ¦¹øÈ£
+	// ê²°ì œë²ˆí˜¸
 	private String payNo;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// ´Ü°¡Ç¥¹øÈ£
+	// ë‹¨ê°€í‘œë²ˆí˜¸
 	private Cost cost;
-	// Ä«Å×°í¸®¹øÈ£ / °áÁ¦¹æ¹ı
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸ / ê²°ì œë°©ë²•
 	private Category category;
-	// °áÁ¦°¡ °áÁ¦±¸ºĞ
+	// ê²°ì œê°€ ê²°ì œêµ¬ë¶„
 	private String payPayerPart;
-	// ±¸ºĞ / CM /¹è³Ê / ½ºÆ©µğ¿À¿¹¾à / ÈÄ¿ø
+	// êµ¬ë¶„ / CM /ë°°ë„ˆ / ìŠ¤íŠœë””ì˜¤ì˜ˆì•½ / í›„ì›
 	private String payPart;
-	// °áÁ¦±İ¾×
+	// ê²°ì œê¸ˆì•¡
 	private String payPrice;
-	// °áÁ¦ÀÏ½Ã
+	// ê²°ì œì¼ì‹œ
 	private String payDate;
-	// ¿µ¼öÁõ¹ß±Ş¿©ºÎ
+	// ì˜ìˆ˜ì¦ë°œê¸‰ì—¬ë¶€
 	private String payBill;
 
 	public String getPayNo() {

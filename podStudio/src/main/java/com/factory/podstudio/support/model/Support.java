@@ -7,31 +7,31 @@ import com.factory.podstudio.podcast.model.PodCast;
 import com.factory.podstudio.user.model.User;
 
 public class Support {
-	// ÈÄ¿ø¹øÈ£
+	// í›„ì›ë²ˆí˜¸
 	private String supportNo;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// ´Ü°¡Ç¥ ¹øÈ£
+	// ë‹¨ê°€í‘œ ë²ˆí˜¸
 	private Cost cost;
-	// °áÁ¦¹øÈ£
+	// ê²°ì œë²ˆí˜¸
 	private Pay pay;
-	// ÆÌÄ³½ºÆ®¹øÈ£
+	// íŒŸìºìŠ¤íŠ¸ë²ˆí˜¸
 	private PodCast podCast;
-	// ¿¡ÇÇ¼Òµå ¹øÈ£
+	// ì—í”¼ì†Œë“œ ë²ˆí˜¸
 	private Episode episode;
-	// ÈÄ¿ø°áÁ¦ÀÏ½Ã
+	// í›„ì›ê²°ì œì¼ì‹œ
 	private String supportDate;
-	// ¿µ¼öÁõ¹ß±Ş¿©ºÎ
+	// ì˜ìˆ˜ì¦ë°œê¸‰ì—¬ë¶€
 	private String supportBill;
-	// ÈÄ¿ø±İ¾×
+	// í›„ì›ê¸ˆì•¡
 	private int supportAmount;
-	// ¼ö¼ö·á
+	// ìˆ˜ìˆ˜ë£Œ
 	private int supportCommission;
-	// Á¦ÀÛÀÚ¿¡°Ô Áö±ŞÇÒ ±İ¾×
+	// ì œì‘ìì—ê²Œ ì§€ê¸‰í•  ê¸ˆì•¡
 	private int supportPaymentAmount;
-	// ÀÎÃâ±¸ºĞ / ¹ÌÀÎÃâ / ÀÎÃâ
+	// ì¸ì¶œêµ¬ë¶„ / ë¯¸ì¸ì¶œ / ì¸ì¶œ
 	private String supportWithDrawalPart;
-	// ÀÎÃâ ÀÏÀÚ
+	// ì¸ì¶œ ì¼ì
 	private String supportWithDrawalDate;
 
 	public String getSupportNo() {

@@ -5,17 +5,17 @@ import com.factory.podstudio.user.model.User;
 
 public class Customercenter {
 
-	// °í°´¼¾ÅÍ¹øÈ£
+	// ê³ ê°ì„¼í„°ë²ˆí˜¸
 	private String customercenterNo;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// Ä«Å×°í¸®¹øÈ£ / ¹®ÀÇ Ä«Å×°í¸®¹øÈ£¸¦ °¡Á®¿È
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸ / ë¬¸ì˜ ì¹´í…Œê³ ë¦¬ë²ˆí˜¸ë¥¼ ê°€ì ¸ì˜´
 	private Category category;
-	// Á¦¸ñ
+	// ì œëª©
 	private String customercenterTitle;
-	// ³»¿ë
+	// ë‚´ìš©
 	private String customercenterContent;
-	// ÀÛ¼ºÀÏÀÚ
+	// ì‘ì„±ì¼ì
 	private String customercenterDate;
 
 	public String getCustomercenterNo() {

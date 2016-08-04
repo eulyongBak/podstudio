@@ -5,17 +5,17 @@ import com.factory.podstudio.podcast.model.PodCast;
 import com.factory.podstudio.user.model.User;
 
 public class Listen {
-	// Ã»Ãë¼ö¼øÀ§¹øÈ£
+	// ì²­ì·¨ìˆ˜ìˆœìœ„ë²ˆí˜¸
 	private String listenNo;
-	// ÆÌÄ³½ºÆ®¹øÈ£
+	// íŒŸìºìŠ¤íŠ¸ë²ˆí˜¸
 	private PodCast podCast;
-	// ¿¡ÇÇ¼Òµå¹øÈ£
+	// ì—í”¼ì†Œë“œë²ˆí˜¸
 	private Episode episode;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// ±¸ºĞ / ½ºÆ®¸®¹Ö / ´Ù¿î·Îµå
+	// êµ¬ë¶„ / ìŠ¤íŠ¸ë¦¬ë° / ë‹¤ìš´ë¡œë“œ
 	private String listenPart;
-	// Ã»Ãë½Ã°£
+	// ì²­ì·¨ì‹œê°„
 	private String listenDate;
 
 	public String getListenNo() {
