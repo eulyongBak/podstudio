@@ -12,7 +12,7 @@ public class PodCastController {
 
 	@RequestMapping(value = "/podmain", method = RequestMethod.GET)
 	public String podcastEpisode(PodCast podcast, Model model) {
-		model.addAttribute("", podcast.getPodCastNo());
+		model.addAttribute("podcast", podcast.getPodCastNo());
 		return "podMain";
 	}
 }
