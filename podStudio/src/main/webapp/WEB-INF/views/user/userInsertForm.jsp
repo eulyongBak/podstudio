@@ -1,67 +1,67 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <form id="signUpForm">
 	<div>
-		<label>È¸¿ø¹øÈ£ : </label> <input type="text" name="userNo" />
+		<label>íšŒì›ë²ˆí˜¸ : </label> <input type="text" name="userNo" />
 	</div>
 	<div>
-		<label>Áö¿ª : </label>
+		<label>ì§€ì—­ : </label>
 		<!-- <input type="text" name="categoryNo" /> -->
 		<select name="categoryNo">
-			<option value="category_22">¼­¿ï</option>
-			<option value="category_23">ºÎ»ê</option>
-			<option value="category_24">´ë±¸</option>
-			<option value="category_25">ÀÎÃµ</option>
-			<option value="category_26">±¤ÁÖ</option>
-			<option value="category_27">´ëÀü</option>
-			<option value="category_28">¿ï»ê</option>
-			<option value="category_29">¼¼Á¾</option>
-			<option value="category_30">°æ±â</option>
-			<option value="category_31">°­¿ø</option>
-			<option value="category_32">ÃæºÏ</option>
-			<option value="category_33">Ãæ³²</option>
-			<option value="category_34">ÀüºÏ</option>
-			<option value="category_35">Àü³²</option>
-			<option value="category_36">°æºÏ</option>
-			<option value="category_37">°æ³²</option>
-			<option value="category_38">Á¦ÁÖ</option>
+			<option value="category_22">ì„œìš¸</option>
+			<option value="category_23">ë¶€ì‚°</option>
+			<option value="category_24">ëŒ€êµ¬</option>
+			<option value="category_25">ì¸ì²œ</option>
+			<option value="category_26">ê´‘ì£¼</option>
+			<option value="category_27">ëŒ€ì „</option>
+			<option value="category_28">ìš¸ì‚°</option>
+			<option value="category_29">ì„¸ì¢…</option>
+			<option value="category_30">ê²½ê¸°</option>
+			<option value="category_31">ê°•ì›</option>
+			<option value="category_32">ì¶©ë¶</option>
+			<option value="category_33">ì¶©ë‚¨</option>
+			<option value="category_34">ì „ë¶</option>
+			<option value="category_35">ì „ë‚¨</option>
+			<option value="category_36">ê²½ë¶</option>
+			<option value="category_37">ê²½ë‚¨</option>
+			<option value="category_38">ì œì£¼</option>
 		</select>
 	</div>
 	<div>
-		<label>¾ÆÀÌµð : </label> <input type="text" name="userId" />
+		<label>ì•„ì´ë”” : </label> <input type="text" name="userId" />
 	</div>
 	<div>
-		<label>ºñ¹Ð¹øÈ£</label> <input type="password" name="userPw" />
+		<label>ë¹„ë°€ë²ˆí˜¸</label> <input type="password" name="userPw" />
 	</div>
 	<div>
-		<label>´Ð³×ÀÓ : </label> <input type="text" name="userNickname" />
+		<label>ë‹‰ë„¤ìž„ : </label> <input type="text" name="userNickname" />
 	</div>
 	<div>
-		<label>»ýÀÏ : </label>
+		<label>ìƒì¼ : </label>
 		<input id="dateText" type="date" name="userBirth" />
 	</div>
 	<div>
-		<label>¼ºº° : </label> 
-		<input type="radio" name="userGender" value="³²" />³²
-		<input type="radio" name="userGender" value="¿©" />¿©
+		<label>ì„±ë³„ : </label> 
+		<input type="radio" name="userGender" value="ë‚¨" />ë‚¨
+		<input type="radio" name="userGender" value="ì—¬" />ì—¬
 	</div>
 	<div>
-		<label>ÀÌ¸ÞÀÏ : </label>
+		<label>ì´ë©”ì¼ : </label>
 		<input id="userEmail" type="hidden" name="userEmail" /> 
 		<input id="emailMain" type="text" />
 		@
 		<input id="emailSub" type="text" readonly="readonly"/>
 		<select id="subEmail" >
-			<option value=" ">¼±ÅÃÇÏ¼¼¿ä</option>
+			<option value=" ">ì„ íƒí•˜ì„¸ìš”</option>
 			<option value="naver.com">naver.com</option>
 			<option value="daum.net">daum.net</option>
 			<option value="google.com">google.com</option>
-			<option value="">Á÷Á¢ÀÔ·Â</option>
+			<option value="">ì§ì ‘ìž…ë ¥</option>
 		</select>
 	</div>
 	<div>
-		<label>Åë½Å»ç : </label> <select name="userTelecom">
+		<label>í†µì‹ ì‚¬ : </label> <select name="userTelecom">
 			<option value="LG">LG</option>
 			<option value="KT">KT</option>
 			<option value="SKT">SKT</option>
@@ -69,17 +69,17 @@
 
 	</div>
 	<div>
-		<label>ÀüÈ­¹øÈ£ : </label> <input type="text" name="userPhone" />
+		<label>ì „í™”ë²ˆí˜¸ : </label> <input type="text" name="userPhone" />
 	</div>
 	<div>
-		<label>±ÇÇÑ: </label> <input type="text" name="userLevel" value="»ç¿ëÀÚ"
+		<label>ê¶Œí•œ: </label> <input type="text" name="userLevel" value="ì‚¬ìš©ìž"
 			readonly="readonly" />
 	</div>
 	<div>
-		<label>Á÷¾÷ : </label> <input type="text" name="userJob" />
+		<label>ì§ì—… : </label> <input type="text" name="userJob" />
 	</div>
 	<div>
-		<button id="sendSignUp">È¸¿ø°¡ÀÔ</button>
-		<button id="back">µÚ·Î°¡±â</button>
+		<button id="sendSignUp">íšŒì›ê°€ìž…</button>
+		<button id="back">ë’¤ë¡œê°€ê¸°</button>
 	</div>
 </form>

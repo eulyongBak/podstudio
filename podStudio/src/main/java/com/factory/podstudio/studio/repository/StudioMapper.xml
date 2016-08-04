@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.factory.podstudio.studio.repository.StudioMapper">
+	<insert id="insertStudio" parameterType="com.factory.podstudio.studio.model.Studio">
+		INSERT INTO studio
+			(studio_no
+			, user_no
+			, pay_no
+			, category_no
+			, studioreservation_no
+			, banner_no
+			, studio_name
+			, studio_content
+			, studio_image)
+		VALUES 
+			(#{studio_no}
+			,#{user_no}
+			,#{pay_no}
+			,#{category_no}
+			,#{studioreservation_no}
+			,#{banner_no}
+			,#{studio_name}
+			,#{studio_content}
+			,#{studio_image})	
+	</insert>
 
 </mapper>

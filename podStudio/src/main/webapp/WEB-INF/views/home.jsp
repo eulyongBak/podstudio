@@ -11,6 +11,8 @@ Home Page
 
 <a href="/insertCM">CM광고 추가</a>
 
+<a href="/insertStudio">STUDIO 추가</a>
+
 <a href="/noticeList">공지사항</a>
 <c:if test="${sessionUser.userLevel eq '관리자'}">
 <a href="/noticeWrite">공지추가</a>
