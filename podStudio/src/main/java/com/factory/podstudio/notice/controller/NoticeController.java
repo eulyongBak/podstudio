@@ -61,10 +61,18 @@ public class NoticeController {
 		noticeService.modifyNoticeByNoticeNo(notice);
 		return "redirect:/noticeList";
 	}
+	
+	//삭제 화면
+	@RequestMapping(value="/noticeDeleteForm", method =RequestMethod.GET)
+	public String noticeDeleteForm(Model model, Notice notice){
+		model.addAttribute("noticeOne", noticeService.selectOneBynoticeNo(notice));
+		return "Customercenter/noticeDeleteForm";
+	}
+
 	//삭제하기
-	@RequestMapping(value="/noticeDelete", method= RequestMethod.GET)
-	public String noticeDelete(Model model , Notice notice){
-		noticeService.deleteNoticeByNoticeNo(notice);
-		return "redirect:/noticeList";
+		@RequestMapping(value="/noticeDelete", method= RequestMethod.POST)
+		public String noticeDelete(Model model , Notice notice){
+			noticeService.deleteNoticeByNoticeNo(notice);
+			return "redirect:/noticeList";
 	}
 }

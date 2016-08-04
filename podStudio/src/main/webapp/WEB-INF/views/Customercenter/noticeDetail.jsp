@@ -6,19 +6,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script>
-	$(document).ready(function() {
-		$('#btn').click(function() {
-			confirm("정말 삭제하시겠습니까??");
-		});
-	});
-</script>
+
 <title>Title</title>
 </head>
 <body>
-	<h1>상세 보기</h1>
-
+	
 	<div>게시글 제목 :</div>
 	<div>
 		<input type="text" readonly="readonly"
@@ -31,12 +23,11 @@
 			readonly="readonly">${noticeOne.noticeContent}</textarea>
 	</div>
 
-	<div>
-		<a href="/modifyform?noticeNo=${noticeOne.noticeNo }">수정</a>
-	</div>
-	<div>
-		<a id="btn" href="/noticeDelete?noticeNo=${noticeOne.noticeNo }">삭제</a>
-	</div>
-
+	<c:if test="${sessionUser.userLevel eq '관리자'}">
+		<div>
+			<a href="/modifyform?noticeNo=${noticeOne.noticeNo }">수정</a>
+			<a href="/noticeDeleteForm?noticeNo=${noticeOne.noticeNo }">삭제</a>
+		</div>
+	</c:if>
 </body>
 </html>
