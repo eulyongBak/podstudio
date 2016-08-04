@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<form>
+	<textarea rows="3" cols="40"></textarea>
+	<button>µî·Ï</button>
+</form>
+<table>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+	<tr>
+		<td>125rqweopjafjasjdlkasjsfasd</td>
+	</tr>
+</table>

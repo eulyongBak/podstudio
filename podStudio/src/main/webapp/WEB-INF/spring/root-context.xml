@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+
+	<!-- Connection Pool -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://hatsukoi1307.cafe24.com:3306/hatsukoi1307?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="hatsukoi1307" />
+		<property name="password" value="ksmart20rl01xlab" />
+	</bean>
+
+	<!-- Transaction Manager -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<!-- mysql sqlSessionFactoryBanner -->
+	<bean id="sqlSessionFactoryBanner" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/advertising/banner/repository/BannerMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateBanner -->
+	<bean id="sqlSessionTemplateBanner" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryBanner" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryCM -->
+	<bean id="sqlSessionFactoryCM" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/advertising/cm/repository/CMMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateCM -->
+	<bean id="sqlSessionTemplateCM" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryCM" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryCustomerCenter -->
+	<bean id="sqlSessionFactoryCustomerCenter" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/customercenter/repository/CustomerCenterMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateCustomerCenter -->
+	<bean id="sqlSessionTemplateCustomerCenter" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0"
+			ref="sqlSessionFactoryCustomerCenter" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryEpisode -->
+	<bean id="sqlSessionFactoryEpisode" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/episode/repository/EpisodeMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateEpisode -->
+	<bean id="sqlSessionTemplateEpisode" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryEpisode" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryEpisodeReply -->
+	<bean id="sqlSessionFactoryEpisodeReply" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/episode/repository/EpisodeReplyMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateEpisodeReply -->
+	<bean id="sqlSessionTemplateEpisodeReply" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryEpisodeReply" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryGood -->
+	<bean id="sqlSessionFactoryGood" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/good/repository/GoodMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateGood -->
+	<bean id="sqlSessionTemplateGood" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryGood" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryListen -->
+	<bean id="sqlSessionFactoryListen" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/listen/repository/ListenMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateListen -->
+	<bean id="sqlSessionTemplateListen" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryListen" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryMyPod -->
+	<bean id="sqlSessionFactoryMyPod" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/mypod/repository/MyPodMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateMyPod -->
+	<bean id="sqlSessionTemplateMyPod" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryMyPod" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryNotice -->
+	<bean id="sqlSessionFactoryNotice" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/notice/repository/NoticeMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateNotice -->
+	<bean id="sqlSessionTemplateNotice" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryNotice" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryPay -->
+	<bean id="sqlSessionFactoryPay" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/pay/repository/PayMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplatePay -->
+	<bean id="sqlSessionTemplatePay" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryPay" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryPodCast -->
+	<bean id="sqlSessionFactoryPodCast" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/podcast/repository/PodCastMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplatePodCast -->
+	<bean id="sqlSessionTemplatePodCast" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryPodCast" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryPodMeeting -->
+	<bean id="sqlSessionFactoryPodMeeting" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/podmeeting/repository/PodMeetingMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplatePodMeeting -->
+	<bean id="sqlSessionTemplatePodMeeting" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryPodMeeting" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryPodMeetingReply -->
+	<bean id="sqlSessionFactoryPodMeetingReply" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/podmeeting/repository/PodMeetingReplyMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplatePodMeetingReply -->
+	<bean id="sqlSessionTemplatePodMeetingReply" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryPodMeetingReply" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryRefund -->
+	<bean id="sqlSessionFactoryRefund" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/refund/repository/RefundMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateRefund -->
+	<bean id="sqlSessionTemplateRefund" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryRefund" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryShow -->
+	<bean id="sqlSessionFactoryShow" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/show/repository/ShowMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateShow -->
+	<bean id="sqlSessionTemplateShow" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryShow" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryShowReply -->
+	<bean id="sqlSessionFactoryShowReply" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/show/repository/ShowReplyMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateShowReply -->
+	<bean id="sqlSessionTemplateShowReply" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryShowReply" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryStudio -->
+	<bean id="sqlSessionFactoryStudio" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/studio/repository/StudioMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateStudio -->
+	<bean id="sqlSessionTemplateStudio" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryStudio" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryStudioReservation -->
+	<bean id="sqlSessionFactoryStudioReservation" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/studio/repository/StudioReservationMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateStudioReservation -->
+	<bean id="sqlSessionTemplateStudioReservation" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryStudioReservation" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactorySupport -->
+	<bean id="sqlSessionFactorySupport" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/support/repository/SupportMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateSupport -->
+	<bean id="sqlSessionTemplateSupport" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactorySupport" />
+	</bean>
+
+
+	<!-- mysql sqlSessionFactoryUser -->
+	<bean id="sqlSessionFactoryUser" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/user/repository/UserMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateUser -->
+	<bean id="sqlSessionTemplateUser" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryUser" />
+	</bean>
+</beans>

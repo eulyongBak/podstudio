@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="mainlayout" template="/WEB-INF/views/layout.jsp">
+		<put-attribute name="title" value="메인페이지" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/mainlayout/header.jsp" />
+		<put-attribute name="nav_menu"
+			value="/WEB-INF/views/mainlayout/nav_menu.jsp" />
+		<put-attribute name="banner"
+			value="/WEB-INF/views/mainlayout/banner.jsp" />
+		<put-attribute name="left" value="/WEB-INF/views/mainlayout/left.jsp" />
+		<put-attribute name="main" value="" />
+		<put-attribute name="login"
+			value="/WEB-INF/views/mainlayout/login.jsp" />
+		<put-attribute name="right"
+			value="/WEB-INF/views/mainlayout/right.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/mainlayout/footer.jsp" />
+	</definition>
+
+
+	<definition name="*" extends="mainlayout">
+		<put-attribute name="main" value="/WEB-INF/views/{1}.jsp" />
+	</definition>
+
+	<definition name="*/*" extends="mainlayout">
+		<put-attribute name="main" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+
+	<definition name="podcastlayout" template="/WEB-INF/views/podlayout.jsp">
+		<put-attribute name="title" value="팟캐스트" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/podcastlayout/header.jsp" />
+		<put-attribute name="podcasttitle"
+			value="/WEB-INF/views/podcastlayout/title.jsp" />
+		<put-attribute name="share"
+			value="/WEB-INF/views/podcastlayout/share.jsp" />
+		<put-attribute name="main" value="" />
+		<put-attribute name="right"
+			value="/WEB-INF/views/podcastlayout/right.jsp" />
+		<put-attribute name="bottomL"
+			value="/WEB-INF/views/podcastlayout/bottomleft.jsp" />
+		<put-attribute name="bottomR"
+			value="/WEB-INF/views/podcastlayout/bottomright.jsp" />
+	</definition>
+
+	<definition name="podMain" extends="podcastlayout">
+		<put-attribute name="main"
+			value="/WEB-INF/views/podcastlayout/main.jsp" />
+	</definition>
+
+
+	<definition name="mypagelayout" template="/WEB-INF/views/mypagelayout.jsp">
+		<put-attribute name="title" value="마이페이지" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/mypagelayout/header.jsp" />
+		<put-attribute name="profile"
+			value="/WEB-INF/views/mypagelayout/profile.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/mypagelayout/menu.jsp" />
+		<put-attribute name="main" value="" />
+	</definition>
+
+	<definition name="mypage" extends="mypagelayout">
+		<put-attribute name="main"
+			value="/WEB-INF/views/mypagelayout/main.jsp" />
+	</definition>
+
+	<definition name="mypage/*" extends="mypagelayout">
+		<put-attribute name="main" value="/WEB-INF/views/mypage/{1}.jsp" />
+	</definition>
+
+</tiles-definitions>

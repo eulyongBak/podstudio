@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.factory.podstudio.notice.repository.NoticeMapper">
+	<select id="selectNotice" parameterType="java.util.Map"
+		resultType="com.factory.podstudio.notice.model.Notice">
+		select
+		notice.notice_no AS noticeNo,
+		user.user_no AS userNo,
+		user.user_nickname AS userNickname,
+		notice.notice_title AS noticeTitle,
+		notice.notice_content AS noticeContent,
+		DATE_FORMAT(notice_date,'%p %Y-%m-%d %h:%i') AS noticeDate
+		from notice inner join user on
+		notice.user_no = user.user_no
+		<where>
+			<if test="word != null">
+				notice_no LIKE CONCAT ('%',#{word},'%') OR
+				notice_title
+				LIKE CONCAT ('%',#{word},'%')
+			</if>
+		</where>
+		ORDER BY notice_no DESC
+		LIMIT #{pageHelper.startPage},
+		#{pageHelper.linePerPage}
+	</select>
+
+	<select id="selectTotalCount" resultType="Integer">
+		SELECT
+		COUNT(*)
+		FROM
+		notice
+	</select>
+	
+	<insert id="insertNotice" parameterType="com.factory.podstudio.notice.model.Notice">
+		INSERT INTO notice
+		(notice_no,
+		user_no,
+		notice_title,
+		notice_content,
+		notice_date)
+		VALUES (#{noticeNo},
+		#{userNo},
+		#{noticeTitle},
+		#{noticeContent},
+		SYSDATE())
+	</insert>
+	
+	<select id="selectOneNotice" parameterType="com.factory.podstudio.notice.model.Notice" resultType="com.factory.podstudio.notice.model.Notice">
+	select 
+	notice_no AS noticeNo, 
+	notice_title AS noticeTitle, 
+	notice_content AS noticeContent
+	from notice where notice_no = '${noticeNo}' 
+	</select>
+</mapper>
