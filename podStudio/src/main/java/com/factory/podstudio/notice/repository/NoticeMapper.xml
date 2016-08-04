@@ -9,7 +9,8 @@
 		user.user_nickname AS userNickname,
 		notice.notice_title AS noticeTitle,
 		notice.notice_content AS noticeContent,
-		DATE_FORMAT(notice_date,'%p %Y-%m-%d %h:%i') AS noticeDate
+		DATE_FORMAT(notice_date,'%p
+		%Y-%m-%d %h:%i') AS noticeDate
 		from notice inner join user on
 		notice.user_no = user.user_no
 		<where>
@@ -30,7 +31,7 @@
 		FROM
 		notice
 	</select>
-	
+
 	<insert id="insertNotice" parameterType="com.factory.podstudio.notice.model.Notice">
 		INSERT INTO notice
 		(notice_no,
@@ -38,18 +39,33 @@
 		notice_title,
 		notice_content,
 		notice_date)
-		VALUES (#{noticeNo},
+		VALUES
+		(#{noticeNo},
 		#{userNo},
 		#{noticeTitle},
 		#{noticeContent},
 		SYSDATE())
 	</insert>
-	
-	<select id="selectOneNotice" parameterType="com.factory.podstudio.notice.model.Notice" resultType="com.factory.podstudio.notice.model.Notice">
-	select 
-	notice_no AS noticeNo, 
-	notice_title AS noticeTitle, 
-	notice_content AS noticeContent
-	from notice where notice_no = '${noticeNo}' 
+
+	<select id="selectOneNotice" parameterType="com.factory.podstudio.notice.model.Notice"
+		resultType="com.factory.podstudio.notice.model.Notice">
+		select
+		notice_no AS noticeNo,
+		notice_title AS noticeTitle,
+		notice_content AS noticeContent
+		from notice where notice_no = '${noticeNo}'
 	</select>
+
+	<update id="modifyNotice" parameterType="com.factory.podstudio.notice.model.Notice">
+		UPDATE notice
+		SET
+		notice_title='${noticeTitle}',
+		notice_content='${noticeContent}'
+		WHERE notice_no='${noticeNo}'
+	</update>
+	
+	<delete id="deleteNotice" parameterType="com.factory.podstudio.notice.model.Notice">
+		DELETE FROM notice 
+		WHERE notice_no='${noticeNo}'
+	</delete>
 </mapper>
