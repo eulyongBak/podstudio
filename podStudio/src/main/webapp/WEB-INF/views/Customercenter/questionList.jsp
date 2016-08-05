@@ -26,8 +26,7 @@ body {
 			<th>문의 번호</th>
 			<th>유저 닉네임</th>
 			<th>문의 사항</th>
-			<th>문의 제목</th>
-			<th>문의 내용</th>
+			<th>문의 제목</th>	
 			<th>문의 시간</th>
 		</tr>
 		<c:forEach var="list" items="${ questionList }">
@@ -36,7 +35,6 @@ body {
 				<td>${ list.userNickname }</td>
 				<td>${ list.categorySub }</td>
 				<td><a href="/customercenterContent?noticeNo=${list.customercenterNo}">${ list.customercenterTitle }</a></td>
-				<td>${ list.customercenterContent }</td>
 				<td>${ list.customercenterDate}</td>
 
 				<td></td>
