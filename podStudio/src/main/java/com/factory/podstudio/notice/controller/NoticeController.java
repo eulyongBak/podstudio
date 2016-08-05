@@ -2,8 +2,6 @@ package com.factory.podstudio.notice.controller;
 
 import java.util.List;
 
-import javax.xml.ws.ServiceMode;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,9 +17,9 @@ public class NoticeController {
 
 	@Autowired
 	private NoticeServiceImpl noticeService;
-	
+	//리스트 처리
 	@RequestMapping(value = "/noticeList", method = RequestMethod.GET)
-	public String boardList(Model model, @RequestParam(value = "page", defaultValue = "1") int page,
+	public String noticeList(Model model, @RequestParam(value = "page", defaultValue = "1") int page, 
 			@RequestParam(value = "word", required = false) String word) {
 		List<Notice> noticelist = noticeService.selectNoticeByNoticeNo(page, word);
 		model.addAttribute("noticeList", noticelist);
@@ -31,10 +29,12 @@ public class NoticeController {
 		model.addAttribute("lastPage", noticeService.getLastPage());
 		return "Customercenter/noticeList";
 	}
+	//입력 화면
 	@RequestMapping(value = "/noticeWrite", method = RequestMethod.GET)
 	public String noticeWrite() {
 		return "Customercenter/noticeInsertForm";
 	}
+	//입력 처리
 	@RequestMapping(value = "/addNotice", method = RequestMethod.POST)
 	public String boardWrite(Notice notice) {
 		// notice 에 저장된 값을 보여준다.
@@ -42,6 +42,7 @@ public class NoticeController {
 		System.out.println(notice);
 		return "redirect:/noticeList";
 	}
+	//상세보기
 	@RequestMapping(value= "/noticeContent", method = RequestMethod.GET)
 	public String noticeContent(Model model , Notice notice){
 		Notice resultNotice = noticeService.selectOneBynoticeNo(notice);

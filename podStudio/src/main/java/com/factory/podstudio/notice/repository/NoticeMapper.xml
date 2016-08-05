@@ -5,7 +5,7 @@
 		resultType="com.factory.podstudio.notice.model.Notice">
 		select
 		notice.notice_no AS noticeNo,
-		user.user_no AS userNo,
+		notice.user_no AS userNo,
 		user.user_nickname AS userNickname,
 		notice.notice_title AS noticeTitle,
 		notice.notice_content AS noticeContent,

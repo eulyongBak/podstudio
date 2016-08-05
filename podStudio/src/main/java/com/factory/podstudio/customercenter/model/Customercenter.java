@@ -1,16 +1,18 @@
 package com.factory.podstudio.customercenter.model;
 
-import com.factory.podstudio.category.model.Category;
-import com.factory.podstudio.user.model.User;
 
 public class Customercenter {
 
 	// 고객센터번호
 	private String customercenterNo;
 	// 회원번호
-	private User user;
+	private String userNo;
+	// 유저 닉네임
+	private String userNickname;
 	// 카테고리번호 / 문의 카테고리번호를 가져옴
-	private Category category;
+	private String categoryNo;
+	// 카테고리메인 / 문의 내용이 무엇인지 가져옴
+	private String categorySub;
 	// 제목
 	private String customercenterTitle;
 	// 내용
@@ -26,20 +28,36 @@ public class Customercenter {
 		this.customercenterNo = customercenterNo;
 	}
 
-	public User getUser() {
-		return user;
+	public String getUserNo() {
+		return userNo;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
 	}
 
-	public Category getCategory() {
-		return category;
+	public String getUserNickname() {
+		return userNickname;
 	}
 
-	public void setCategory(Category category) {
-		this.category = category;
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
+	}
+
+	public String getCategoryNo() {
+		return categoryNo;
+	}
+
+	public void setCategoryNo(String categoryNo) {
+		this.categoryNo = categoryNo;
+	}
+
+	public String getCategorySub() {
+		return categorySub;
+	}
+
+	public void setCategorySub(String categorySub) {
+		this.categorySub = categorySub;
 	}
 
 	public String getCustomercenterTitle() {
@@ -68,9 +86,13 @@ public class Customercenter {
 
 	@Override
 	public String toString() {
-		return "Customercenter [customercenterNo=" + customercenterNo + ", user=" + user + ", category=" + category
+		return "Customercenter [customercenterNo=" + customercenterNo + ", userNo=" + userNo + ", userNickname="
+				+ userNickname + ", categoryNo=" + categoryNo + ", categorySub=" + categorySub
 				+ ", customercenterTitle=" + customercenterTitle + ", customercenterContent=" + customercenterContent
 				+ ", customercenterDate=" + customercenterDate + "]";
 	}
+
+	
+
 
 }

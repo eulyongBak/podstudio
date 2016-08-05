@@ -8,14 +8,16 @@
 <title>Title</title>
 </head>
 <body>
-
+	<div>
 		<form action="/noticeDelete" method ="post" accept-charset="utf-8">
 			<input type="hidden" name="noticeNo" value="${noticeOne.noticeNo }"/>
 			<div><button>삭제</button></div>
 		</form>	
-		
+	</div>
+	<div>	
 		<form action="/noticeList" method="get" accept-charset="utf-8">
 		<button>취소</button>
 		</form>
+	</div>
 </body>
 </html>
