@@ -18,4 +18,4 @@ Home Page
 <a href="/noticeWrite">공지추가</a>
 </c:if>
 <br />
-<a href="/podmain">팟캐스트 보기</a>
+<a href="/podmain?podCastNo=podcast_001">팟캐스트 보기</a>

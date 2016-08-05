@@ -1,18 +1,17 @@
 package com.factory.podstudio.podcast.model;
 
-import com.factory.podstudio.category.model.Category;
-import com.factory.podstudio.user.model.User;
-
 public class PodCast {
 
 	// 팟캐스트번호
 	private String podCastNo;
 	// 회원번호
-	private User user;
+	private String userNo;
 	// 카테고리번호1
-	private Category categoryNo1;
+	private String categoryNo1;
 	// 카테고리번호2
-	private Category categoryNo2;
+	private String categoryNo2;
+	// 카테고리 제목
+	private String categoryMain;
 	// 팟캐스트 제목
 	private String podCastTitle;
 	// 팟캐스트 부제목
@@ -28,28 +27,36 @@ public class PodCast {
 		this.podCastNo = podCastNo;
 	}
 
-	public User getUser() {
-		return user;
+	public String getUserNo() {
+		return userNo;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
 	}
 
-	public Category getCategoryNo1() {
+	public String getCategoryNo1() {
 		return categoryNo1;
 	}
 
-	public void setCategoryNo1(Category categoryNo1) {
+	public void setCategoryNo1(String categoryNo1) {
 		this.categoryNo1 = categoryNo1;
 	}
 
-	public Category getCategoryNo2() {
+	public String getCategoryNo2() {
 		return categoryNo2;
 	}
 
-	public void setCategoryNo2(Category categoryNo2) {
+	public void setCategoryNo2(String categoryNo2) {
 		this.categoryNo2 = categoryNo2;
+	}
+
+	public String getCategoryMain() {
+		return categoryMain;
+	}
+
+	public void setCategoryMain(String categoryMain) {
+		this.categoryMain = categoryMain;
 	}
 
 	public String getPodCastTitle() {
@@ -78,9 +85,9 @@ public class PodCast {
 
 	@Override
 	public String toString() {
-		return "PodCast [podCastNo=" + podCastNo + ", user=" + user + ", categoryNo1=" + categoryNo1 + ", categoryNo2="
-				+ categoryNo2 + ", podCastTitle=" + podCastTitle + ", podCastSubTitle=" + podCastSubTitle
-				+ ", podCastPublicBroadCast=" + podCastPublicBroadCast + "]";
+		return "PodCast [podCastNo=" + podCastNo + ", userNo=" + userNo + ", categoryNo1=" + categoryNo1
+				+ ", categoryNo2=" + categoryNo2 + ", categoryMain=" + categoryMain + ", podCastTitle=" + podCastTitle
+				+ ", podCastSubTitle=" + podCastSubTitle + ", podCastPublicBroadCast=" + podCastPublicBroadCast + "]";
 	}
 
 }

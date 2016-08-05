@@ -1,6 +1,6 @@
 package com.factory.podstudio.podcast.repository;
 
-import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +17,9 @@ public class PodCastDaoImpl implements IPodCastDao {
 	@Autowired
 	private SqlSessionTemplate sqlSessionTemplatePodCast;
 	@Override
-	public List<PodCast> selectPodcast(PodCast podCast) {
+	public PodCast selectPodcast(Map<String,Object> map) {
 		
-		return null;
+		return sqlSessionTemplatePodCast.selectOne(NAME_SPACE_PODCAST+".selectPodCast", map);
 	}
 
 }
