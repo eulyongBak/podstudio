@@ -1,23 +1,22 @@
 package com.factory.podstudio.podcast.model;
 
-import com.factory.podstudio.category.model.Category;
-import com.factory.podstudio.user.model.User;
-
 public class PodCast {
 
-	// ÆÌÄ³½ºÆ®¹øÈ£
+	// íŒŸìºìŠ¤íŠ¸ë²ˆí˜¸
 	private String podCastNo;
-	// È¸¿ø¹øÈ£
-	private User user;
-	// Ä«Å×°í¸®¹øÈ£1
-	private Category categoryNo1;
-	// Ä«Å×°í¸®¹øÈ£2
-	private Category categoryNo2;
-	// ÆÌÄ³½ºÆ® Á¦¸ñ
+	// íšŒì›ë²ˆí˜¸
+	private String userNo;
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸1
+	private String categoryNo1;
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸2
+	private String categoryNo2;
+	// ì¹´í…Œê³ ë¦¬ ì œëª©
+	private String categoryMain;
+	// íŒŸìºìŠ¤íŠ¸ ì œëª©
 	private String podCastTitle;
-	// ÆÌÄ³½ºÆ® ºÎÁ¦¸ñ
+	// íŒŸìºìŠ¤íŠ¸ ë¶€ì œëª©
 	private String podCastSubTitle;
-	// °ø°³¹æ¼Û°¡´É¿©ºÎ
+	// ê³µê°œë°©ì†¡ê°€ëŠ¥ì—¬ë¶€
 	private String podCastPublicBroadCast;
 
 	public String getPodCastNo() {
@@ -28,28 +27,36 @@ public class PodCast {
 		this.podCastNo = podCastNo;
 	}
 
-	public User getUser() {
-		return user;
+	public String getUserNo() {
+		return userNo;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
 	}
 
-	public Category getCategoryNo1() {
+	public String getCategoryNo1() {
 		return categoryNo1;
 	}
 
-	public void setCategoryNo1(Category categoryNo1) {
+	public void setCategoryNo1(String categoryNo1) {
 		this.categoryNo1 = categoryNo1;
 	}
 
-	public Category getCategoryNo2() {
+	public String getCategoryNo2() {
 		return categoryNo2;
 	}
 
-	public void setCategoryNo2(Category categoryNo2) {
+	public void setCategoryNo2(String categoryNo2) {
 		this.categoryNo2 = categoryNo2;
+	}
+
+	public String getCategoryMain() {
+		return categoryMain;
+	}
+
+	public void setCategoryMain(String categoryMain) {
+		this.categoryMain = categoryMain;
 	}
 
 	public String getPodCastTitle() {
@@ -78,9 +85,9 @@ public class PodCast {
 
 	@Override
 	public String toString() {
-		return "PodCast [podCastNo=" + podCastNo + ", user=" + user + ", categoryNo1=" + categoryNo1 + ", categoryNo2="
-				+ categoryNo2 + ", podCastTitle=" + podCastTitle + ", podCastSubTitle=" + podCastSubTitle
-				+ ", podCastPublicBroadCast=" + podCastPublicBroadCast + "]";
+		return "PodCast [podCastNo=" + podCastNo + ", userNo=" + userNo + ", categoryNo1=" + categoryNo1
+				+ ", categoryNo2=" + categoryNo2 + ", categoryMain=" + categoryMain + ", podCastTitle=" + podCastTitle
+				+ ", podCastSubTitle=" + podCastSubTitle + ", podCastPublicBroadCast=" + podCastPublicBroadCast + "]";
 	}
 
 }

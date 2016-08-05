@@ -6,23 +6,23 @@ import com.factory.podstudio.podcast.model.PodCast;
 import com.factory.podstudio.user.model.User;
 
 public class PodMeeting {
-	// ´ÜÆÌ»§ ¹øÈ£
+	// ë‹¨íŒŸë¹µ ë²ˆí˜¸
 	private String podMeetingNo;
-	// ÆÌÄ³½ºÆ®¹øÈ£
+	// íŒŸìºìŠ¤íŠ¸ë²ˆí˜¸
 	private PodCast podCast;
-	// ¿¡ÇÇ¼Òµå¹øÈ£
+	// ì—í”¼ì†Œë“œë²ˆí˜¸
 	private Episode episode;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// Ä«Å×°í¸®¹øÈ£ / Áö¿ª
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸ / ì§€ì—­
 	private Category category;
-	// ´ÜÆÌ»§ Á¦¸ñ
+	// ë‹¨íŒŸë¹µ ì œëª©
 	private String podMeetingTitle;
-	// ´ÜÆÌ»§ ³»¿ë
+	// ë‹¨íŒŸë¹µ ë‚´ìš©
 	private String podMeetingContent;
-	// ´ÜÆÌ»§ ºñ¹Ğ¹øÈ£
+	// ë‹¨íŒŸë¹µ ë¹„ë°€ë²ˆí˜¸
 	private String podMeetingPw;
-	// ´ÜÆÌ»§ ÀÛ¼ºÀÏÀÚ
+	// ë‹¨íŒŸë¹µ ì‘ì„±ì¼ì
 	private String podMeetingDate;
 
 	public String getPodMeetingNo() {

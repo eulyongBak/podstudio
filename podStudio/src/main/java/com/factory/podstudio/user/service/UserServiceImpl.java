@@ -12,7 +12,6 @@ public class UserServiceImpl implements IUserService {
 	@Autowired
 	private UserDaoImpl userDao;
 	
-	//�Ѹ��� ȸ����ȣ�� ������ ȸ�������� �����ش� - select ������ ���
 	@Override
 	public User selectUserByUserNo(User user) {
 		return userDao.selectUserByUserNo(user);

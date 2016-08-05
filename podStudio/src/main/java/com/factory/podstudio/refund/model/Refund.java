@@ -4,23 +4,23 @@ import com.factory.podstudio.pay.model.Pay;
 import com.factory.podstudio.user.model.User;
 
 public class Refund {
-	// È¯ºÒ¹øÈ£
+	// í™˜ë¶ˆë²ˆí˜¸
 	private String refundNo;
-	// °áÁ¦¹øÈ£
+	// ê²°ì œë²ˆí˜¸
 	private Pay pay;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// È¯ºÒ¿äÃ»ÀÏÀÚ
+	// í™˜ë¶ˆìš”ì²­ì¼ì
 	private String refundRequestDate;
-	// È¯ºÒÃ³¸®ÀÏÀÚ
+	// í™˜ë¶ˆì²˜ë¦¬ì¼ì
 	private String refundResponseDate;
-	// È¯ºÒ ¼ö¼ö·á
+	// í™˜ë¶ˆ ìˆ˜ìˆ˜ë£Œ
 	private int refundRefundFees;
-	// È¯ºÒ±İ¾×
+	// í™˜ë¶ˆê¸ˆì•¡
 	private int refundPrice;
-	// ±¸ºĞ / ½ºÆ©µğ¿À¿¹¾à / ÈÄ¿ø / CM / ¹è³Ê
+	// êµ¬ë¶„ / ìŠ¤íŠœë””ì˜¤ì˜ˆì•½ / í›„ì› / CM / ë°°ë„ˆ
 	private String refundPart;
-	// È¯ºÒ »çÀ¯
+	// í™˜ë¶ˆ ì‚¬ìœ 
 	private String refundReason;
 
 	public String getRefundNo() {

@@ -3,21 +3,21 @@ package com.factory.podstudio.show.model;
 import com.factory.podstudio.user.model.User;
 
 public class ShowReply {
-	// °ø¿¬´ñ±Û¹øÈ£
+	// ê³µì—°ëŒ“ê¸€ë²ˆí˜¸
 	private String showReplyNo;
-	// °ø¿¬¹øÈ£
+	// ê³µì—°ë²ˆí˜¸
 	private Show show;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// °ø¿¬´ñ±Û ³»¿ë
+	// ê³µì—°ëŒ“ê¸€ ë‚´ìš©
 	private String showReplyContent;
-	// ´ä±Û¹øÈ£
+	// ë‹µê¸€ë²ˆí˜¸
 	private int showReplyReplyNo;
-	// ´ä±Û±íÀÌ
+	// ë‹µê¸€ê¹Šì´
 	private int showReplyReplyDepth;
-	// ´ä±Û¼ø¼­
+	// ë‹µê¸€ìˆœì„œ
 	private int showReplyReplyOrder;
-	// ÀÛ¼ºÀÏÀÚ
+	// ì‘ì„±ì¼ì
 	private String showReplyDate;
 
 	public String getShowReplyNo() {

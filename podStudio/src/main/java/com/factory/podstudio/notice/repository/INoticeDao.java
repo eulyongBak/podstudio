@@ -14,4 +14,9 @@ public interface INoticeDao {
 	int insertNotice(Notice notice);
 	
 	Notice noticeOne(Notice notice);
+	
+	int modifyNotice(Notice notice);
+	
+	int deleteNotice(Notice notice);
+	
 }

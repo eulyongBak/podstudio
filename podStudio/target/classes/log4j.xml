@@ -13,6 +13,10 @@
 	<logger name="com.factory.podstudio.user.repository">
 		<level value="debug" />
 	</logger>
+	<logger name="com.factory.podstudio.podcast.repository">
+		<level value="debug" />
+	</logger>
+	
 	
 	<!-- Application Loggers -->
 	<logger name="com.factory.podstudio">

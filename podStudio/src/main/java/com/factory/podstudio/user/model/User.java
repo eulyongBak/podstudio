@@ -1,33 +1,33 @@
 package com.factory.podstudio.user.model;
 
 public class User {
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private String userNo;
-	// Áö¿ª Ä«Å×°í¸®
+	// ì§€ì—­ ì¹´í…Œê³ ë¦¬
 	private String categoryNo;
-	// È¸¿ø¾ÆÀÌµğ
+	// íšŒì›ì•„ì´ë””
 	private String userId;
-	// È¸¿øºñ¹Ğ¹øÈ£
+	// íšŒì›ë¹„ë°€ë²ˆí˜¸
 	private String userPw;
-	// È¸¿ø´Ğ³×ÀÓ
+	// íšŒì›ë‹‰ë„¤ì„
 	private String userNickname;
-	// È¸¿ø»ı³â¿ùÀÏ
+	// íšŒì›ìƒë…„ì›”ì¼
 	private String userBirth;
-	// È¸¿ø ¼ºº°
+	// íšŒì› ì„±ë³„
 	private String userGender;
-	// È¸¿ø ÀÌ¸ŞÀÏ
+	// íšŒì› ì´ë©”ì¼
 	private String userEmail;
-	// È¸¿ø Åë½Å»ç
+	// íšŒì› í†µì‹ ì‚¬
 	private String userTelecom;
-	// È¸¿ø ÈŞ´ëÆù¹øÈ£
+	// íšŒì› íœ´ëŒ€í°ë²ˆí˜¸
 	private String userPhone;
-	// È¸¿ø ±ÇÇÑ
+	// íšŒì› ê¶Œí•œ
 	private String userLevel;
-	// Á÷¾÷
+	// ì§ì—…
 	private String userJob;
-	// °¡ÀÔÀÏÀÚ
+	// ê°€ì…ì¼ì
 	private String userJoinDate;
-	// Å»ÅğÀÏÀÚ
+	// íƒˆí‡´ì¼ì
 	private String userLeaveDate;
 
 	public String getUserNo() {

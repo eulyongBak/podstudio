@@ -6,27 +6,27 @@ import com.factory.podstudio.pay.model.Pay;
 import com.factory.podstudio.user.model.User;
 
 public class Studio {
-	// ½ºÆ©µğ¿À¹øÈ£
+	// ìŠ¤íŠœë””ì˜¤ë²ˆí˜¸
 	private String studioNo;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// °áÁ¦¹øÈ£
+	// ê²°ì œë²ˆí˜¸
 	private Pay pay;
-	// Ä«Å×°í¸®¹øÈ£ / Áö¿ª
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸ / ì§€ì—­
 	private Category category;
-	// ½ºÆ©µğ¿À¿¹¾à¹øÈ£
+	// ìŠ¤íŠœë””ì˜¤ì˜ˆì•½ë²ˆí˜¸
 	private StudioReservation studioreservation;
-	// ¹è³Ê¹øÈ£
+	// ë°°ë„ˆë²ˆí˜¸
 	private Banner banner;
-	// ½ºÆ©µğ¿À¸í
+	// ìŠ¤íŠœë””ì˜¤ëª…
 	private String studioName;
-	// ½ºÆ©µğ¿À ³»¿ë
+	// ìŠ¤íŠœë””ì˜¤ ë‚´ìš©
 	private String studioContent;
-	// ½ºÆ©µğ¿À ÀÌ¹ÌÁö
+	// ìŠ¤íŠœë””ì˜¤ ì´ë¯¸ì§€
 	private String studioImage;
-	// ÆíÁı °¡´É°¡ºÎ
+	// í¸ì§‘ ê°€ëŠ¥ê°€ë¶€
 	private String studioEdit;
-	// Æò°¡
+	// í‰ê°€
 	private int studioFeedback;
 
 	public String getStudioNo() {

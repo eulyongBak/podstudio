@@ -2,9 +2,9 @@ package com.factory.podstudio.notice.model;
 
 public class PageHelper {
 
-	// ÇØ´ç °Ô½Ã±ÛÀÇ Ã¹ÆäÀÌÁö ¼³Á¤
+	// í•´ë‹¹ ê²Œì‹œê¸€ì˜ ì²«í˜ì´ì§€ ì„¤ì •
 	private int startPage;
-	// °Ô½Ã±Û ÆäÀÌÁö¸¦ ÇÑ¹ø¿¡ ¸î°³¾¿ º¸¿©ÁÙÁö ¼³Á¤
+	// ê²Œì‹œê¸€ í˜ì´ì§€ë¥¼ í•œë²ˆì— ëª‡ê°œì”© ë³´ì—¬ì¤„ì§€ ì„¤ì •
 	private int linePerPage;
 
 	public PageHelper() {
@@ -12,9 +12,9 @@ public class PageHelper {
 	}
 
 	public PageHelper(int page, int linePerPage) {
-		// ÇÑÆäÀÌÁö¿¡ ¸î°³ °³½Ã±ÛÀ» ÁÙÁö ¼³Á¤
+		// í•œí˜ì´ì§€ì— ëª‡ê°œ ê°œì‹œê¸€ì„ ì¤„ì§€ ì„¤ì •
 		this.linePerPage = linePerPage;
-		// ¸î¹øÂ° °Ô½Ã±Û ºÎÅÍ º¸¿©ÁÙÁö Ã¹ ÆäÀÌÁö ¼³Á¤
+		// ëª‡ë²ˆì§¸ ê²Œì‹œê¸€ ë¶€í„° ë³´ì—¬ì¤„ì§€ ì²« í˜ì´ì§€ ì„¤ì •
 		this.startPage = (page - 1) * linePerPage;
 	}
 

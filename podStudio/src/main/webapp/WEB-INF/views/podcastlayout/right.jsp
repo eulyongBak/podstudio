@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <div class="container">
 	<ul class="nav nav-tabs">
@@ -10,10 +10,18 @@
 
 	<div class="tab-content">
 		<div id="audio" class="tab-pane fade in active">
-			<p>오디오 리스트 .</p>
+			<c:if test="${ episodeAudio }">
+				<c:forEach var="audio" items="${ episode.episodeAudio }">
+
+				</c:forEach>
+			</c:if>
 		</div>
 		<div id="video" class="tab-pane fade">
-			<p>비디오 리스트.</p>
+			<c:if test="${ episodeVideo }">
+				<c:forEach var="video" items="${ episode.episodeVideo }">
+
+				</c:forEach>
+			</c:if>
 		</div>
 	</div>
 </div>

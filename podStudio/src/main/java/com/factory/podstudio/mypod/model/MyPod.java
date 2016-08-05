@@ -6,15 +6,15 @@ import com.factory.podstudio.podcast.model.PodCast;
 import com.factory.podstudio.user.model.User;
 
 public class MyPod {
-	// ¸¶ÀÌÆÌ»§¹øÈ£
+	// ë§ˆì´íŒŸë¹µë²ˆí˜¸
 	private String MyPodNo;
-	// È¸¿ø¹øÈ£
+	// íšŒì›ë²ˆí˜¸
 	private User user;
-	// ÆÌÄ³½ºÆ®¹øÈ£
+	// íŒŸìºìŠ¤íŠ¸ë²ˆí˜¸
 	private PodCast podCast;
-	// ¿¡ÇÇ¼Òµå¹øÈ£
+	// ì—í”¼ì†Œë“œë²ˆí˜¸
 	private Episode episode;
-	// Ä«Å×°í¸®¹øÈ£ ????????????????????????
+	// ì¹´í…Œê³ ë¦¬ë²ˆí˜¸ ????????????????????????
 	private Category category;
 
 	public String getMyPodNo() {
