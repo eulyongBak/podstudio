@@ -26,6 +26,11 @@
 			$('#memberFormAndAction').attr("method", "GET");
 			$('#memberFormAndAction').submit();
 		});
+		$('#modifyBtn').click(function() {
+			$('#memberFormAndAction').attr("action", "/modifyUser");
+			$('#memberFormAndAction').attr("method", "GET");
+			$('#memberFormAndAction').submit();
+		});
 
 	});
 </script>
@@ -49,5 +54,6 @@
 		${sessionUser.userNickname}님 환영합니다.
 		<button id="logout">Logout</button>
 		<button id="myProfile">회원정보보기</button>
+		<button id="modifyBtn">회원정보수정</button>
 	</form>
 </c:if>

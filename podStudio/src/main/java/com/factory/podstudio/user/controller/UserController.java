@@ -26,7 +26,7 @@ public class UserController {
 		return "user/userInsertForm";
 	}
 
-	//회원가입 처리
+	// 회원가입 처리
 	@RequestMapping(value = "/signUp", method = RequestMethod.POST)
 	public String insert(User user) {
 		logger.info("{}", user.toString());
@@ -64,7 +64,7 @@ public class UserController {
 	@RequestMapping(value = "/userDetail", method = RequestMethod.GET)
 	public String userDetail(Model model, User user) {
 		User resultUser = userService.selectUserByUserNo(user);
-		logger.info("resultUser : {}" , resultUser);
+		logger.info("resultUser : {}", resultUser);
 		model.addAttribute("userId", resultUser.getUserId());
 		model.addAttribute("userNickname", resultUser.getUserNickname());
 		model.addAttribute("userBirth", resultUser.getUserBirth());
@@ -76,5 +76,29 @@ public class UserController {
 		model.addAttribute("userJob", resultUser.getUserJob());
 		return "user/userDetailForm";
 	}
-	// 회원 
+
+	// 회원 정보수정폼
+	@RequestMapping(value = "/modifyUser", method = RequestMethod.GET)
+	public String modifyUser() {
+		return "user/userUpdateForm";
+	}
+
+	// 회원정보 수정처리
+	@RequestMapping(value = "/modifyUser", method = RequestMethod.POST)
+	public String modifyUser(User user) {
+		logger.info("user :::::: {} :::::::", user);
+		// 생년월일 문자열 잘라서 데이터베이스에 넣기
+		String birth = user.getUserBirth(), year, month, day;
+		int x = birth.indexOf("년");
+		int y = birth.indexOf("월");
+		int z = birth.indexOf("일");
+		year = birth.substring(0, x);
+		month = birth.substring(x + 1, y);
+		day = birth.substring(y + 1, z);
+		birth = year + month + day;
+		user.setUserBirth(birth);
+		userService.modifyUserByUserNo(user);
+		return "redirect:/";
+	}
+
 }

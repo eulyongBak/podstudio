@@ -8,7 +8,7 @@ public interface IUserService {
 	User selectUserByUserNo(User user);
 	//int selectUserByUserNo(int userNo);
 	
-	int modifyUserByUserNo(int userNo);
+	int modifyUserByUserNo(User user);
 	
 	void deleteUserByUserNo();
 	

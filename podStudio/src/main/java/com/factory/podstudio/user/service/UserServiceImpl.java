@@ -18,10 +18,9 @@ public class UserServiceImpl implements IUserService {
 	}
 	
 	@Override
-	public int modifyUserByUserNo(int userNo) {
+	public int modifyUserByUserNo(User user) {
 		
-		return 0;
-		//return userDao.selectUserByIdAndPw(user);
+		return userDao.modifyUserByUserNo(user);
 	}
 	
 	@Override
