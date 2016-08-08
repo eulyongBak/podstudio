@@ -37,8 +37,8 @@ public class NoticeController {
 	//입력 처리
 	@RequestMapping(value = "/addNotice", method = RequestMethod.POST)
 	public String boardWrite(Notice notice) {
-		// notice 에 저장된 값을 보여준다.
 		noticeService.insertNotice(notice);
+		// notice 에 저장된 값을 보여준다.
 		System.out.println(notice);
 		return "redirect:/noticeList";
 	}

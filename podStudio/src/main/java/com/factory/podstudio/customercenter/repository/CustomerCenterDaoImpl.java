@@ -25,4 +25,9 @@ public class CustomerCenterDaoImpl implements ICustomerCenterDao {
 		return sqlSessionTemplateCustomerCenter.selectOne(NAME_SPACE+".selectTotalCount");
 	}
 
+	@Override
+	public int insertQuestion(Customercenter customercenter) {
+		return sqlSessionTemplateCustomerCenter.insert(NAME_SPACE+".insertQuestion", customercenter);
+	}
+
 }

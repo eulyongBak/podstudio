@@ -10,4 +10,6 @@ public interface ICustomerCenterDao {
 	List<Customercenter> selectquestionList(Map<String, Object> map);
 	
 	int selectTotalCount();
+	
+	int insertQuestion(Customercenter customercenter);
 }

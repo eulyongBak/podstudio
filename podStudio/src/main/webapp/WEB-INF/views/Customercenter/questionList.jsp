@@ -24,10 +24,10 @@ body {
 	<table>
 		<tr>
 			<th>문의 번호</th>
-			<th>유저 닉네임</th>
-			<th>문의 사항</th>
-			<th>문의 제목</th>	
-			<th>문의 시간</th>
+			<th>닉네임</th>
+			<th>문의사항</th>
+			<th>문의제목</th>	
+			<th>문의시간</th>
 		</tr>
 		<c:forEach var="list" items="${ questionList }">
 			<tr>

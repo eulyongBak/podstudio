@@ -28,5 +28,18 @@ public class CustommerCenterController {
 		model.addAttribute("lastPage", customerCenterservice.getLastPage());
 		return "Customercenter/questionList";
 	}	
+	//문의 화면
+	@RequestMapping(value="/addQuestionForm", method = RequestMethod.GET)
+	public String addQuestionForm(Model model){
+		return "Customercenter/questionInsertForm";
+	}
+	//문의 입력
+	@RequestMapping(value="/addQuestion", method = RequestMethod.POST)
+	public String addQuestion(Customercenter customercenter){
+		customerCenterservice.insertCustomerCenter(customercenter);
+		System.out.println(customercenter);
+		return "redirect:/";
+		
+	}
 
 }

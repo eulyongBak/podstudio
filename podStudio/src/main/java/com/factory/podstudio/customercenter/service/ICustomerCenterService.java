@@ -6,7 +6,7 @@ import com.factory.podstudio.customercenter.model.Customercenter;
 
 public interface ICustomerCenterService {
 	
-	void insertCustomerCenter();
+	int insertCustomerCenter(Customercenter customercenter);
 	
 	List<Customercenter> selectCustomerCenterByUserNo(int page);
 	

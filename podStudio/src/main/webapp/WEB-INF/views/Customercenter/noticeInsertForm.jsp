@@ -27,5 +27,4 @@
 	</div>
 </form>
 <div>
-<button id="back">뒤로가기</button>
 </div>

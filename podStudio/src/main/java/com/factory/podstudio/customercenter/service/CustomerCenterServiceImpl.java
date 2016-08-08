@@ -30,7 +30,8 @@ public class CustomerCenterServiceImpl implements ICustomerCenterService {
 		return (int) (Math.ceil((double) customerCenterDao.selectTotalCount() / LINE_PER_PAGE));
 	}
 	@Override
-	public void insertCustomerCenter() {
+	public int insertCustomerCenter(Customercenter customercenter) {
+		return customerCenterDao.insertQuestion(customercenter);
 	}
 
 	@Override
@@ -41,6 +42,7 @@ public class CustomerCenterServiceImpl implements ICustomerCenterService {
 	public void deleteCustomerCenterByCustomerCenterNo() {
 		
 	}
+	
 
 
 }
