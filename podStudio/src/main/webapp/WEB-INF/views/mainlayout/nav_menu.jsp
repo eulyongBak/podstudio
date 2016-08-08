@@ -7,6 +7,7 @@
 	<li role="presentation"><a href="#">홈</a></li>
 	<li role="presentation"><a href="/signUp">회원가입</a></li>
 	<li role="presentation"><a href="/insertCM">CM광고 추가</a></li>
+	<li role="presentation"><a href="/detailListCM?userNo=${ sessionUser.userNo }">내CM광고리스트</a></li>
 	<li role="presentation"><a href="/StudioList">STUDIO</a></li>
 	<li role="presentation"><a href="/noticeList">공지사항</a></li>
 	<li role="presentation"><a href="/podmain?podCastNo=podcast_001">팟캐스트 보기</a></li>

@@ -4,14 +4,16 @@ public class CM {
 
 	// CM광고번호
 	private String cmNo;
+	// 회원번호
+	private String userNo;
 	// 팟캐스트번호
-	private String podCast;
+	private String podcastNo;
 	// 스튜디오번호
-	private String studio;
+	private String studioNo;
 	// 단가번호
-	private String cost;
+	private String costNo;
 	// 결제번호
-	private String pay;
+	private String payNo;
 	// CM광고제품명
 	private String cmProduct;
 	// CM광고업체명
@@ -32,115 +34,123 @@ public class CM {
 	public String getCmNo() {
 		return cmNo;
 	}
-
+	
 	public void setCmNo(String cmNo) {
 		this.cmNo = cmNo;
 	}
-
-	public String getPodCast() {
-		return podCast;
+	
+	public String getUserNo() {
+		return userNo;
 	}
 
-	public void setPodCast(String podCast) {
-		this.podCast = podCast;
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
 	}
 
-	public String getStudio() {
-		return studio;
+	public String getPodcastNo() {
+		return podcastNo;
 	}
-
-
-	public void setStudio(String studio) {
-		this.studio = studio;
+	
+	public void setPodcastNo(String podcastNo) {
+		this.podcastNo = podcastNo;
 	}
-
-	public String getCost() {
-		return cost;
+	
+	public String getStudioNo() {
+		return studioNo;
 	}
-
-	public void setCost(String cost) {
-		this.cost = cost;
+	
+	public void setStudioNo(String studioNo) {
+		this.studioNo = studioNo;
 	}
-
-	public String getPay() {
-		return pay;
+	
+	public String getCostNo() {
+		return costNo;
 	}
-
-	public void setPay(String pay) {
-		this.pay = pay;
+	
+	public void setCostNo(String costNo) {
+		this.costNo = costNo;
 	}
-
+	
+	public String getPayNo() {
+		return payNo;
+	}
+	
+	public void setPayNo(String payNo) {
+		this.payNo = payNo;
+	}
+	
 	public String getCmProduct() {
 		return cmProduct;
 	}
-
+	
 	public void setCmProduct(String cmProduct) {
 		this.cmProduct = cmProduct;
 	}
-
+	
 	public String getCmCompany() {
 		return cmCompany;
 	}
-
-
+	
 	public void setCmCompany(String cmCompany) {
 		this.cmCompany = cmCompany;
 	}
-
+	
 	public String getCmContent() {
 		return cmContent;
 	}
-
+	
 	public void setCmContent(String cmContent) {
 		this.cmContent = cmContent;
 	}
-
+	
 	public int getCmCount() {
 		return cmCount;
 	}
-
+	
 	public void setCmCount(int cmCount) {
 		this.cmCount = cmCount;
 	}
-
+	
 	public String getCmDate() {
 		return cmDate;
 	}
-
+	
 	public void setCmDate(String cmDate) {
 		this.cmDate = cmDate;
 	}
-
+	
 	public String getCmServiceStart() {
 		return cmServiceStart;
 	}
-
+	
 	public void setCmServiceStart(String cmServiceStart) {
 		this.cmServiceStart = cmServiceStart;
 	}
-
+	
 	public String getCmServiceEnd() {
 		return cmServiceEnd;
 	}
-
+	
 	public void setCmServiceEnd(String cmServiceEnd) {
 		this.cmServiceEnd = cmServiceEnd;
 	}
-
+	
 	public String getCmStatus() {
 		return cmStatus;
 	}
-
+	
 	public void setCmStatus(String cmStatus) {
 		this.cmStatus = cmStatus;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "CM [cmNo=" + cmNo + ", podCast=" + podCast + ", cost=" + cost + ", cmProduct=" + cmProduct
-				+ ", cmCompany=" + cmCompany + ", cmContent=" + cmContent + ", cmCount=" + cmCount + ", cmDate="
-				+ cmDate + ", cmServiceStart=" + cmServiceStart + ", cmServiceEnd=" + cmServiceEnd + ", cmStatus="
-				+ cmStatus + "]";
+		return "CM [cmNo=" + cmNo + ", podcastNo=" + podcastNo + ", studioNo=" + studioNo + ", costNo=" + costNo
+				+ ", payNo=" + payNo + ", cmProduct=" + cmProduct + ", cmCompany=" + cmCompany + ", cmContent="
+				+ cmContent + ", cmCount=" + cmCount + ", cmDate=" + cmDate + ", cmServiceStart=" + cmServiceStart
+				+ ", cmServiceEnd=" + cmServiceEnd + ", cmStatus=" + cmStatus + "]";
 	}
-
-}
+	
+	
+	
+	}

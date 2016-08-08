@@ -1,23 +1,29 @@
 package com.factory.podstudio.advertising.cm.service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.factory.podstudio.advertising.cm.model.CM;
+import com.factory.podstudio.advertising.cm.repository.CMDaoImpl;
 
 @Service
 public class CMServiceImpl implements ICMService {
 	
+	@Autowired
+	private CMDaoImpl cmDao;
+	
+	//CM광고 등록
 	@Override
 	public int insertCM(CM cm) {
-		
-		return 0;
-		
+		return cmDao.insertCM(cm);
 	}
 	
+	//회원정보(광고주)에 따른 CM광고 정보 리스트 보기
 	@Override
-	public void selectCMByCMNo() {
-		// TODO Auto-generated method stub
-		
+	public List<CM> selectCMByUserNo(CM cm) {
+		return cmDao.selectCMByUserNo(cm);
 	}
 	
 	@Override
@@ -25,17 +31,13 @@ public class CMServiceImpl implements ICMService {
 		// TODO Auto-generated method stub
 		
 	}
-	
 	@Override
 	public void deleteCMByCMNo() {
 		// TODO Auto-generated method stub
 		
 	}
-	
 	@Override
-	public void selectCMList(CM cm) {
-		// TODO Auto-generated method stub
-		
+	public CM selectCMList(CM cm) {
+		return null;//cmDao.selectCMList(cm);
 	}
-
 }

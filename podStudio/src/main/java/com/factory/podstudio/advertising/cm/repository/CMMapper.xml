@@ -2,9 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.factory.podstudio.advertising.banner.repository.CMMapper">
 	<insert id="insertCM" parameterType="com.factory.podstudio.advertising.cm.model.CM">
-		INSERT INTO CM
+		INSERT INTO cm
 			(cm_no
 			, podcast_no
+			, user_no
 			, studio_no
 			, cost_no
 			, pay_no
@@ -18,6 +19,7 @@
 			, cm_status)
 		VALUES
 			(#{cmNo}
+			, #{userNo}
 			, #{podcastNo}
 			, #{studioNo}
 			, #{costNo}
@@ -27,8 +29,22 @@
 			, #{cmContent}
 			, #{cmCount}
 			, SYSDATE()
-			, SYSDATE()	<!-- #{cmServiceStart} -->
-			, SYSDATE()	<!-- #{cmServiceEnd} -->
+			, #{cmServiceStart}
+			, #{cmServiceEnd}
 			, #{cmStatus});
 	</insert>
+	<select id="selectUserByUserNo" parameterType="com.factory.podstudio.advertising.cm.model.CM"
+									resultType="com.factory.podstudio.advertising.cm.model.CM">
+		SELECT
+			cm_product AS cmProduct
+			, cm_company AS cmCompany
+			, cm_content AS cmContent
+			, cm_count AS cmCount
+			, cm_date AS cmDate
+			, cm_servicestart AS cmServiceStrart 
+			, cm_serviceend AS cmServiceEnd
+			, cm_status AS cmStatus
+		FROM cm
+		WHERE user_no = #{cm.userNo}
+	</select>
 </mapper>

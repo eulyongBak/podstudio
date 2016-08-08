@@ -11,5 +11,7 @@ import com.factory.podstudio.advertising.cm.model.CM;
 public interface ICMDao {
 	int insertCM(CM cm);
 	
+	List<CM> selectCMByUserNo(CM cm);
+	
 	List<CM> selectCMList(Map<String, Object> map);
 }

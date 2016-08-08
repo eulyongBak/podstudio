@@ -12,22 +12,37 @@ import com.factory.podstudio.advertising.cm.model.CM;
 @Repository
 public class CMDaoImpl implements ICMDao {
 	
-private static final String NAME_SPACE_CM ="com.factory.podstudio.advertising.repository.CMMapper";
+private static final String NAME_SPACE_CM ="com.factory.podstudio.advertising.banner.repository.CMMapper";
 	
 	@Autowired 
 	private SqlSessionTemplate sqlSessionTemplateCM;
 	
-	
+	//CM광고등록
 	@Override
 	public int insertCM(CM cm) {
-		
 		return sqlSessionTemplateCM.insert(NAME_SPACE_CM+".insertCM", cm);
 	}
 	
+	//회원번호에 따른 CM광고정보 리스트보기
+	@Override
+	public List<CM> selectCMByUserNo(CM cm) {
+		return sqlSessionTemplateCM.selectList(NAME_SPACE_CM +".selectUserByUserNo", cm);
+				
+	}
+	
+	
+	/*
+	 * @Override
+		public List<BoardArticle> selectArticle(Map<String, Object> map) {
+			return sqlSessionTemplate.selectList(NAME_SPACE + ".selectArticle", map);
+		}
+	 */	
 	@Override
 	public List<CM> selectCMList(Map<String, Object> map) {
 		return sqlSessionTemplateCM.selectList(NAME_SPACE_CM+".selectNotice", map);
 	}
+
+	
 
 
 }
