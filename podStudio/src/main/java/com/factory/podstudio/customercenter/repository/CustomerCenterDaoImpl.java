@@ -30,4 +30,9 @@ public class CustomerCenterDaoImpl implements ICustomerCenterDao {
 		return sqlSessionTemplateCustomerCenter.insert(NAME_SPACE+".insertQuestion", customercenter);
 	}
 
+	@Override
+	public Customercenter selectOneCustomercenter(Customercenter customercenter) {
+		return sqlSessionTemplateCustomerCenter.selectOne(NAME_SPACE+".selectOneCustomercenter", customercenter);
+	}
+
 }

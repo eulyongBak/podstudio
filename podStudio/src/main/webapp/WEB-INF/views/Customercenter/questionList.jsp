@@ -34,7 +34,7 @@ body {
 				<td>${ list.customercenterNo }</td>
 				<td>${ list.userNickname }</td>
 				<td>${ list.categorySub }</td>
-				<td><a href="/customercenterContent?noticeNo=${list.customercenterNo}">${ list.customercenterTitle }</a></td>
+				<td><a href="/questionDetail?customercenterNo=${list.customercenterNo}">${ list.customercenterTitle }</a></td>
 				<td>${ list.customercenterDate}</td>
 
 				<td></td>

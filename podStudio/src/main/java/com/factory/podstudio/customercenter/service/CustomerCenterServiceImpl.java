@@ -33,16 +33,12 @@ public class CustomerCenterServiceImpl implements ICustomerCenterService {
 	public int insertCustomerCenter(Customercenter customercenter) {
 		return customerCenterDao.insertQuestion(customercenter);
 	}
+	@Override
+	public Customercenter selectOneCustomercenter(Customercenter customercenter) {
+		return customerCenterDao.selectOneCustomercenter(customercenter);
+	}
 
-	@Override
-	public void modifyCustomerCenterByCustomerCenterNo() {
-		
-	}
-	@Override
-	public void deleteCustomerCenterByCustomerCenterNo() {
-		
-	}
-	
+
 
 
 }

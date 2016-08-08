@@ -21,12 +21,14 @@
 		from customercenter
 
 		inner join user
-		inner join category
+		inner
+		join category
 		on customercenter.user_no = user.user_no
 		and
 		customercenter.category_no = category.category_no
 
-		ORDER BY customercenter_date DESC
+		ORDER BY
+		customercenter_date DESC
 		LIMIT #{pageHelper.startPage},
 		#{pageHelper.linePerPage}
 
@@ -58,4 +60,13 @@
 		SYSDATE()
 		)
 	</insert>
+
+	<select id="selectOneCustomercenter" parameterType="com.factory.podstudio.customercenter.model.Customercenter"
+	resultType="com.factory.podstudio.customercenter.model.Customercenter">
+		SELECT
+		customercenter_title AS customercenterTitle,
+		customercenter_content AS customercenterContent		
+		from customercenter 
+		where customercenter_no = '${customercenterNo}'
+	</select>
 </mapper>

@@ -12,4 +12,6 @@ public interface ICustomerCenterDao {
 	int selectTotalCount();
 	
 	int insertQuestion(Customercenter customercenter);
+	
+	Customercenter selectOneCustomercenter(Customercenter customercenter);
 }

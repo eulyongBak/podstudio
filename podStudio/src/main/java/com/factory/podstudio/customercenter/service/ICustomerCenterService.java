@@ -12,8 +12,6 @@ public interface ICustomerCenterService {
 	
 	int getLastPage();
 	
-	void modifyCustomerCenterByCustomerCenterNo();
-	
-	void deleteCustomerCenterByCustomerCenterNo();
+	Customercenter selectOneCustomercenter(Customercenter customercenter);
 
 }

@@ -15,31 +15,40 @@ import com.factory.podstudio.customercenter.service.CustomerCenterServiceImpl;
 @Controller
 public class CustommerCenterController {
 
-	@Autowired 
+	@Autowired
 	private CustomerCenterServiceImpl customerCenterservice;
 
-	@RequestMapping(value="/questionList", method = RequestMethod.GET)
-	public String questionList(Model model, @RequestParam(value = "page", defaultValue = "1") int page){
+	@RequestMapping(value = "/questionList", method = RequestMethod.GET)
+	public String questionList(Model model, @RequestParam(value = "page", defaultValue = "1") int page) {
 		List<Customercenter> questionList = customerCenterservice.selectCustomerCenterByUserNo(page);
 		model.addAttribute("questionList", questionList);
 		// 값이 제대로 들어오는지
-		System.out.println("questionList :" +questionList);
+		System.out.println("questionList :" + questionList);
 		model.addAttribute("page", page);
 		model.addAttribute("lastPage", customerCenterservice.getLastPage());
 		return "Customercenter/questionList";
-	}	
-	//문의 화면
-	@RequestMapping(value="/addQuestionForm", method = RequestMethod.GET)
-	public String addQuestionForm(Model model){
+	}
+
+	// 문의 화면
+	@RequestMapping(value = "/addQuestionForm", method = RequestMethod.GET)
+	public String addQuestionForm(Model model) {
 		return "Customercenter/questionInsertForm";
 	}
-	//문의 입력
+
+	// 문의 입력
 	@RequestMapping(value="/addQuestion", method = RequestMethod.POST)
 	public String addQuestion(Customercenter customercenter){
 		customerCenterservice.insertCustomerCenter(customercenter);
 		System.out.println(customercenter);
 		return "redirect:/";
-		
+	}	
+	//상세보기
+	@RequestMapping(value="/questionDetail", method =RequestMethod.GET)
+	public String questionDetail(Model model, Customercenter customercenter){
+		Customercenter RScustomercenter = customerCenterservice.selectOneCustomercenter(customercenter);
+		model.addAttribute("questionDetail", RScustomercenter);
+		System.out.println(RScustomercenter);
+		return "Customercenter/questionDetail";
 	}
 
 }
