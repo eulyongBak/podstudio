@@ -15,35 +15,35 @@
 	width: 100%;
 }
 
-#wrap .row #header {
+#wrap .container .row #header {
 	height: 100px;
 }
 
-#wrap .row #nav_menu {
-	height: 100px;
-}
-
-#wrap .row #banner {
-	height: 140px;
-}
-
-#wrap .row #login {
-	height: 140px;
-}
-
-#wrap .row #left {
-	height: 240px;
-}
-
-#wrap .row #main {
+#wrap .container .row #nav_menu {
 	height: auto;
 }
 
-#wrap .row #right {
+#wrap .container .row #banner {
+	height: 140px;
+}
+
+#wrap .container .row #login {
+	height: 140px;
+}
+
+#wrap .container .row #left {
 	height: 240px;
 }
 
-#wrap .row #footer {
+#wrap .container .row #main {
+	height: auto;
+}
+
+#wrap .container .row #right {
+	height: 240px;
+}
+
+#wrap .container .row #footer {
 	height: 80px;
 }
 

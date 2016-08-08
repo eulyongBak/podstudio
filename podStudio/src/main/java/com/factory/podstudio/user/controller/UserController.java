@@ -20,11 +20,13 @@ public class UserController {
 	@Autowired
 	private UserServiceImpl userService;
 
+	// 회원가입
 	@RequestMapping(value = "/signUp", method = RequestMethod.GET)
 	public String insert() {
 		return "user/userInsertForm";
 	}
 
+	//회원가입 처리
 	@RequestMapping(value = "/signUp", method = RequestMethod.POST)
 	public String insert(User user) {
 		logger.info("{}", user.toString());
@@ -32,6 +34,7 @@ public class UserController {
 		return "redirect:/";
 	}
 
+	// 로그인
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(HttpSession session, User user) {
 		User sessionUser = userService.getUserByIdAndPw(user);
@@ -50,12 +53,14 @@ public class UserController {
 		}
 	}
 
+	// 로그아웃
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "redirect:/";
 	}
 
+	// 개인 회원정보보기
 	@RequestMapping(value = "/userDetail", method = RequestMethod.GET)
 	public String userDetail(Model model, User user) {
 		User resultUser = userService.selectUserByUserNo(user);
@@ -71,5 +76,5 @@ public class UserController {
 		model.addAttribute("userJob", resultUser.getUserJob());
 		return "user/userDetailForm";
 	}
-
+	// 회원 
 }
