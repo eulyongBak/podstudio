@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.factory.podstudio.studio.repository.StudioMapper">
+	<select id="selectStudio" parameterType="java.util.Map"
+		resultType="com.factory.podstudio.studio.model.Studio">
+		select
+			studio.studio_no AS studioNo,
+			studio.studio_name AS studioName,
+			studio.studio_content AS studioContent,
+			studio.studio_image AS studioImage
+		from studio
+		<where>
+			<if test="word != null">
+				studio_name LIKE CONCAT ('%',#{word},'%') OR
+				studio_content LIKE CONCAT ('%',#{word},'%')
+			</if>
+		</where>
+		ORDER BY studio_no DESC
+		LIMIT #{pageHelper.startPage},
+		#{pageHelper.linePerPage}
+		
+		
+	</select>
+	
+	<select id="selectTotalCount" resultType="Integer">
+		SELECT
+		COUNT(*)
+		FROM
+		studio
+	</select>
+	
+	<select id="selectOneStudio" parameterType="com.factory.podstudio.studio.model.Studio"
+		resultType="com.factory.podstudio.studio.model.Studio">
+		select
+		studio_no AS studioNo,
+		studio_name AS studioName,
+		studio_content AS studioContent,
+		studio_image AS studioImage,
+		from studio where studio_no = '${studioNo}'
+	</select>
+	
 	<insert id="insertStudio" parameterType="com.factory.podstudio.studio.model.Studio">
 		INSERT INTO studio
 			(studio_no
@@ -23,5 +61,19 @@
 			,#{studio_content}
 			,#{studio_image})	
 	</insert>
+	
+	<update id="modifyStudio" parameterType="com.factory.podstudio.studio.model.Studio">
+		UPDATE studio
+		SET
+		studio_name='${studioName}',
+		studio_content='${studioContent}',
+		studio_image='${studioImage}'
+		WHERE studio_no='${studioNo}'
+	</update>
+	
+	<delete id="deleteStudio" parameterType="com.factory.podstudio.studio.model.Studio">
+		DELETE FROM studio 
+		WHERE studio_no='${studioNo}'
+	</delete>
 
 </mapper>
