@@ -2,9 +2,9 @@
 	pageEncoding="UTF-8"%>
 
 <form id="signUpForm">
-	<div>
-		<label>회원번호 : </label> <input type="text" name="userNo" />
-	</div>
+<!-- 	<div> -->
+<!-- 		<label>회원번호 : </label> <input type="text" name="userNo" /> -->
+<!-- 	</div> -->
 	<div>
 		<label>지역 : </label>
 		<!-- <input type="text" name="categoryNo" /> -->

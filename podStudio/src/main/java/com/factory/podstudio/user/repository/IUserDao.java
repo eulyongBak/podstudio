@@ -8,6 +8,8 @@ import com.factory.podstudio.user.model.User;
 public interface IUserDao {
 	int insertUser(User user);
 
+	User selectUserNo(User user);
+	
 	User selectUserByIdAndPw(User user);
 
 	User selectUserByUserNo(User user);

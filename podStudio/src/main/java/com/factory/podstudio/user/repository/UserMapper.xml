@@ -17,26 +17,21 @@
 		user_level
 		, user_job
 		, user_joindate
-		<!-- 회원가입 입력 처리 테스트용 입력 변수 user_leavedate , user_leavedate -->
 		)
-		VALUES (#{userNo}	<!-- ${userNo} -->
+		SELECT CONCAT ('user_',LPAD(MAX(RIGHT(user_no,3)) +1,3,0))
 		, #{categoryNo}
 		, #{userId}
 		, #{userPw}
 		, #{userNickname}
-		, <!-- 회원가입 입력 처리 
-			테스트용 SYSDATE() -->
-		#{userBirth}
+		, #{userBirth}
 		, #{userGender}
 		, #{userEmail}
 		, #{userTelecom}
-		,
-		#{userPhone}
+		, #{userPhone}
 		, #{userLevel}
 		, #{userJob}
 		, SYSDATE()
-		<!-- 회원가입 입력 처리 테스트용 SYSDATE() , SYSDATE() -->
-		)
+		FROM user WHERE 1
 	</insert>
 
 	<select id="selectUserByUserNo" parameterType="com.factory.podstudio.user.model.User"
@@ -111,5 +106,6 @@
 		WHERE
 		user_no = #{userNo}
 	</update>
+
 
 </mapper>

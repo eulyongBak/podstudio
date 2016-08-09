@@ -43,4 +43,10 @@ public class UserDaoImpl implements IUserDao {
 		return sqlSessionTemplateUser.update(NAME_SPACE_USER + ".deleteUserByUserId", user);
 	}
 
+
+	@Override
+	public User selectUserNo(User user) {
+		return sqlSessionTemplateUser.selectOne(NAME_SPACE_USER+".selectUserNo", user);
+	}
+
 }

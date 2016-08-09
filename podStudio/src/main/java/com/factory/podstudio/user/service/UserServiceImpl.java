@@ -2,6 +2,7 @@ package com.factory.podstudio.user.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.factory.podstudio.user.model.User;
 import com.factory.podstudio.user.repository.UserDaoImpl;
@@ -27,6 +28,7 @@ public class UserServiceImpl implements IUserService {
 	public int deleteUserByUserNo(User user) {
 		return userDao.deleteUserByUserNo(user);
 	}
+	
 	
 	@Override
 	public int insertUser(User user) {
