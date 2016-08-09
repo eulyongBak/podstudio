@@ -5,9 +5,6 @@
 
 <form action="/addQuestion" method="post" accept-charset="utf-8">
 	<div>
-		<label>±Û ¹øÈ£ : </label> <input type="text" name="customercenterNo" />
-	</div>
-	<div>
 		<input readonly="readonly" type="hidden" value="${sessionUser.userNo }" name="userNo" />
 	</div>
 	<div>

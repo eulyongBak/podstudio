@@ -8,11 +8,6 @@
 	<div>
 		<input readonly="readonly" type="hidden" value="${sessionUser.userNo }" name="userNo" />
 	</div>
-	
-	<div>
-		<label>글 번호 : </label> <input type="text" name="noticeNo" />
-	</div>
-
 	<div>
 		<label>글제목 : </label> <input type="text" name="noticeTitle" />
 	</div>

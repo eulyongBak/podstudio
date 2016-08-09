@@ -50,15 +50,15 @@
 		customercenter_title,
 		customercenter_content,
 		customercenter_date)
-
-		VALUES (
-		#{customercenterNo},
+		
+		SELECT CONCAT('customercenter_', LPAD(MAX(RIGHT(customercenter_no, 3)) + 1, 3, 0)),
 		#{userNo},
 		#{categoryNo},
 		#{customercenterTitle},
 		#{customercenterContent},
 		SYSDATE()
-		)
+		From customercenter where 1
+		
 	</insert>
 
 	<select id="selectOneCustomercenter" parameterType="com.factory.podstudio.customercenter.model.Customercenter"
