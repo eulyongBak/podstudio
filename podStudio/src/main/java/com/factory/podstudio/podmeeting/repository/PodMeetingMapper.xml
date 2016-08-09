@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.factory.podstudio.podmeeting.repository.PodMeetingMapper">
+<insert id="insertPodMeeting" parameterType="com.factory.podstudio.podmeeting.model.PodMeeting">
+	INSERT INTO podmeeting
+		(podmeeting_no
+		, podcast_no
+		, episode_no
+		, user_no
+		, category_no
+		, podmeeting_title
+		, podmeeting_content
+		, podmeeting_pw
+		, podmeeting_date)
+	VALUES
+		(#{podMeetingNo}
+		, #{podcastNo}
+		, #{episodeNo}
+		, #{userNo}
+		, #{categoryNo}
+		, #{podMeetingTitle}
+		, #{podMeetingContent}
+		, #{podMeetingPw}
+		, SYSDATE())
+</insert>
 
+<!-- <select id="selectListText" parameterType="cafe.isa.lew.model.Board" resultType="cafe.isa.lew.model.Board">
+	SELECT
+		textno
+		, title
+		, writer
+		, date
+	FROM ew08 
+</select>
+
+<select id="selectOneText" parameterType="cafe.isa.lew.model.Board" resultType="cafe.isa.lew.model.Board">
+	SELECT
+		textno
+		, title
+		, content
+		, writer
+		, date
+		, pw
+	FROM ew08
+	WHERE textno= #{textNo}
+</select>
+
+<delete id="deleteOneText" parameterType="cafe.isa.lew.model.Board" >
+	DELETE FROM ew08 WHERE textno=#{textNo}
+</delete>
+	
+<update id="updateOneText" parameterType="cafe.isa.lew.model.Board">
+	UPDATE ew08
+	SET
+		title=#{title}
+		, content=#{content}
+		, writer=#{writer}
+		, date=NOW(date)
+		, pw=#{pw}
+	WHERE textno=#{textNo}
+</update>	 -->
 </mapper>

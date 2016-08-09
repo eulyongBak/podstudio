@@ -9,13 +9,17 @@ public class PodMeeting {
 	// 단팟빵 번호
 	private String podMeetingNo;
 	// 팟캐스트번호
-	private PodCast podCast;
+	//private PodCast podCast;
+	private String podcastNo;
 	// 에피소드번호
-	private Episode episode;
+	//private Episode episode;
+	private String episodeNo;
 	// 회원번호
-	private User user;
+	//private User user;
+	private String userNo;
 	// 카테고리번호 / 지역
-	private Category category;
+	//private Category category;
+	private String categoryNo;
 	// 단팟빵 제목
 	private String podMeetingTitle;
 	// 단팟빵 내용
@@ -32,8 +36,8 @@ public class PodMeeting {
 	public void setPodMeetingNo(String podMeetingNo) {
 		this.podMeetingNo = podMeetingNo;
 	}
-
-	public PodCast getPodCast() {
+	
+	/*public PodCast getPodCast() {
 		return podCast;
 	}
 
@@ -63,6 +67,38 @@ public class PodMeeting {
 
 	public void setCategory(Category category) {
 		this.category = category;
+	}*/
+
+	public String getPodcastNo() {
+		return podcastNo;
+	}
+
+	public void setPodcastNo(String podcastNo) {
+		this.podcastNo = podcastNo;
+	}
+
+	public String getEpisodeNo() {
+		return episodeNo;
+	}
+
+	public void setEpisodeNo(String episodeNo) {
+		this.episodeNo = episodeNo;
+	}
+
+	public String getUserNo() {
+		return userNo;
+	}
+
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
+	}
+
+	public String getCategoryNo() {
+		return categoryNo;
+	}
+
+	public void setCategoryNo(String categoryNo) {
+		this.categoryNo = categoryNo;
 	}
 
 	public String getPodMeetingTitle() {
@@ -99,9 +135,12 @@ public class PodMeeting {
 
 	@Override
 	public String toString() {
-		return "PodMeeting [podMeetingNo=" + podMeetingNo + ", podCast=" + podCast + ", episode=" + episode + ", user="
-				+ user + ", category=" + category + ", podMeetingTitle=" + podMeetingTitle + ", podMeetingContent="
-				+ podMeetingContent + ", podMeetingPw=" + podMeetingPw + ", podMeetingDate=" + podMeetingDate + "]";
+		return "PodMeeting [podMeetingNo=" + podMeetingNo + ", podcastNo=" + podcastNo + ", episodeNo=" + episodeNo
+				+ ", userNo=" + userNo + ", categoryNo=" + categoryNo + ", podMeetingTitle=" + podMeetingTitle
+				+ ", podMeetingContent=" + podMeetingContent + ", podMeetingPw=" + podMeetingPw + ", podMeetingDate="
+				+ podMeetingDate + "]";
 	}
+
+	
 
 }

@@ -7,20 +7,35 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>글쓰기폼</h1>
-	<form action="/insertText" method="post" accept-charset="UTF-8">
+	<h1>단팟 게시판</h1>
+	<form action="/insertPodMeeting" method="post" accept-charset="UTF-8">
 		<table>
 			<tr>
-				<td>제목:<input type="text" name="title" /></td>
+				<td>단팟빵번호:<input type="text" name="podMeetingNo"/></td>
+			</tr>
+			<tr>	
+				<td>팟케스트번호:<input type="text" name="podcastNo"/></td>
 			</tr>
 			<tr>
-				<td><textarea rows="40" cols="100" name="content"></textarea></td>
+				<td>에피소드번호:<input type="text" name="episodeNo"/></td>
 			</tr>
 			<tr>
-				<td>글쓴이<input type="text" name="writer" /> 비밀번호: <input
-					type="password" name="pw" />
-				</td>
+				<td>회원번호:<input type="text" name="userNo"/></td>
 			</tr>
+			<tr>	
+				<td>카테고리번호:<input type="text" name="categoryNo"/></td>
+				
+			</tr>
+			<tr>
+				<td>제목:<input type="text" name="podMeetingTitle" /></td>
+			</tr>
+			<tr>
+				<td><textarea rows="20" cols="50" name="podMeetingContent"></textarea></td>
+			</tr>
+			<tr>
+				<td>비밀번호: <input type="password" name="podMeetingPw"/></td>
+			</tr>
+			
 		</table>
 
 		<div>
