@@ -10,7 +10,7 @@ public interface IUserService {
 	
 	int modifyUserByUserNo(User user);
 	
-	void deleteUserByUserNo();
+	int deleteUserByUserNo(User user);
 	
 	User getUserByIdAndPw(User user);
 

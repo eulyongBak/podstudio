@@ -13,4 +13,6 @@ public interface IUserDao {
 	User selectUserByUserNo(User user);
 
 	int modifyUserByUserNo(User user);
+	
+	int deleteUserByUserNo(User user);
 }

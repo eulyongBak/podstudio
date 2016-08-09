@@ -31,6 +31,11 @@
 			$('#memberFormAndAction').attr("method", "GET");
 			$('#memberFormAndAction').submit();
 		});
+		$('#deleteUserBtn').click(function() {
+			$('#memberFormAndAction').attr("action", "/deleteUser");
+			$('#memberFormAndAction').attr("method", "POST");
+			$('#memberFormAndAction').submit();
+		});
 
 	});
 </script>
@@ -55,5 +60,6 @@
 		<button id="logout">Logout</button>
 		<button id="myProfile">회원정보보기</button>
 		<button id="modifyBtn">회원정보수정</button>
+		<button id="deleteUserBtn">회원탈퇴</button>
 	</form>
 </c:if>

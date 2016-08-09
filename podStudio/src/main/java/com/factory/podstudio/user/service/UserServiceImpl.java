@@ -24,7 +24,8 @@ public class UserServiceImpl implements IUserService {
 	}
 	
 	@Override
-	public void deleteUserByUserNo() {
+	public int deleteUserByUserNo(User user) {
+		return userDao.deleteUserByUserNo(user);
 	}
 	
 	@Override

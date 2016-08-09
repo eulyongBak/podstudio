@@ -38,12 +38,7 @@ public class UserController {
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(HttpSession session, User user) {
 		User sessionUser = userService.getUserByIdAndPw(user);
-		logger.info("sessionUser : {}", sessionUser);
-		if (sessionUser == null) {
-			logger.info("sessionUser : {}", sessionUser);
-			return "redirect:/";
-			// 로그인 폼으로 포워딩
-		} else {
+		if (sessionUser.getUserLeaveDate() == null) {
 			// model.addAttribute("sessionUser", sessionUser);
 			session.setAttribute("sessionUser", sessionUser);
 			// 모델2하고는 가장 비슷한 방법이긴 하나 좋지 않은 방법이다
@@ -51,6 +46,8 @@ public class UserController {
 			logger.info("sessionUser : {}", sessionUser);
 			return "redirect:/";
 		}
+		return "redirect:/";
+
 	}
 
 	// 로그아웃
@@ -101,4 +98,12 @@ public class UserController {
 		return "redirect:/";
 	}
 
+	// 회원정보 삭제 처리 탈퇴시간을 기록하기 위해서 update문을 사용한다.
+	@RequestMapping(value = "/deleteUser", method = RequestMethod.POST)
+	public String deleteUser(HttpSession session ,User user) {
+		logger.info("user ::::::::{}", user);
+		userService.deleteUserByUserNo(user);
+		session.invalidate();
+		return "redirect:/";
+	}
 }
