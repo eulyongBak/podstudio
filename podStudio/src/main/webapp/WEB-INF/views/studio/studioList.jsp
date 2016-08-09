@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
 <body>
-	<form action="/studioList" method="get" accept-charset="UTF-8">
-		<label>검색어:</label><input type="text" name="word"/>
-		<button>검색</button>
-	</form>
+	
 	<table>
 	<tr>
 		<th>studioNo</th>
@@ -22,6 +21,7 @@
 			<td>${list.studioImage }</td>
 		</tr>
 	</c:forEach>
+	</table>
 	
 	<div>
 		<c:if test="${ page > 1 }">
@@ -38,6 +38,16 @@
 		</c:if>
 	</div>
 	
+	<form action="/studioList" method="get" accept-charset="UTF-8">
+		<label>검색어:</label><input type="text" name="word"/>
+		<button>검색</button>
+	</form>
 	
-	</table>
+	<br/>
+	
+	<div>
+	<button><a href="/insertStudio" >스튜디오추가</a></button>
+	</div>
+	
+	
 </body>
