@@ -11,7 +11,8 @@ import com.factory.podstudio.studio.model.Studio;
 
 @Repository
 public class StudioDaoImpl implements IStudioDao {
-	private final String NAME_SPACE ="com.factory.podstudio.studio.repository.StudioMapper";
+	
+	private static final String NAME_SPACE ="com.factory.podstudio.studio.repository.StudioMapper";
 	
 	@Autowired
 	private SqlSessionTemplate sqlSessionTemplateStudio;
@@ -22,7 +23,7 @@ public class StudioDaoImpl implements IStudioDao {
 	}
 	
 	@Override
-	public int selectTotalCount(Studio studio) {
+	public int selectTotalCount() {
 		return sqlSessionTemplateStudio.selectOne(NAME_SPACE+".selectTotalCount");
 	}
 	
@@ -45,13 +46,6 @@ public class StudioDaoImpl implements IStudioDao {
 	public int deleteStudio(Studio studio) {
 		return sqlSessionTemplateStudio.delete(NAME_SPACE+".deleteStudio", studio);
 	}
-
-	@Override
-	public List<Studio> selectStudioByStudioNo(Studio studio) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 
 
 

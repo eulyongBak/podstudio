@@ -2,6 +2,14 @@
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
+	<definition name="projectLayout" template="/WEB-INF/views/projectLayout.jsp">
+		<put-attribute name="title" value="프로젝트소개페이지"/>
+		<put-attribute name="header" value="/WEB-INF/views/projectLayout/header.jsp"/>
+		<put-attribute name="body" value=""/>
+	</definition>
+	<definition name="project/*" extends="projectLayout">
+		<put-attribute name="body" value="/WEB-INF/views/projectLayout/{1}.jsp"/>
+	</definition>
 	<definition name="mainlayout" template="/WEB-INF/views/layout.jsp">
 		<put-attribute name="title" value="메인페이지" />
 		<put-attribute name="header"

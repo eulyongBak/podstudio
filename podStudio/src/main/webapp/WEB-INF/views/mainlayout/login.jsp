@@ -10,12 +10,6 @@
 			$('#loginAction').submit();
 		});
 
-		$('#signUp').click(function() {
-			$('#loginAction').attr("action", "/signUp");
-			$('#loginAction').attr("method", "GET");
-			$('#loginAction').submit();
-		});
-
 		$('#logout').click(function() {
 			$('#memberFormAndAction').attr("action", "/logout");
 			$('#memberFormAndAction').attr("method", "POST");
@@ -49,7 +43,7 @@
 		</div>
 		<div>
 			<button id="signIn">Sign In</button>
-			<button id="signUp">Sign Up</button>
+			<button><a href="/signUp">Sign Up</a></button>
 		</div>
 	</form>
 </c:if>

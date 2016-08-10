@@ -34,27 +34,26 @@
 
 	<insert id="insertNotice" parameterType="com.factory.podstudio.notice.model.Notice">
 		INSERT INTO notice
-		(notice_no
-		, user_no
-		, notice_title
-		, notice_content
-		, notice_date)
-		SELECT CONCAT('notice_', LPAD(MAX(RIGHT(notice_no, 3)) + 1, 3, 0))
-		,#{userNo}
-		,#{noticeTitle}
-		,#{noticeContent}
-		,SYSDATE()
+		(notice_no,
+		user_no,
+		notice_title,
+		notice_content,
+		notice_date)
+		
+		SELECT LPAD(MAX(RIGHT(notice_no, 3)) + 1, 10 ,'notice_00'),
+		#{userNo},
+		#{noticeTitle},
+		#{noticeContent},
+		SYSDATE()
+		
 		FROM notice
-		WHERE 1
-
 	</insert>
 
 	<select id="selectOneNotice" parameterType="com.factory.podstudio.notice.model.Notice"
 		resultType="com.factory.podstudio.notice.model.Notice">
 		select
 		notice_title AS noticeTitle,
-		notice_content AS
-		noticeContent
+		notice_content AS noticeContent
 		from notice where notice_no = '${noticeNo}'
 	</select>
 
@@ -63,13 +62,12 @@
 		SET
 		notice_title='${noticeTitle}',
 		notice_content='${noticeContent}'
-		WHERE
-		notice_no='${noticeNo}'
+		WHERE notice_no='${noticeNo}'
 	</update>
-
+	
 	<delete id="deleteNotice" parameterType="com.factory.podstudio.notice.model.Notice">
-		DELETE FROM notice
-		WHERE
-		notice_no='${noticeNo}'
+		DELETE FROM notice 
+		WHERE notice_no='${noticeNo}'
 	</delete>
+	
 </mapper>

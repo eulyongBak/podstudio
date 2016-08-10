@@ -47,13 +47,11 @@ public class StudioServiceImpl implements IStudioService {
 	}
 	@Override
 	public int selectStudioByStudioNo(Studio studio) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 	@Override
 	public int getLastPage() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (int) (Math.ceil((double) studioDao.selectTotalCount() / LINE_PER_PAGE));
 	}
 	
 	

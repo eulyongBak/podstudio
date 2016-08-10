@@ -2,14 +2,13 @@ package com.factory.podstudio.user.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.factory.podstudio.user.model.User;
 import com.factory.podstudio.user.repository.UserDaoImpl;
 
 @Service
 public class UserServiceImpl implements IUserService {
-	
+
 	@Autowired
 	private UserDaoImpl userDao;
 	

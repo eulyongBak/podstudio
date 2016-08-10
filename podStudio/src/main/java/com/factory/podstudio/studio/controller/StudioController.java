@@ -29,7 +29,7 @@ public class StudioController {
 		List<Studio> studioList = studioService.selectStudioByStudioNo(page, word);
 		model.addAttribute("studioList", studioList);
 		System.out.println(studioList);
-		model.addAttribute("page", page);
+		model.addAttribute("page", page);      
 		model.addAttribute("lastPage", studioService.getLastPage());
 		return "studio/studioList";
 	}

@@ -9,11 +9,10 @@ public interface IStudioDao {
 	List<Studio> selectStudio(Map<String, Object> map);
 	
 
-	int selectTotalCount(Studio studio);
+	int selectTotalCount();
 	
 	int insertStudio(Studio studio);
 	
-	List<Studio> selectStudioByStudioNo(Studio studio);
 	
 	Studio studioOne(Studio studio);
 	

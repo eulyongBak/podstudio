@@ -17,6 +17,8 @@ public class NoticeController {
 
 	@Autowired
 	private NoticeServiceImpl noticeService;
+	
+	
 	//리스트 처리
 	@RequestMapping(value = "/noticeList", method = RequestMethod.GET)
 	public String noticeList(Model model, @RequestParam(value = "page", defaultValue = "1") int page, 
@@ -54,7 +56,6 @@ public class NoticeController {
 	public String noticeModifyForm(Model model, Notice notice){
 		model.addAttribute("noticeOne", noticeService.selectOneBynoticeNo(notice));
 		return "Customercenter/noticeModifyForm";
-		
 	}
 	//수정 하기
 	@RequestMapping(value="/noticeModify", method = RequestMethod.POST)
