@@ -1,18 +1,24 @@
 package com.factory.podstudio.advertising.banner.model;
 
-public class Banner {
+import com.factory.podstudio.cost.model.Cost;
+import com.factory.podstudio.pay.model.Pay;
+import com.factory.podstudio.podcast.model.PodCast;
+import com.factory.podstudio.show.model.Show;
+import com.factory.podstudio.studio.model.Studio;
+
+public class Banner2 {
 	// 배너광고 번호
 	private String bannerNo;
 	// 팟캐스트에서 번호를 가져온다
-	private String podcastNo; 
+	private PodCast podCast;
 	// 스튜디오 번호를 가져온다
-	private String studioNo;
+	private Studio studio;
 	// 공연번호를 가져온다
-	private String showNo;
+	private Show show;
 	// 단가표번호를 가져온다
-	private String costNo;
+	private Cost cost;
 	// 결제번호
-	private String payNo;
+	private Pay pay;
 	// 배너광고 제품명
 	private String bannerProduct;
 	// 배너광고 업체명
@@ -38,44 +44,44 @@ public class Banner {
 		this.bannerNo = bannerNo;
 	}
 
-	public String getPodcastNo() {
-		return podcastNo;
+	public PodCast getPodCast() {
+		return podCast;
 	}
 
-	public void setPodcastNo(String podcastNo) {
-		this.podcastNo = podcastNo;
+	public void setPodCast(PodCast podCast) {
+		this.podCast = podCast;
 	}
 
-	public String getStudioNo() {
-		return studioNo;
+	public Studio getStudio() {
+		return studio;
 	}
 
-	public void setStudioNo(String studioNo) {
-		this.studioNo = studioNo;
+	public void setStudio(Studio studio) {
+		this.studio = studio;
 	}
 
-	public String getShowNo() {
-		return showNo;
+	public Show getShow() {
+		return show;
 	}
 
-	public void setShowNo(String showNo) {
-		this.showNo = showNo;
+	public void setShow(Show show) {
+		this.show = show;
 	}
 
-	public String getCostNo() {
-		return costNo;
+	public Cost getCost() {
+		return cost;
 	}
 
-	public void setCostNo(String costNo) {
-		this.costNo = costNo;
+	public void setCost(Cost cost) {
+		this.cost = cost;
 	}
 
-	public String getPayNo() {
-		return payNo;
+	public Pay getPay() {
+		return pay;
 	}
 
-	public void setPayNo(String payNo) {
-		this.payNo = payNo;
+	public void setPay(Pay pay) {
+		this.pay = pay;
 	}
 
 	public String getBannerProduct() {
@@ -144,10 +150,11 @@ public class Banner {
 
 	@Override
 	public String toString() {
-		return "Banner [bannerNo=" + bannerNo + ", podcastNo=" + podcastNo + ", studioNo=" + studioNo + ", showNo="
-				+ showNo + ", costNo=" + costNo + ", payNo=" + payNo + ", bannerProduct=" + bannerProduct
-				+ ", bannerCompany=" + bannerCompany + ", bannerFileName=" + bannerFileName + ", bannerCount="
-				+ bannerCount + ", bannerDate=" + bannerDate + ", bannerServiceStart=" + bannerServiceStart
-				+ ", bannerServiceEnd=" + bannerServiceEnd + ", bannerStatus=" + bannerStatus + "]";
+		return "Banner [bannerNo=" + bannerNo + ", podCast=" + podCast + ", cost=" + cost + ", bannerProduct="
+				+ bannerProduct + ", bannerCompany=" + bannerCompany + ", bannerFileName=" + bannerFileName
+				+ ", bannerCount=" + bannerCount + ", bannerDate=" + bannerDate + ", bannerServiceStart="
+				+ bannerServiceStart + ", bannerServiceEnd=" + bannerServiceEnd + ", bannerStatus=" + bannerStatus
+				+ "]";
 	}
+
 }

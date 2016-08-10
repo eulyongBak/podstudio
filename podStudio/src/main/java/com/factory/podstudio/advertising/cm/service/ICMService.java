@@ -7,8 +7,6 @@ import com.factory.podstudio.advertising.cm.model.CM;
 public interface ICMService {
 
 	int insertCM(CM cm);
-	//CM selectCMByUserNo(String userNo, CM cm);
-	
 	List<CM> selectCMByUserNo(CM cm);
 	
 	CM selectCMList(CM cm);

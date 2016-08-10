@@ -13,5 +13,5 @@ public interface ICMDao {
 	
 	List<CM> selectCMByUserNo(CM cm);
 	
-	List<CM> selectCMList(Map<String, Object> map);
+	//List<CM> selectCMList(Map<String, Object> map);
 }

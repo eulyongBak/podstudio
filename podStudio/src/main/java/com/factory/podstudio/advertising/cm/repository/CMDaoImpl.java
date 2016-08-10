@@ -29,20 +29,4 @@ private static final String NAME_SPACE_CM ="com.factory.podstudio.advertising.ba
 		return sqlSessionTemplateCM.selectList(NAME_SPACE_CM +".selectUserByUserNo", cm);
 				
 	}
-	
-	
-	/*
-	 * @Override
-		public List<BoardArticle> selectArticle(Map<String, Object> map) {
-			return sqlSessionTemplate.selectList(NAME_SPACE + ".selectArticle", map);
-		}
-	 */	
-	@Override
-	public List<CM> selectCMList(Map<String, Object> map) {
-		return sqlSessionTemplateCM.selectList(NAME_SPACE_CM+".selectNotice", map);
-	}
-
-	
-
-
 }

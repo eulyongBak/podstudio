@@ -6,6 +6,8 @@ public class CM {
 	private String cmNo;
 	// 회원번호
 	private String userNo;
+	// 회원닉네임 
+	private String userNickname;
 	// 팟캐스트번호
 	private String podcastNo;
 	// 스튜디오번호
@@ -45,6 +47,14 @@ public class CM {
 
 	public void setUserNo(String userNo) {
 		this.userNo = userNo;
+	}
+	
+	public String getUserNickname() {
+		return userNickname;
+	}
+
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
 	}
 
 	public String getPodcastNo() {
@@ -142,15 +152,13 @@ public class CM {
 	public void setCmStatus(String cmStatus) {
 		this.cmStatus = cmStatus;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "CM [cmNo=" + cmNo + ", podcastNo=" + podcastNo + ", studioNo=" + studioNo + ", costNo=" + costNo
-				+ ", payNo=" + payNo + ", cmProduct=" + cmProduct + ", cmCompany=" + cmCompany + ", cmContent="
-				+ cmContent + ", cmCount=" + cmCount + ", cmDate=" + cmDate + ", cmServiceStart=" + cmServiceStart
-				+ ", cmServiceEnd=" + cmServiceEnd + ", cmStatus=" + cmStatus + "]";
+		return "CM [cmNo=" + cmNo + ", userNo=" + userNo + ", userNickname=" + userNickname + ", podcastNo=" + podcastNo
+				+ ", studioNo=" + studioNo + ", costNo=" + costNo + ", payNo=" + payNo + ", cmProduct=" + cmProduct
+				+ ", cmCompany=" + cmCompany + ", cmContent=" + cmContent + ", cmCount=" + cmCount + ", cmDate="
+				+ cmDate + ", cmServiceStart=" + cmServiceStart + ", cmServiceEnd=" + cmServiceEnd + ", cmStatus="
+				+ cmStatus + "]";
 	}
-	
-	
-	
-	}
+}

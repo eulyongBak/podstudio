@@ -35,6 +35,8 @@ public class CMController {
 		cmService.insertCM(cm);
 		return "redirect:/";
 	}
+	
+	
 	//내용 백업용
 	/*@RequestMapping(value = "/detailListCM", method = RequestMethod.GET)
 	public String detail(Model model, CM cm) {
@@ -52,42 +54,34 @@ public class CMController {
 		return "cm/cmDetailForm";
 	}*/
 	
-	@RequestMapping(value = "/detailListCM", method = RequestMethod.GET)
-	/*public String detail(Model model, @RequestParam(value = "page", defaultValue = "1") int page,
-						@RequestParam(value = "word", required = false) String word) {*/
-	public String  detail(@RequestParam(value = "userNo") String userNo, CM cm)	{
+	/*@RequestMapping(value = "/detailListCM", method = RequestMethod.GET)
+	public String detail(Model model, @RequestParam(value = "page", defaultValue = "1") int page,
+						@RequestParam(value = "word", required = false) String word, String userNo, CM cm) {
 		System.out.println("userNo : "+userNo);
 		cm.setUserNo(userNo);
 		System.out.println("cm.userNo : "+cm.getUserNo());
-		
-		cmService.selectCMByUserNo(cm);
+		List<CM> cmList = cmService.selectCMByUserNo(page, word, cm);
 		//CM resultCM = cmService.selectCMByUserNo(userNo, cm);
 		
-		/*model.addAttribute("userNo", userNo);
-		model.addAttribute("cmCompany", resultCM.getCmCompany());
-		model.addAttribute("cmContent", resultCM.getCmContent());
-		model.addAttribute("cmCount", resultCM.getCmCount());
-		model.addAttribute("cmDate", resultCM.getCmDate());
-		model.addAttribute("cmServiceStart", resultCM.getCmServiceStart());
-		model.addAttribute("cmServiceEnd", resultCM.getCmServiceEnd());
-		model.addAttribute("cmStatus", resultCM.getCmStatus());*/
+		model.addAttribute("cmList", cmList);
 		
 		return "cm/cmDetailForm";
+	}*/
+	
+	@RequestMapping(value = "/detailListCM", method = RequestMethod.GET)
+	public String  detail(Model model, @RequestParam(value = "userNo") String userNo, CM cm)	{
+		System.out.println("userNo : "+userNo);
+		cm.setUserNo(userNo);
+		System.out.println("cm.userNo : "+cm.getUserNo());
+		List<CM> cmList = cmService.selectCMByUserNo(cm);
+		System.out.println(cmList.size() + "<-- cmList.size()");
+		
+		
+		model.addAttribute("cmList", cmList);
+		
+		return "advertising/cmDetailList";
 	}
-	
-	/*public String boardList(Model model, @RequestParam(value = "page", defaultValue = "1") int page,
-			@RequestParam(value = "word", required = false) String word) {
-		List<Notice> noticelist = noticeService.selectNoticeByNoticeNo(page, word);
-		model.addAttribute("noticeList", noticelist);
-		// 값이 제대로 들어오는지
-		System.out.println(noticelist);
-		model.addAttribute("page", page);
-		model.addAttribute("lastPage", noticeService.getLastPage());
-		return "Customercenter/noticeList";*/
-	
-	
-	
-	
+
 
 	@RequestMapping(value = "/cmList", method = RequestMethod.GET)
 	public String selectList(CM cm) {
