@@ -63,7 +63,7 @@ public class StudioController {
 	@RequestMapping(value="/studioModifyform", method =RequestMethod.GET)
 	public String studioModifyForm(Model model, Studio studio){
 		model.addAttribute("studioOne", studioService.selectOneByStudioNo(studio));
-		return "studio/noticeModifyForm";
+		return "studio/studioModifyForm";
 	}
 	
 	//수정 하기
