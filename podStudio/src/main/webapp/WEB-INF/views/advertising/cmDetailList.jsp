@@ -4,10 +4,6 @@
 <script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </script>
-<form id="cmDetailListFormAndAction">
-
-
-
 	<%-- <div class="row">
 		<div class="col-sm-2">
 			<label>CM광고제품명</label>
@@ -61,9 +57,11 @@
 			<label>(정상서비스 / 서비스진행 / 서비스만료)</label>
 		</div>
 	</div> --%>
-	<table>
+	<form id="cmDetailListFormAndAction">
+	<table border="1">
 		<thead>
 			<tr>
+				<td>CM광고번호</td>
 				<td>CM광고제품명</td>
 				<td>CM광고업체명</td>
 				<td>CM광고내용</td>
@@ -77,11 +75,12 @@
 			</tr>
 		</thead>
 		<tbody>
-		<c:forEach var="cmList" items="cmList" >
+		<c:forEach var="list" items="${cmList}" >
 			<tr>
- 				<td>${ cmList.cmProduct }</td>
-				<td>${ cmList.cmCompany }</td>
-				<td>${ cmList.cmContent }</td>
+				<td>${ list.cmNo }</td>
+ 				<td>${ list.cmProduct }</td>
+				<td>${ list.cmCompany }</td>
+				<td>${ list.cmContent }</td>
 				<td>${ list.cmCount }</td>
 				<td>${ list.cmDate }</td>
 				<td>${ list.cmServiceStart }</td>

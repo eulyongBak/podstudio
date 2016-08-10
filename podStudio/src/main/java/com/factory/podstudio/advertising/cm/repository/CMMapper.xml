@@ -34,68 +34,23 @@
 			, #{cmStatus});
 	</insert>
 	
-	<!-- <select id="selectUserByUserNo" parameterType="java.util.Map"
-									resultType="com.factory.podstudio.advertising.cm.model.CM">
-		SELECT
-			cm.cm_no AS cm_no
-			, user.user_nickname AS userNickname
-			, cm.cm_product AS cmProduct
-			, cm.cm_company AS cmCompany
-			, cm.cm_content AS cmContent
-			, cm_count AS cmCount
-			, DATE_FORMAT(cm_date, '%p%Y-%m-%d %h:%i') AS cmDate
-			, DATE_FORMAT(cm_servicestart, '%p%Y-%m-%d %h:%i') AS cmServiceStrart 
-			, DATE_FORMAT(cm_serviceend, '%p%Y-%m-%d %h:%i') AS cmServiceEnd
-			, cm_status AS cmStatus
-		FROM cm INNER JOIN user ON
-		cm.user_no = user_no
-		<where>
-			<if test="word != null">
-				cm_no LIKE CONCAT ('%',#{word},'%') OR
-				cm_title
-				LIKE CONCAT ('%',#{word},'%')
-			</if>
-		</where>
-		ORDER BY cm_no DESC
-		LIMIT #{cmPageHelper.startPage},
-		#{cmPageHelper.linePerPage}
-	</select> -->
-	
-	
-	<!-- <select id="selectUserByUserNo" parameterType="java.util.Map"
-									resultType="com.factory.podstudio.advertising.cm.model.CM">
-		SELECT
-			cm.cm_no AS cmNo
-			, cm.user_no AS userNo
-			, user.user_nickname AS userNickname
-			, cm.cm_product AS cmProduct
-			, cm.cm_company AS cmCompany
-			, cm.cm_content AS cmContent
-			, cm_count AS cmCount
-			, DATE_FORMAT(cm_date, '%p%Y-%m-%d %h:%i') AS cmDate
-			, DATE_FORMAT(cm_servicestart, '%p%Y-%m-%d %h:%i') AS cmServiceStrart 
-			, DATE_FORMAT(cm_serviceend, '%p%Y-%m-%d %h:%i') AS cmServiceEnd
-			, cm_status AS cmStatus
-		FROM cm 
-		INNER JOIN user
-		ON cm.user_no = user_no
-		WHERE user_no = #{cm.userNo}
-	</select> -->
 	<select id="selectUserByUserNo" parameterType="com.factory.podstudio.advertising.cm.model.CM"
 									resultType="com.factory.podstudio.advertising.cm.model.CM">
-									
 		SELECT
-		c.cm_no as cmNo,
-		c.cm_product as cmProduct,
-		c.cm_company as cmCompany,
-		c.cm_content as cmContent
-					
+			c.cm_no AS cmNo
+			, c.cm_product AS cmProduct
+			, c.cm_company AS cmCompany
+			, c.cm_content AS cmContent
+			, c.cm_count AS cmCount
+			, DATE_FORMAT(c.cm_date,'%p %Y-%m-%d %h:%i') AS cmDate
+			, DATE_FORMAT(c.cm_servicestart,'%p %Y-%m-%d %h:%i') AS cmServiceStart
+			, DATE_FORMAT(c.cm_serviceend,'%p %Y-%m-%d %h:%i')  AS cmServiceEnd
+			, c.cm_status AS cmStatus
+			, u.user_nickname as userNickname
 		FROM cm AS c
 		INNER JOIN user AS u
 		ON c.user_no = u.user_no
 		WHERE u.user_no = #{userNo}
 		ORDER BY cm_no DESC
-
-				
 	</select>
 </mapper>
