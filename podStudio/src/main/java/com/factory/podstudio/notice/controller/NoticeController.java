@@ -2,6 +2,7 @@ package com.factory.podstudio.notice.controller;
 
 import java.util.List;
 
+import org.apache.tiles.template.AddAttributeModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -74,6 +75,7 @@ public class NoticeController {
 	//삭제하기
 		@RequestMapping(value="/noticeDelete", method= RequestMethod.POST)
 		public String noticeDelete(Model model , Notice notice){
+			System.out.println("삭제하기 noticeNo : "+notice.getNoticeNo());
 			noticeService.deleteNoticeByNoticeNo(notice);
 			return "redirect:/noticeList";
 	}

@@ -52,6 +52,7 @@
 	<select id="selectOneNotice" parameterType="com.factory.podstudio.notice.model.Notice"
 		resultType="com.factory.podstudio.notice.model.Notice">
 		select
+		notice_no AS noticeNo,
 		notice_title AS noticeTitle,
 		notice_content AS noticeContent
 		from notice where notice_no = '${noticeNo}'

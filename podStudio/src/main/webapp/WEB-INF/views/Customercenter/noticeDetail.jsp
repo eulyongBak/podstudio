@@ -25,8 +25,8 @@
 
 	<c:if test="${sessionUser.userLevel eq '관리자'}">
 		<div>
-			<a href="/modifyform?noticeNo=${noticeOne.noticeNo }">수정</a>
-			<a href="/noticeDeleteForm?noticeNo=${noticeOne.noticeNo }">삭제</a>
+			<a href="/modifyform?noticeNo=${noticeOne.noticeNo}">수정</a>
+			<a href="/noticeDeleteForm?noticeNo=${noticeOne.noticeNo}">삭제</a>
 		</div>
 	</c:if>
 </body>
