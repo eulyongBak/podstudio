@@ -41,24 +41,10 @@ public class HomeController {
 		return "project/introduce";
 	}
 
-	@RequestMapping(value = "/developmentEnvironment", method = RequestMethod.GET)
-	public String development() {
-		return "project/developmentEnvironment";
-	}
-
-	@RequestMapping(value = "/erdisign", method = RequestMethod.GET)
-	public String erdisign() {
-		return "project/erdisign";
-	}
-
-	@RequestMapping(value = "/flowChart", method = RequestMethod.GET)
-	public String flowChart() {
-		return "project/folwChart";
-	}
-
-	@RequestMapping(value = "/officialName", method = RequestMethod.GET)
-	public String officalName() {
-		return "project/officialName";
+	@RequestMapping(value="/myPage", method = RequestMethod.GET)
+	public String myPage(){
+		return "mypage";
+		
 	}
 
 }

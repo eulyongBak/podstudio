@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<style>
+#myPage {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+    width: 100%;
+}
+</style>
 <script>
 	$(document).ready(function() {
 		$('#signIn').click(function() {
@@ -15,22 +22,11 @@
 			$('#memberFormAndAction').attr("method", "POST");
 			$('#memberFormAndAction').submit();
 		});
-		$('#myProfile').click(function() {
-			$('#memberFormAndAction').attr("action", "/userDetail");
+		$('#myPage').click(function() {
+			$('#memberFormAndAction').attr("action", "/myPage");
 			$('#memberFormAndAction').attr("method", "GET");
 			$('#memberFormAndAction').submit();
 		});
-		$('#modifyBtn').click(function() {
-			$('#memberFormAndAction').attr("action", "/modifyUser");
-			$('#memberFormAndAction').attr("method", "GET");
-			$('#memberFormAndAction').submit();
-		});
-		$('#deleteUserBtn').click(function() {
-			$('#memberFormAndAction').attr("action", "/deleteUser");
-			$('#memberFormAndAction').attr("method", "POST");
-			$('#memberFormAndAction').submit();
-		});
-
 	});
 </script>
 <c:if test="${sessionUser == null}">
@@ -50,10 +46,15 @@
 <c:if test="${sessionUser != null}">
 	<form id="memberFormAndAction">
 		<input type="hidden" value="${ sessionUser.userNo }" name="userNo" />
-		${sessionUser.userNickname}님 환영합니다.
-		<button id="logout">Logout</button>
-		<button id="myProfile">회원정보보기</button>
-		<button id="modifyBtn">회원정보수정</button>
-		<button id="deleteUserBtn">회원탈퇴</button>
+			<div>
+				${sessionUser.userNickname}님 환영합니다.
+			</div>
+			<div>
+				<button id="logout">Logout</button>
+			</div>
+			<br>
+			<div>
+				<button id="myPage">마이 페이지</button>	
+			</div>
 	</form>
 </c:if>

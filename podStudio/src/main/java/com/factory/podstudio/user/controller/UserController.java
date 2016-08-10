@@ -72,6 +72,7 @@ public class UserController {
 		model.addAttribute("userLevel", resultUser.getUserLevel());
 		model.addAttribute("userJob", resultUser.getUserJob());
 		return "user/userDetailForm";
+	
 	}
 
 	// 회원 정보수정폼
