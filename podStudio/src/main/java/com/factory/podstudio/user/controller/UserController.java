@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.factory.podstudio.notice.model.Notice;
 import com.factory.podstudio.user.model.User;
 import com.factory.podstudio.user.service.UserServiceImpl;
 
@@ -38,7 +37,7 @@ public class UserController {
 	// 로그인
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(HttpSession session, User user) {
-		User sessionUser = userService.getUserByIdAndPw(user);
+		User sessionUser = userService.selectUserByIdAndPw(user);
 		if (sessionUser.getUserLeaveDate() == null) {
 			// model.addAttribute("sessionUser", sessionUser);
 			session.setAttribute("sessionUser", sessionUser);
@@ -60,7 +59,8 @@ public class UserController {
 
 	// 개인 회원정보보기
 	@RequestMapping(value = "/userDetail", method = RequestMethod.GET)
-	public String userDetail(Model model, User user) {
+	public String userDetail(HttpSession session, Model model) {
+		User user = (User) session.getAttribute("sessionUser");
 		User resultUser = userService.selectUserByUserNo(user);
 		logger.info("resultUser : {}", resultUser);
 		model.addAttribute("user", resultUser);

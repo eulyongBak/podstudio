@@ -17,7 +17,7 @@
 		<label>이메일 : </label> ${ user.userEmail }
 	</div>
 	<div>
-		<label>[통신사] 전화번호 : </label> [${ user.userTelecome }] ${ user.userPhone }
+		<label>[통신사] 전화번호 : </label> [${ user.userTelecom }] ${ user.userPhone }
 	</div>
 	<div>
 		<label>권한 : </label> ${ user.userLevel }
