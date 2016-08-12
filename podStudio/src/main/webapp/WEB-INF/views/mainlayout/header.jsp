@@ -4,5 +4,7 @@
 
 <ul class="nav nav-tabs">
 	<li role="presentation"><a href="/introduce">프로젝트 소개</a></li>
+	<c:if test="${sessionUser.userNo == null}">
 	<li role="presentation"><a href="/signUp">회원가입</a></li>
+	</c:if>
 </ul>

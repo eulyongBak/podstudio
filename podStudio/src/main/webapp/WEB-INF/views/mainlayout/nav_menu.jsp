@@ -7,6 +7,8 @@
 	<li role="presentation"><a href="/">홈</a></li>
 	<li role="presentation"><a href="/noticeList">공지사항</a></li>
 	<li role="presentation"><a href="/podmain?podCastNo=podcast_001">팟캐스트 보기</a></li>
+	<li role="presentation"><a href="/insertPodMeeting">단팟 등록</a></li>
+	
 </ul>
 
 <!-- 관리자 메뉴 -->
