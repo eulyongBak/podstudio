@@ -37,38 +37,6 @@ public class PodMeeting {
 		this.podMeetingNo = podMeetingNo;
 	}
 	
-	/*public PodCast getPodCast() {
-		return podCast;
-	}
-
-	public void setPodCast(PodCast podCast) {
-		this.podCast = podCast;
-	}
-
-	public Episode getEpisode() {
-		return episode;
-	}
-
-	public void setEpisode(Episode episode) {
-		this.episode = episode;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-	public Category getCategory() {
-		return category;
-	}
-
-	public void setCategory(Category category) {
-		this.category = category;
-	}*/
-
 	public String getPodcastNo() {
 		return podcastNo;
 	}

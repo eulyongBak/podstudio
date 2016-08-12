@@ -24,39 +24,34 @@
 		, SYSDATE())
 </insert>
 
-<!-- <select id="selectListText" parameterType="cafe.isa.lew.model.Board" resultType="cafe.isa.lew.model.Board">
-	SELECT
-		textno
-		, title
-		, writer
-		, date
-	FROM ew08 
-</select>
-
-<select id="selectOneText" parameterType="cafe.isa.lew.model.Board" resultType="cafe.isa.lew.model.Board">
-	SELECT
-		textno
-		, title
-		, content
-		, writer
-		, date
-		, pw
-	FROM ew08
-	WHERE textno= #{textNo}
-</select>
-
-<delete id="deleteOneText" parameterType="cafe.isa.lew.model.Board" >
-	DELETE FROM ew08 WHERE textno=#{textNo}
-</delete>
+<select id="selectpodMeeting" parameterType="java.util.Map"
+		resultType="com.factory.podstudio.podmeeting.model.PodMeeting">
+		SELECT
+		p.podmeeting_no AS podMeetingNo
+		, p.user_no AS userNo
+		, p.podmeeting_title AS podMeetingTitle
+		, p.podmeeting_content AS podMeetingContent
+		, DATE_FORMAT(p.podmeeting_date,'%p %Y-%m-%d %h:%i') AS podMeetingDate   
+		, u.user_nickname AS userNickname
+		FROM podmeeting AS p
+		INNER JOIN user AS u ON
+		p.user_no = u.user_no
+		<where>
+			<if test="word != null">
+				podmeeting_no LIKE CONCAT ('%',#{word},'%') OR
+				podmeeting_title
+				LIKE CONCAT ('%',#{word},'%')
+			</if>
+		</where>
+		ORDER BY podmeeting_no DESC
+		LIMIT #{pageHelper.startPage},
+		#{pageHelper.linePerPage}
+	</select>
 	
-<update id="updateOneText" parameterType="cafe.isa.lew.model.Board">
-	UPDATE ew08
-	SET
-		title=#{title}
-		, content=#{content}
-		, writer=#{writer}
-		, date=NOW(date)
-		, pw=#{pw}
-	WHERE textno=#{textNo}
-</update>	 -->
+	<select id="selectTotalCount" resultType="Integer">
+		SELECT
+		COUNT(*)
+		FROM
+		notice
+	</select>
 </mapper>
