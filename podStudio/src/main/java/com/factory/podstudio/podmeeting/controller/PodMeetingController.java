@@ -21,7 +21,7 @@ public class PodMeetingController {
 	// 홈화면에서 글입력 화면으로
 	@RequestMapping(value = "/insertPodMeeting", method = RequestMethod.GET)
 	public String insert() {//웹요청을 처리할 메서드
-		return "podmeeting/podMeetingInsertForm"; //뷰이름 리턴
+		return "podmeeting/podmeetingInsertForm"; //뷰이름 리턴
 		// /WEB-INF/views/podmeeting/podmeetingInsertForm.jsp
 	}
   
