@@ -1,5 +1,7 @@
 package com.factory.podstudio.advertising.banner.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +19,9 @@ public class BannerServiceImpl implements IBannerService {
 		return bannerDao.insertBanner(banner);
 	}
 	@Override
-	public void selectBannerByBannerNo() {
-		// TODO Auto-generated method stub
-		
+	public List<Banner> selectBannerByUserNo(Banner banner) {
+		return bannerDao.selectBannerByUserNo(banner);
+
 	}
 	@Override
 	public void modifyBannerByBannerNo() {
@@ -31,5 +33,4 @@ public class BannerServiceImpl implements IBannerService {
 		// TODO Auto-generated method stub
 		
 	}
-
 }

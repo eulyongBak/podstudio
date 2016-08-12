@@ -1,5 +1,7 @@
 package com.factory.podstudio.advertising.banner.repository;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -17,5 +19,12 @@ public class BannerDaoImpl implements IBannerDao {
 	public int insertBanner(Banner banner) {
 		return sqlSessionTemplateBanner.insert(NAME_SPACE_BANNER + ".insertBanner", banner);
 	}
+
+	@Override
+	public List<Banner> selectBannerByUserNo(Banner banner) {
+		return sqlSessionTemplateBanner.selectList(NAME_SPACE_BANNER +".selectBannerByUserNo", banner);
+	}
+	
+	
 
 }

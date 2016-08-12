@@ -34,7 +34,7 @@
 		FROM cm
 	</insert>
 	
-	<select id="selectUserByUserNo" parameterType="com.factory.podstudio.advertising.cm.model.CM"
+	<select id="selectCMByUserNo" parameterType="com.factory.podstudio.advertising.cm.model.CM"
 									resultType="com.factory.podstudio.advertising.cm.model.CM">
 		SELECT
 			c.cm_no AS cmNo

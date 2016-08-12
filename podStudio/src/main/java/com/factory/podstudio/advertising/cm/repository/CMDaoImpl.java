@@ -26,7 +26,7 @@ private static final String NAME_SPACE_CM ="com.factory.podstudio.advertising.ba
 	//회원번호에 따른 CM광고정보 리스트보기
 	@Override
 	public List<CM> selectCMByUserNo(CM cm) {
-		return sqlSessionTemplateCM.selectList(NAME_SPACE_CM +".selectUserByUserNo", cm);
+		return sqlSessionTemplateCM.selectList(NAME_SPACE_CM +".selectCMByUserNo", cm);
 				
 	}
 }

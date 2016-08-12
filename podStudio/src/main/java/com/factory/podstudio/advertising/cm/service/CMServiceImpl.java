@@ -26,21 +26,9 @@ public class CMServiceImpl implements ICMService {
 		return cmDao.insertCM(cm);
 	}
 	
-	//내용 백업용
-	/*@Override
-	public List<CM> selectCMByUserNo(int page, String word, CM cm) {
-		
-		CMPageHelper cmPageHelper = new CMPageHelper(page, LINE_PER_PAGE);
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("cmPageHelper", cmPageHelper);
-		map.put("word", word);
-		
-		return cmDao.selectCMByUserNo(map);
-	}*/
 	//회원정보(광고주)에 따른 CM광고 정보 리스트 보기
 	@Override
 	public List<CM> selectCMByUserNo(CM cm) {
-
 		return cmDao.selectCMByUserNo(cm);
 	}
 	

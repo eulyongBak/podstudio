@@ -3,36 +3,57 @@
 <mapper namespace="com.factory.podstudio.advertising.banner.repository.BannerMapper">
 	<insert id="insertBanner" parameterType="com.factory.podstudio.advertising.banner.model.Banner">
 	INSERT INTO banner
-	(banner_no
-	, user_no
-	, podcast_no
-	, studio_no
-	, performance_no
-	, cost_no
-	, pay_no
-	, banner_product
-	, banner_company
-	, banner_filename
-	, banner_count
-	, banner_date
-	, banner_servicestart
-	, banner_serviceend
-	, banner_status)
-	SELECT LPAD(MAX(RIGHT(banner_no,3)) +1,10,'banner_00')
-	, #{userNo}
-	, #{podcastNo}
-	, #{studioNo}
-	, #{performanceNo}
-	, #{costNo}
-	, #{payNo}
-	, #{bannerProduct}
-	, #{bannerCompany}
-	, #{bannerFileName}
-	, #{bannerCount}
-	, SYSDATE() 
-	, #{bannerServiceStart}
-	, #{bannerServiceEnd}
-	, #{bannerStatus}
-	FROM banner	
+		(banner_no
+		, user_no
+		, podcast_no
+		, studio_no
+		, performance_no
+		, cost_no
+		, pay_no
+		, banner_product
+		, banner_company
+		, banner_filename
+		, banner_count
+		, banner_date
+		, banner_servicestart
+		, banner_serviceend
+		, banner_status)
+		SELECT LPAD(MAX(RIGHT(banner_no,3)) +1,10,'banner_00')
+			, #{userNo}
+			, #{podcastNo}
+			, #{studioNo}
+			, #{performanceNo}
+			, #{costNo}
+			, #{payNo}
+			, #{bannerProduct}
+			, #{bannerCompany}
+			, #{bannerFileName}
+			, #{bannerCount}
+			, SYSDATE() 
+			, #{bannerServiceStart}
+			, #{bannerServiceEnd}
+			, #{bannerStatus}
+		FROM banner	
 	</insert>
+	
+	<select id="selectBannerByUserNo" parameterType="com.factory.podstudio.advertising.banner.model.Banner"
+									resultType="com.factory.podstudio.advertising.banner.model.Banner">
+		SELECT
+			b.banner_no AS bannerNo
+			, b.banner_product AS bannerProduct
+			, b.banner_company AS bannerCompany
+			, b.banner_filename AS bannerFileName
+			, b.banner_count AS bannerCount
+			, DATE_FORMAT(b.banner_date,'%p %Y-%m-%d %h:%i') AS bannerDate
+			, DATE_FORMAT(b.banner_servicestart,'%p %Y-%m-%d %h:%i') AS bannerServiceStart
+			, DATE_FORMAT(b.banner_serviceend,'%p %Y-%m-%d %h:%i')  AS bannerServiceEnd
+			, b.banner_status AS bannerStatus
+			, u.user_nickname as userNickname
+		FROM banner AS b
+		INNER JOIN user AS u
+		ON b.user_no = u.user_no
+		WHERE b.user_no = #{userNo}
+		ORDER BY banner_no DESC
+	</select>
+	
 </mapper>
