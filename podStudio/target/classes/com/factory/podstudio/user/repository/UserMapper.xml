@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.factory.podstudio.user.repository.UserMapper">
+	<insert id="insertUser" parameterType="com.factory.podstudio.user.model.User">
+		INSERT INTO user
+		(user_no
+		, category_no
+		, user_id
+		, user_pw
+		, user_nickname
+		, user_birth
+		, user_gender
+		, user_email
+		, user_telecom
+		, user_phone
+		, user_level
+		, user_job
+		, user_joindate)
+		SELECT LPAD(MAX(RIGHT(user_no,3)) +1,8,'user_00'))
+		, #{categoryNo}
+		, #{userId}
+		, #{userPw}
+		, #{userNickname}
+		, #{userBirth}
+		, #{userGender}
+		, #{userEmail}
+		, #{userTelecom}
+		, #{userPhone}
+		, #{userLevel}
+		, #{userJob}
+		, SYSDATE()
+		FROM user
+	</insert>
+	<select id="selectUserByUserNo" parameterType="com.factory.podstudio.user.model.User"
+		resultType="com.factory.podstudio.user.model.User">
+		SELECT
+		user_id AS userId
+		, user_nickname AS userNickname
+		, DATE_FORMAT(user_birth,'%Y년%m월%d일') AS userBirth
+		, user_gender AS userGender
+		, user_email AS userEmail
+		, user_telecom AS userTelecom
+		, user_phone AS userPhone
+		, user_level AS userLevel
+		, user_job AS userJob
+		FROM user
+		WHERE user_no = #{userNo}
+	</select>
+
+	<select id="selectUserByIdAndPw" parameterType="com.factory.podstudio.user.model.User"
+		resultType="com.factory.podstudio.user.model.User">
+		SELECT
+		user_no AS userNo
+		, user_id AS userId
+		, category_no AS catggoryNo
+		, user_pw AS userPw
+		, DATE_FORMAT(user_birth,'%Y년%m월%d일') AS userBirth
+		, user_email AS userEmail
+		, user_nickname AS userNickname
+		, user_telecom AS userTelecom
+		, user_phone AS userPhone
+		, user_level AS userLevel
+		, user_job As userJob
+		, user_joindate AS userJoinDate
+		, user_leavedate AS userLeaveDate
+		FROM user
+		WHERE user_id=#{userId} AND user_pw=#{userPw}
+	</select>
+
+	<!-- 회원정보수정 -->
+	<update id="modifyUserByUserNo" parameterType="com.factory.podstudio.user.model.User">
+		UPDATE user
+		SET
+		category_no=#{categoryNo},
+		user_pw=#{userPw},
+		user_nickname=#{userNickname},
+		user_birth=#{userBirth},
+		user_email=#{userEmail},
+		user_telecom=#{userTelecom},
+		user_phone=#{userPhone},
+		user_level=#{userLevel},
+		user_job=#{userJob}
+		WHERE user_id= #{userId}
+	</update>
+
+	<update id="deleteUserByUserId" parameterType="com.factory.podstudio.user.model.User">
+		UPDATE user
+		SET
+		user_leavedate=SYSDATE()
+		WHERE
+		user_no = #{userNo}
+	</update>
+	
+</mapper>

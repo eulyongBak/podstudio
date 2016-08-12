@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.factory.podstudio.advertising.banner.repository.CMMapper">
+	<insert id="insertCM" parameterType="com.factory.podstudio.advertising.cm.model.CM">
+		INSERT INTO cm
+			(cm_no
+			, user_no
+			, podcast_no
+			, studio_no
+			, cost_no
+			, pay_no
+			, cm_product
+			, cm_company
+			, cm_content
+			, cm_count
+			, cm_date
+			, cm_servicestart
+			, cm_serviceend
+			, cm_status)
+			SELECT LPAD(MAX(RIGHT(cm_no,3)) +1,6,'cm_00')
+			, #{userNo}
+			, #{podcastNo}
+			, #{studioNo}
+			, #{costNo}
+			, #{payNo}
+			, #{cmProduct}
+			, #{cmCompany}
+			, #{cmContent}
+			, #{cmCount}
+			, SYSDATE() 
+			, SYSDATE() 
+			, SYSDATE() 
+			, #{cmStatus}
+		FROM cm
+	</insert>
+	
+	<select id="selectCMByUserNo" parameterType="com.factory.podstudio.advertising.cm.model.CM"
+									resultType="com.factory.podstudio.advertising.cm.model.CM">
+		SELECT
+			c.cm_no AS cmNo
+			, c.cm_product AS cmProduct
+			, c.cm_company AS cmCompany
+			, c.cm_content AS cmContent
+			, c.cm_count AS cmCount
+			, DATE_FORMAT(c.cm_date,'%p %Y-%m-%d %h:%i') AS cmDate
+			, DATE_FORMAT(c.cm_servicestart,'%p %Y-%m-%d %h:%i') AS cmServiceStart
+			, DATE_FORMAT(c.cm_serviceend,'%p %Y-%m-%d %h:%i')  AS cmServiceEnd
+			, c.cm_status AS cmStatus
+			, u.user_nickname as userNickname
+		FROM cm AS c
+		INNER JOIN user AS u
+		ON c.user_no = u.user_no
+		WHERE u.user_no = #{userNo}
+		ORDER BY cm_no DESC
+	</select>
+</mapper>

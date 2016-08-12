@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.factory.podstudio.podcast.repository.PodCastMapper">
+
+	<select id="selectPodCast" parameterType="java.util.Map"
+		resultType="com.factory.podstudio.podcast.model.PodCast">
+		SELECT
+			 p.user_no AS userNo
+			,p.podcast_title AS podCastTitle
+			,p.podcast_subtitle AS podCastSubTitle
+			,c.category_main AS categoryMain
+			,(CASE
+				WHEN IFNULL(p.category_no2, '-') = '-'
+				THEN null
+				ELSE c1.category_main
+				END
+			) AS categoryMain2 
+		FROM
+			podcast p
+			INNER JOIN
+			category c
+			ON
+			p.category_no1 = c.category_no
+			LEFT OUTER JOIN
+			category c1
+			ON
+			p.category_no2 = c1.category_no
+		WHERE
+			p.podcast_no = #{podCast.podCastNo}
+	</select>
+
+</mapper>

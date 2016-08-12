@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.factory.podstudio.podmeeting.repository.PodMeetingMapper">
+<insert id="insertPodMeeting" parameterType="com.factory.podstudio.podmeeting.model.PodMeeting">
+	INSERT INTO podmeeting
+		(podmeeting_no
+		, podcast_no
+		, episode_no
+		, user_no
+		, category_no
+		, podmeeting_title
+		, podmeeting_content
+		, podmeeting_pw
+		, podmeeting_date)
+	VALUES
+		(#{podMeetingNo}
+		, #{podcastNo}
+		, #{episodeNo}
+		, #{userNo}
+		, #{categoryNo}
+		, #{podMeetingTitle}
+		, #{podMeetingContent}
+		, #{podMeetingPw}
+		, SYSDATE())
+</insert>
+
+<select id="selectpodMeeting" parameterType="java.util.Map"
+		resultType="com.factory.podstudio.podmeeting.model.PodMeeting">
+		SELECT
+		p.podmeeting_no AS podMeetingNo
+		, p.user_no AS userNo
+		, p.podmeeting_title AS podMeetingTitle
+		, p.podmeeting_content AS podMeetingContent
+		, DATE_FORMAT(p.podmeeting_date,'%p %Y-%m-%d %h:%i') AS podMeetingDate   
+		, u.user_nickname AS userNickname
+		FROM podmeeting AS p
+		INNER JOIN user AS u ON
+		p.user_no = u.user_no
+		<where>
+			<if test="word != null">
+				podmeeting_no LIKE CONCAT ('%',#{word},'%') OR
+				podmeeting_title
+				LIKE CONCAT ('%',#{word},'%')
+			</if>
+		</where>
+		ORDER BY podmeeting_no DESC
+		LIMIT #{pageHelper.startPage},
+		#{pageHelper.linePerPage}
+	</select>
+	
+	<select id="selectTotalCount" resultType="Integer">
+		SELECT
+		COUNT(*)
+		FROM
+		notice
+	</select>
+</mapper>
