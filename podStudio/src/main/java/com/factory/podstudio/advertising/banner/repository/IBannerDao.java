@@ -1,5 +1,10 @@
 package com.factory.podstudio.advertising.banner.repository;
 
-public interface IBannerDao {
+import org.springframework.stereotype.Repository;
 
+import com.factory.podstudio.advertising.banner.model.Banner;
+
+@Repository
+public interface IBannerDao {
+	int insertBanner(Banner banner);
 }

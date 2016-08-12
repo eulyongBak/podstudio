@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.factory.podstudio.advertising.banner.repository.BannerMapper">
-
-
-
+	<insert id="insertBanner" parameterType="com.factory.podstudio.advertising.banner.model.Banner">
+	INSERT INTO banner
+	(banner_no
+	, user_no
+	, podcast_no
+	, studio_no
+	, show_no
+	, cost_no
+	, pay_no
+	, banner_product
+	, banner_company
+	, banner_filename
+	, banner_count
+	, banner_date
+	, banner_servicestart
+	, banner_serviceend
+	, banner_status)
+	SELECT LPAD(MAX(RIGHT(banner_no,3)) +1,10,'banner_00')
+	, #{userNo}
+	, #{podcastNo}
+	, #{studioNo}
+	, #{showNo}
+	, #{costNo}
+	, #{payNo}
+	, #{bnnerProduct}
+	, #{bannerCompany}
+	, #{bannerFilename}
+	, #{bannerCount}
+	, SYSDATE() 
+	, SYSDATE()	<!-- #{bannerServiceStart} -->
+	, SYSDATE()	<!-- #{bannerServiceEnd} -->
+	, #{bannerStatus}
+	FROM banner	
+	</insert>
 </mapper>

@@ -27,7 +27,7 @@ public class Banner {
 	private String bannerServiceStart;
 	// 서비스 종료일
 	private String bannerServiceEnd;
-	// 서비스 상태 / 정상서비스 / 서비스 진행중 / 서비스 안료
+	// 서비스 상태 / 정상서비스 / 서비스 진행중 / 서비스 완료
 	private String bannerStatus;
 
 	public String getBannerNo() {
