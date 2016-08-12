@@ -75,9 +75,11 @@
 		<put-attribute name="main"
 			value="/WEB-INF/views/mypagelayout/main.jsp" />
 	</definition>
-
 	<definition name="mypage/*" extends="mypagelayout">
 		<put-attribute name="main" value="/WEB-INF/views/mypage/{1}.jsp" />
+	</definition>
+	<definition name="mypage/user/*" extends="mypagelayout">
+		<put-attribute name="main" value="/WEB-INF/views/mypage/user/{1}.jsp" />
 	</definition>
 
 </tiles-definitions>

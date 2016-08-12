@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.factory.podstudio.notice.model.Notice;
 import com.factory.podstudio.user.model.User;
 import com.factory.podstudio.user.service.UserServiceImpl;
 
@@ -62,23 +63,15 @@ public class UserController {
 	public String userDetail(Model model, User user) {
 		User resultUser = userService.selectUserByUserNo(user);
 		logger.info("resultUser : {}", resultUser);
-		model.addAttribute("userId", resultUser.getUserId());
-		model.addAttribute("userNickname", resultUser.getUserNickname());
-		model.addAttribute("userBirth", resultUser.getUserBirth());
-		model.addAttribute("userGender", resultUser.getUserGender());
-		model.addAttribute("userEmail", resultUser.getUserEmail());
-		model.addAttribute("userTelecome", resultUser.getUserTelecom());
-		model.addAttribute("userPhone", resultUser.getUserPhone());
-		model.addAttribute("userLevel", resultUser.getUserLevel());
-		model.addAttribute("userJob", resultUser.getUserJob());
-		return "user/userDetailForm";
+		model.addAttribute("user", resultUser);
+		return "mypage/user/userDetailForm";
 	
 	}
 
 	// 회원 정보수정폼
 	@RequestMapping(value = "/modifyUser", method = RequestMethod.GET)
 	public String modifyUser() {
-		return "user/userUpdateForm";
+		return "mypage/user/userUpdateForm";
 	}
 
 	// 회원정보 수정처리
@@ -96,9 +89,13 @@ public class UserController {
 		birth = year + month + day;
 		user.setUserBirth(birth);
 		userService.modifyUserByUserNo(user);
-		return "redirect:/";
+		return "redirect:/myPage";
 	}
-
+	//삭제 화면
+			@RequestMapping(value="/deleteUser", method =RequestMethod.GET)
+			public String noticeDeleteForm(){
+				return "mypage/user/userDeleteForm";
+			}
 	// 회원정보 삭제 처리 탈퇴시간을 기록하기 위해서 update문을 사용한다.
 	@RequestMapping(value = "/deleteUser", method = RequestMethod.POST)
 	public String deleteUser(HttpSession session ,User user) {
