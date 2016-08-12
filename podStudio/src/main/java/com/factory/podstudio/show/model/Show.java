@@ -1,148 +1,145 @@
 package com.factory.podstudio.show.model;
 
-import com.factory.podstudio.category.model.Category;
-import com.factory.podstudio.cost.model.Cost;
-import com.factory.podstudio.podcast.model.PodCast;
-import com.factory.podstudio.user.model.User;
-
 public class Show {
 	// 공연번호
-	private String showNo;
+	private String performanceNo;
 	// 팟캐스트번호
-	private PodCast podCast;
+	private String podCastNo;
 	// 카테고리번호 / 팟캐스트
-	private Category category;
+	private String categoryNo;
 	// 회원번호
-	private User user;
-	// 단가표번호
-	private Cost cost;
+	private String userNo;
+	// 단가표번호 / 광고신청시 결제하기위해서
+	private String cost;
 	// 공연제목
-	private String showName;
+	private String performanceName;
 	// 공연일자
-	private String showDate;
+	private String performanceDate;
 	// 공연 기간
-	private String showPeriod;
+	private String performancePeriod;
 	// 공연 장소
-	private String showPlace;
+	private String performancePlace;
 	// 공연 등록일자
-	private String showRegistrationDate;
+	private String performanceRegistrationDate;
 	// 티켓가격 / 단순히 정보만 제공
-	private int showTicketPrice;
+	private int performanceTicketPrice;
 	// 출연진
-	private String showCast;
+	private String performanceCast;
 	// 연락방법
-	private String showContent;
+	private String performanceContent;
 
-	public String getShowNo() {
-		return showNo;
+	public String getPerformanceNo() {
+		return performanceNo;
 	}
 
-	public void setShowNo(String showNo) {
-		this.showNo = showNo;
+	public void setPerformanceNo(String performanceNo) {
+		this.performanceNo = performanceNo;
 	}
 
-	public PodCast getPodCast() {
-		return podCast;
+	public String getPodCastNo() {
+		return podCastNo;
 	}
 
-	public void setPodCast(PodCast podCast) {
-		this.podCast = podCast;
+	public void setPodCastNo(String podCastNo) {
+		this.podCastNo = podCastNo;
 	}
 
-	public Category getCategory() {
-		return category;
+	public String getCategoryNo() {
+		return categoryNo;
 	}
 
-	public void setCategory(Category category) {
-		this.category = category;
+	public void setCategoryNo(String categoryNo) {
+		this.categoryNo = categoryNo;
 	}
 
-	public User getUser() {
-		return user;
+	public String getUserNo() {
+		return userNo;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
 	}
 
-	public Cost getCost() {
+	public String getCost() {
 		return cost;
 	}
 
-	public void setCost(Cost cost) {
+	public void setCost(String cost) {
 		this.cost = cost;
 	}
 
-	public String getShowName() {
-		return showName;
+	public String getPerformanceName() {
+		return performanceName;
 	}
 
-	public void setShowName(String showName) {
-		this.showName = showName;
+	public void setPerformanceName(String performanceName) {
+		this.performanceName = performanceName;
 	}
 
-	public String getShowDate() {
-		return showDate;
+	public String getPerformanceDate() {
+		return performanceDate;
 	}
 
-	public void setShowDate(String showDate) {
-		this.showDate = showDate;
+	public void setPerformanceDate(String performanceDate) {
+		this.performanceDate = performanceDate;
 	}
 
-	public String getShowPeriod() {
-		return showPeriod;
+	public String getPerformancePeriod() {
+		return performancePeriod;
 	}
 
-	public void setShowPeriod(String showPeriod) {
-		this.showPeriod = showPeriod;
+	public void setPerformancePeriod(String performancePeriod) {
+		this.performancePeriod = performancePeriod;
 	}
 
-	public String getShowPlace() {
-		return showPlace;
+	public String getPerformancePlace() {
+		return performancePlace;
 	}
 
-	public void setShowPlace(String showPlace) {
-		this.showPlace = showPlace;
+	public void setPerformancePlace(String performancePlace) {
+		this.performancePlace = performancePlace;
 	}
 
-	public String getShowRegistrationDate() {
-		return showRegistrationDate;
+	public String getPerformanceRegistrationDate() {
+		return performanceRegistrationDate;
 	}
 
-	public void setShowRegistrationDate(String showRegistrationDate) {
-		this.showRegistrationDate = showRegistrationDate;
+	public void setPerformanceRegistrationDate(String performanceRegistrationDate) {
+		this.performanceRegistrationDate = performanceRegistrationDate;
 	}
 
-	public int getShowTicketPrice() {
-		return showTicketPrice;
+	public int getPerformanceTicketPrice() {
+		return performanceTicketPrice;
 	}
 
-	public void setShowTicketPrice(int showTicketPrice) {
-		this.showTicketPrice = showTicketPrice;
+	public void setPerformanceTicketPrice(int performanceTicketPrice) {
+		this.performanceTicketPrice = performanceTicketPrice;
 	}
 
-	public String getShowCast() {
-		return showCast;
+	public String getPerformanceCast() {
+		return performanceCast;
 	}
 
-	public void setShowCast(String showCast) {
-		this.showCast = showCast;
+	public void setPerformanceCast(String performanceCast) {
+		this.performanceCast = performanceCast;
 	}
 
-	public String getShowContent() {
-		return showContent;
+	public String getPerformanceContent() {
+		return performanceContent;
 	}
 
-	public void setShowContent(String showContent) {
-		this.showContent = showContent;
+	public void setPerformanceContent(String performanceContent) {
+		this.performanceContent = performanceContent;
 	}
 
 	@Override
 	public String toString() {
-		return "Show [showNo=" + showNo + ", podCast=" + podCast + ", category=" + category + ", user=" + user
-				+ ", cost=" + cost + ", showName=" + showName + ", showDate=" + showDate + ", showPeriod=" + showPeriod
-				+ ", showPlace=" + showPlace + ", showRegistrationDate=" + showRegistrationDate + ", showTicketPrice="
-				+ showTicketPrice + ", showCast=" + showCast + ", showContent=" + showContent + "]";
+		return "Show [performanceNo=" + performanceNo + ", podCastNo=" + podCastNo + ", categoryNo=" + categoryNo
+				+ ", userNo=" + userNo + ", cost=" + cost + ", performanceName=" + performanceName
+				+ ", performanceDate=" + performanceDate + ", performancePeriod=" + performancePeriod
+				+ ", performancePlace=" + performancePlace + ", performanceRegistrationDate="
+				+ performanceRegistrationDate + ", performanceTicketPrice=" + performanceTicketPrice
+				+ ", performanceCast=" + performanceCast + ", performanceContent=" + performanceContent + "]";
 	}
 
 }

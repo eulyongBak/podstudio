@@ -7,7 +7,7 @@
 		SELECT
 			 p.user_no AS userNo
 			,p.podcast_title AS podCastTitle
-			,p.podCast_subtitle AS podCastSubTitle
+			,p.podcast_subtitle AS podCastSubTitle
 			,c.category_main AS categoryMain
 			,(CASE
 				WHEN IFNULL(p.category_no2, '-') = '-'
@@ -25,6 +25,8 @@
 			category c1
 			ON
 			p.category_no2 = c1.category_no
+		WHERE
+			p.podcast_no = #{podCast.podCastNo}
 	</select>
 
 </mapper>

@@ -17,6 +17,7 @@ public class PodCastController {
 	
 	@RequestMapping(value = "/podmain", method = RequestMethod.GET)
 	public String podcastEpisode(PodCast podcast, Model model) {
+		System.out.println("PodCast" + podcast);
 		PodCast resultPodCast = podcastService.selectPodcastByPodcastNo(podcast);
 		System.out.println(resultPodCast);
 		model.addAttribute("categoryMain" , resultPodCast.getCategoryMain());
