@@ -1,17 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
-<html>
-	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-	<title>dd</title>
-	<script>
+<script>
 	$(document).ready(function() {
 		$('#sendCM').click(function() {
-			$('#sendCM').attr("action", "/insertCM");
-			$('#sendCM').attr("method", "POST");
-			$('#sendCM').attr("accept-charset", "utf-8");
-			$('#sendCM').submit();
+			$('#cmInsertForm').attr("action", "/insertCM");
+			$('#cmInsertForm').attr("method", "POST");
+			$('#cmInsertForm').attr("accept-charset", "utf-8");
+			$('#cmInsertForm').submit();
 		});
 	});
 	</script>
@@ -19,8 +14,9 @@
 <body>
 	<form id="cmInsertForm">
 		<div>
-			<label>CM광고번호 : </label>
-			<input type="text" name="cmNo"/>
+			<label>회원번호 : </label>
+			<label>(SQL Session에 있는 값이 Hidden에 담겨 넘어간다)</label>
+			<input type="hidden" name="userNo" value="${ sessionUser.userNo }" />
 		</div>
 		<div>
 			<label>팟캐스트번호 : </label>
@@ -55,14 +51,14 @@
 			<label>CM광고클릭수 : </label>
 			<input type="text" name="cmCount"/>
 		</div>
-		<!-- <div>
+		<div>
 			<label>서비스시작일 : </label>
-			<input type="text" name="cmServiceStart"/>
+			<input type="date" name="cmServiceStart"/>
 		</div>
 		<div>
 			<label>서비스종료일 : </label>
-			<input type="text" name="cmServiceEnd"/>
-		</div> -->
+			<input type="date" name="cmServiceEnd"/>
+		</div>
 		<div>
 			<label>서비스상태 : </label>
 			<input type="text" name="cmStatus"/>

@@ -1,7 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+    
+<script>
+	$(document).ready(function() {
+		$('#sendBanner').click(function() {
+			$('#bannerInsertForm').attr("action", "/insertBanner");
+			$('#bannerInsertForm').attr("method", "POST");
+			$('#bannerInsertForm').attr("accept-charset", "utf-8");
+			$('#bannerInsertForm').submit();
+		});
+	});
+</script>
 
-<form>
+<form id="bannerInsertForm">
 	<!-- <div>
 		<label>배너번호 : </label>
 		<label>
@@ -10,6 +21,8 @@
 	</div> -->
 	<div>
 		<label>회원번호 : </label>
+		<label>(SQL Session에 있는 값이 Hidden에 담겨 넘어간다)</label>
+		<input type="hidden" name="userNo" value="${ sessionUser.userNo }" />
 	</div>
 	<div>
 		<label>팟캐스트번호 : </label>
@@ -49,15 +62,17 @@
 	</div>
 	<div>	
 		<label>배너광고서비스시작시간 : </label>
-		<input type="text" name="bannerServiceStart" />
+		<input type="date" name="bannerServiceStart" />
 	</div>
 	<div>	
 		<label>배너광고서비스끝시간 : </label>
-		<input type="text" name="bannerServiceEnd" />
+		<input type="date" name="bannerServiceEnd" />
 	</div>
 	<div>
 		<label>배너광고등록상태 : </label>
-		<label>	(정상서비스 / 서비스 진행중 / 서비스 완료)</label>
 		<input type="text" name="bannerStatus" />
+		<label>	(정상서비스 / 서비스 진행중 / 서비스 완료)</label>
 	</div>
+	<button id="sendBanner">배너광고등록</button>
+	<button id="back">등록취소</button>
 </form>

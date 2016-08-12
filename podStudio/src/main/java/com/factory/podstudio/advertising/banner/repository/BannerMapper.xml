@@ -7,7 +7,7 @@
 	, user_no
 	, podcast_no
 	, studio_no
-	, show_no
+	, performance_no
 	, cost_no
 	, pay_no
 	, banner_product
@@ -22,16 +22,16 @@
 	, #{userNo}
 	, #{podcastNo}
 	, #{studioNo}
-	, #{showNo}
+	, #{performanceNo}
 	, #{costNo}
 	, #{payNo}
-	, #{bnnerProduct}
+	, #{bannerProduct}
 	, #{bannerCompany}
-	, #{bannerFilename}
+	, #{bannerFileName}
 	, #{bannerCount}
 	, SYSDATE() 
-	, SYSDATE()	<!-- #{bannerServiceStart} -->
-	, SYSDATE()	<!-- #{bannerServiceEnd} -->
+	, #{bannerServiceStart}
+	, #{bannerServiceEnd}
 	, #{bannerStatus}
 	FROM banner	
 	</insert>

@@ -22,9 +22,9 @@
 <c:if test="${sessionUser.userLevel eq '광고주'}">
 <ul class="nav nav-tabs">
 	<li role="presentation"><a href="#">광고주 메뉴</a></li>
-	<li role="presentation"><a href="/insertCM">CM광고 추가</a></li>
+	<li role="presentation"><a href="/insertCM?userNo=${ sessionUser.userNo }">CM광고 추가</a></li>
 	<li role="presentation"><a href="/detailListCM?userNo=${ sessionUser.userNo }">내CM광고리스트</a></li>
-	<li role="presentation"><a href="/insertBanner">배너광고 추가</a></li>
+	<li role="presentation"><a href="/insertBanner?userNo=${ sessionUser.userNo }">배너광고 추가</a></li>
 	<li role="presentation"><a href="/detailListBanner?userNo=${ sessionUser.userNo }">내배너광고리스트</a></li>
 </ul>
 </c:if>
