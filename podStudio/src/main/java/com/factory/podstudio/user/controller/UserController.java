@@ -63,76 +63,6 @@ public class UserController {
 		User user = (User) session.getAttribute("sessionUser");
 		User resultUser = userService.selectUserByUserNo(user);
 		logger.info("resultUser : {}", resultUser);
-		switch (resultUser.getCategoryNo()) {
-		case "category_22":
-			resultUser.setCategoryNo("서울");
-			break;
-
-		case "category_23":
-			resultUser.setCategoryNo("부산");
-			break;
-
-		case "category_24":
-			resultUser.setCategoryNo("대구");
-			break;
-
-		case "category_25":
-			resultUser.setCategoryNo("인천");
-			break;
-
-		case "category_26":
-			resultUser.setCategoryNo("광주");
-			break;
-
-		case "category_27":
-			resultUser.setCategoryNo("대전");
-			break;
-
-		case "category_28":
-			resultUser.setCategoryNo("울산");
-			break;
-
-		case "category_29":
-			resultUser.setCategoryNo("세종");
-			break;
-
-		case "category_30":
-			resultUser.setCategoryNo("경기");
-			break;
-
-		case "category_31":
-			resultUser.setCategoryNo("강원");
-			break;
-
-		case "category_32":
-			resultUser.setCategoryNo("충북");
-			break;
-
-		case "category_33":
-			resultUser.setCategoryNo("충남");
-			break;
-
-		case "category_34":
-			resultUser.setCategoryNo("전북");
-			break;
-
-		case "category_35":
-			resultUser.setCategoryNo("전남");
-			break;
-
-		case "category_36":
-			resultUser.setCategoryNo("경북");
-			break;
-
-		case "category_37":
-			resultUser.setCategoryNo("경남");
-			break;
-
-		case "category_38":
-			resultUser.setCategoryNo("제주");
-			break;
-
-		}
 		model.addAttribute("user", resultUser);
 		return "mypage/user/userDetailForm";
 
@@ -141,78 +71,10 @@ public class UserController {
 	// 회원 정보수정폼
 	@RequestMapping(value = "/modifyUser", method = RequestMethod.GET)
 	public String modifyUser(HttpSession session, Model model) {
-		User resultUser = (User) session.getAttribute("sessionUser");
-		switch (resultUser.getCategoryNo()) {
-		case "category_22":
-			resultUser.setCategoryNo("서울");
-			break;
-
-		case "category_23":
-			resultUser.setCategoryNo("부산");
-			break;
-
-		case "category_24":
-			resultUser.setCategoryNo("대구");
-			break;
-
-		case "category_25":
-			resultUser.setCategoryNo("인천");
-			break;
-
-		case "category_26":
-			resultUser.setCategoryNo("광주");
-			break;
-
-		case "category_27":
-			resultUser.setCategoryNo("대전");
-			break;
-
-		case "category_28":
-			resultUser.setCategoryNo("울산");
-			break;
-
-		case "category_29":
-			resultUser.setCategoryNo("세종");
-			break;
-
-		case "category_30":
-			resultUser.setCategoryNo("경기");
-			break;
-
-		case "category_31":
-			resultUser.setCategoryNo("강원");
-			break;
-
-		case "category_32":
-			resultUser.setCategoryNo("충북");
-			break;
-
-		case "category_33":
-			resultUser.setCategoryNo("충남");
-			break;
-
-		case "category_34":
-			resultUser.setCategoryNo("전북");
-			break;
-
-		case "category_35":
-			resultUser.setCategoryNo("전남");
-			break;
-
-		case "category_36":
-			resultUser.setCategoryNo("경북");
-			break;
-
-		case "category_37":
-			resultUser.setCategoryNo("경남");
-			break;
-
-		case "category_38":
-			resultUser.setCategoryNo("제주");
-			break;
-
-		}
+		User user = (User) session.getAttribute("sessionUser");
+		User resultUser = userService.selectUserByUserNo(user);
 		model.addAttribute("user", resultUser);
+		System.out.println("user 수정폼 : " +resultUser);
 		return "mypage/user/userUpdateForm";
 	}
 

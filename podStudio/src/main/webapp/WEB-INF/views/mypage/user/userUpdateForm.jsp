@@ -9,8 +9,45 @@
 			$('#ul').val($('#level').val());
 		});
 		$('#selectCategoryNo').change(function() {
-			$('#inputCategoryNo').val($('#selectCategoryNo').val());
+			$('#showCategoryNo').val($('#selectCategoryNo').val());
 		});
+		$('#selectCategoryNo').change(function() {
+			if ($('#showCategoryNo').val() == '서울') {
+				$('#inputCategoryNo').val('category_22');
+			}else if ($('#showCategoryNo').val() == '부산') {
+				$('#inputCategoryNo').val('category_23');
+			}else if ($('#showCategoryNo').val() == '대구') {
+				$('#inputCategoryNo').val('category_24');
+			}else if ($('#showCategoryNo').val() == '인천') {
+				$('#inputCategoryNo').val('category_25');
+			}else if ($('#showCategoryNo').val() == '광주') {
+				$('#inputCategoryNo').val('category_26');
+			}else if ($('#showCategoryNo').val() == '대전') {
+				$('#inputCategoryNo').val('category_27');
+			}else if ($('#showCategoryNo').val() == '울산') {
+				$('#inputCategoryNo').val('category_28');
+			}else if ($('#showCategoryNo').val() == '세종') {
+				$('#inputCategoryNo').val('category_29');
+			}else if ($('#showCategoryNo').val() == '경기') {
+				$('#inputCategoryNo').val('category_30');
+			}else if ($('#showCategoryNo').val() == '강원') {
+				$('#inputCategoryNo').val('category_31');
+			}else if ($('#showCategoryNo').val() == '충북') {
+				$('#inputCategoryNo').val('category_32');
+			}else if ($('#showCategoryNo').val() == '충남') {
+				$('#inputCategoryNo').val('category_33');
+			}else if ($('#showCategoryNo').val() == '전북') {
+				$('#inputCategoryNo').val('category_34');
+			}else if ($('#showCategoryNo').val() == '전남') {
+				$('#inputCategoryNo').val('category_35');
+			}else if ($('#showCategoryNo').val() == '경북') {
+				$('#inputCategoryNo').val('category_36');
+			}else if ($('#showCategoryNo').val() == '경남') {
+				$('#inputCategoryNo').val('category_37');
+			}else if ($('#showCategoryNo').val() == '제주') {
+				$('#inputCategoryNo').val('category_38');
+			}
+		});	
 		$('#modifyActionBtn').click(function() {
 			$('#modifyUserForm').attr('action', '/modifyUser');
 			$('#modifyUserForm').attr('method', 'POST');
@@ -30,11 +67,12 @@
 			value="${ sessionUser.userId }" name="userId" readonly="readonly"/>
 	</div>
 	<div>
-		<label>지역 : </label> 
-		<input id="inputCategoryNo" type="text"
-			value="${ sessionUser.categoryNo }" name="categoryNo" readonly="readonly"/>
+		<label>지역 : </label>
+		<input id="inputCategoryNo" type="hidden" value="" name="categoryNo" />
+		<input id="showCategoryNo" type="text"
+			value="${ user.categoryMain }" readonly="readonly"/>
 		<select id="selectCategoryNo">
-			<option value="${ sessionUser.categoryNo }">선택하시오</option>
+			<option value="${ user.categoryMain }">선택하시오</option>
 			<option value="서울">서울</option>
 			<option value="부산">부산</option>
 			<option value="대구">대구</option>

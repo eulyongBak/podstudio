@@ -40,17 +40,22 @@
 	<select id="selectUserByUserNo" parameterType="com.factory.podstudio.user.model.User"
 		resultType="com.factory.podstudio.user.model.User">
 		SELECT
-		user_id AS userId
-		, category_no AS categoryNo
-		, user_nickname AS userNickname
-		, DATE_FORMAT(user_birth,'%Y년%m월%d일') AS userBirth
-		, user_gender AS userGender
-		, user_email AS userEmail
-		, user_telecom AS userTelecom
-		, user_phone AS userPhone
-		, user_level AS userLevel
-		, user_job AS userJob
-		FROM user
+		u.user_id AS userId
+		, u.category_no AS categoryNo
+		, c.category_main AS categoryMain
+		, u.user_nickname AS userNickname
+		, DATE_FORMAT(u.user_birth,'%Y년%m월%d일') AS userBirth
+		, u.user_gender AS userGender
+		, u.user_email AS userEmail
+		, u.user_telecom AS userTelecom
+		, u.user_phone AS userPhone
+		, u.user_level AS userLevel
+		, u.user_job AS userJob
+		FROM user AS u
+		INNER JOIN
+		category AS c
+		ON
+		u.category_no = c.category_no
 		WHERE user_no = #{userNo}
 	</select>
 
