@@ -5,7 +5,7 @@
 		<label>아이디 : </label> ${ user.userId }
 	</div>
 	<div>
-		<label>지역 : </label> ${ user.categoryNo }
+		<label>지역 : </label> ${ user.categoryMain }
 	</div>
 	<div>
 		<label>닉네임 : </label> ${ user.userNickname }

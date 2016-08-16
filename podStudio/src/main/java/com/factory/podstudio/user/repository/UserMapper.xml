@@ -41,7 +41,8 @@
 		resultType="com.factory.podstudio.user.model.User">
 		SELECT
 		u.user_id AS userId
-		, c.category_main AS categoryNo
+		, u.category_no AS categoryNo
+		, c.category_main AS categoryMain
 		, u.user_nickname AS userNickname
 		, DATE_FORMAT(u.user_birth,'%Y년%m월%d일') AS userBirth
 		, u.user_gender AS userGender
