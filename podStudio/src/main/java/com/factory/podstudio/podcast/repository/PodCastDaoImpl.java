@@ -17,6 +17,13 @@ public class PodCastDaoImpl implements IPodCastDao {
 	
 	@Autowired
 	private SqlSessionTemplate sqlSessionTemplatePodCast;
+	
+	//팟캐스트 등록 처리 (controller -> service -> dao -> mapper)
+	@Override
+	public int insertPodcast(PodCast podCast) {
+		return sqlSessionTemplatePodCast.insert(NAME_SPACE_PODCAST+".insertPodCast", podCast);
+	}
+	
 	@Override
 	public PodCast selectPodcast(Map<String,Object> map) {
 		
@@ -28,5 +35,7 @@ public class PodCastDaoImpl implements IPodCastDao {
 	public List<PodCast> selectPodCastByUserNo(PodCast podCast) {
 		return sqlSessionTemplatePodCast.selectList(NAME_SPACE_PODCAST+".selectPodCastByUserNo", podCast);
 	}
+
+
 
 }

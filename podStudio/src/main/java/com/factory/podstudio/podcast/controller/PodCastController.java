@@ -43,14 +43,14 @@ public class PodCastController {
 		return "mypage/podcast/podCastInsertForm";
 	}
 	
-	/*
 	//팟캐스트 등록 처리
-	@RequestMapping(value = "/insertPodCast", method = RequestMethod.GET)
+	@RequestMapping(value = "/insertPodCast", method = RequestMethod.POST)
 	public String insertPodCast(PodCast podCast)	{
-		//podCastService.insertPodcast(podCast);
+		System.out.println("podCast.userNo : "+podCast.getUserNo());
+		podCastService.insertPodcast(podCast);
+		System.out.println("podCast.userNo : "+podCast.getUserNo());
 		return "redirect:/";
 	}
-	*/
 	
 	@RequestMapping(value = "/podCastList", method = RequestMethod.GET)
 	public String selectPodCastByUserNo(Model model, @RequestParam(value = "userNo") String userNo, PodCast podCast)	{

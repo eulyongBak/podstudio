@@ -16,11 +16,13 @@ public class PodcastServiceImpl implements IPodcastService {
 	
 	@Autowired
 	private PodCastDaoImpl podCastDao;
+
+	//팟캐스트 등록 처리 (controller -> service -> dao -> mapper)
 	@Override
-	public void insertPodcast() {
-
+	public int insertPodcast(PodCast podCast) {
+		return podCastDao.insertPodcast(podCast);
 	}
-
+	
 	@Override
 	public void modifyPodcastByPodcastNo() {
 
@@ -45,4 +47,5 @@ public class PodcastServiceImpl implements IPodcastService {
 	public List<PodCast> selectPodCastByUserNo(PodCast podCast) {
 		return podCastDao.selectPodCastByUserNo(podCast);
 	}
+
 }

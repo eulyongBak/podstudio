@@ -18,6 +18,8 @@ public class PodCast {
 	private String podCastSubTitle;
 	// 공개방송가능여부
 	private String podCastPublicBroadCast;
+	//팟캐스트 개설일자
+	private String podCastDate;
 
 	public String getPodCastNo() {
 		return podCastNo;
@@ -46,6 +48,8 @@ public class PodCast {
 	public String getCategoryNo2() {
 		return categoryNo2;
 	}
+
+
 
 	public void setCategoryNo2(String categoryNo2) {
 		this.categoryNo2 = categoryNo2;
@@ -83,11 +87,19 @@ public class PodCast {
 		this.podCastPublicBroadCast = podCastPublicBroadCast;
 	}
 
+	public String getPodCastDate() {
+		return podCastDate;
+	}
+
+	public void setPodCastDate(String podCastDate) {
+		this.podCastDate = podCastDate;
+	}
+
 	@Override
 	public String toString() {
 		return "PodCast [podCastNo=" + podCastNo + ", userNo=" + userNo + ", categoryNo1=" + categoryNo1
 				+ ", categoryNo2=" + categoryNo2 + ", categoryMain=" + categoryMain + ", podCastTitle=" + podCastTitle
-				+ ", podCastSubTitle=" + podCastSubTitle + ", podCastPublicBroadCast=" + podCastPublicBroadCast + "]";
+				+ ", podCastSubTitle=" + podCastSubTitle + ", podCastPublicBroadCast=" + podCastPublicBroadCast
+				+ ", podCastDate=" + podCastDate + "]";
 	}
-
 }
