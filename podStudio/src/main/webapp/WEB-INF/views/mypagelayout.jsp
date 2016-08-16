@@ -9,6 +9,9 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/layout.css">
 <title><tiles:getAsString name="title" /></title>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
 </head>
 <body>
 	<div id="wrap">

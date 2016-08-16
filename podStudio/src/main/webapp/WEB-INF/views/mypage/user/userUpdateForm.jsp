@@ -14,6 +14,10 @@
 			$('#modifyUserForm').attr('accept-charset', 'UTF-8');
 			$('#modifyUserForm').submit();
 		});
+		$('.back').click(function() {
+			parent.history.back();
+			return false;
+		})
 	});
 </script>
 <h1>회원정보수정</h1>
