@@ -23,7 +23,7 @@
 		FROM podcast
 	</insert>
 
-	<!-- <select id="selectPodCast" parameterType="java.util.Map"
+	<select id="selectPodCast" parameterType="java.util.Map"
 								resultType="com.factory.podstudio.podcast.model.PodCast">
 		SELECT
 			 p.user_no AS userNo
@@ -48,8 +48,9 @@
 			p.category_no2 = c1.category_no
 		WHERE
 			p.podcast_no = #{podCast.podCastNo}
-	</select> -->
- 	<select id="selectPodCast" parameterType="java.util.Map"
+	</select>
+	
+ 	<!-- <select id="selectPodCast" parameterType="java.util.Map"
 								resultType="com.factory.podstudio.podcast.model.PodCast">
 		SELECT
 			 p.user_no AS userNo
@@ -74,7 +75,7 @@
 			p.category_no2 = c1.category_no
 		WHERE
 			p.podcast_no = #{podCast.podCastNo}
-	</select>
+	</select> -->
 	
 	<select id="selectPodCastByUserNo" parameterType="com.factory.podstudio.podcast.model.PodCast"
 										resultType="com.factory.podstudio.podcast.model.PodCast">

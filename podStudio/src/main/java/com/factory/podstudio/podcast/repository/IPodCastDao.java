@@ -3,8 +3,11 @@ package com.factory.podstudio.podcast.repository;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
 import com.factory.podstudio.podcast.model.PodCast;
 
+@Repository
 public interface IPodCastDao {
 	//팟캐스트 등록 처리 (controller -> service -> dao -> mapper)
 	int insertPodcast(PodCast podCast);

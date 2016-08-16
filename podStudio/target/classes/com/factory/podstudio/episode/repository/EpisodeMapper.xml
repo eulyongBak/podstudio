@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.factory.podstudio.episode.repository.EpisodeMapper">
-
+	<select id="selectEpisodeListByPodCastNo" parameterType="com.factory.podstudio.episode.model.Episode"
+												resultType="com.factory.podstudio.episode.model.Episode">
+		SELECT 
+			episode_no AS episodeNo
+			, podcast_no AS podCastNo
+			, good_no AS goodNo
+			, listen_no AS listenNo
+			, episode_title AS  episodeTtitle
+			, episode_content AS  episodeContent
+			, episode_audio AS  episodeAudio
+			, episode_video AS episodeVideo
+			, episode_date AS episodeDate
+		FROM episode
+		WHERE podcast_no=#{podCastNo}
+	</select>
+	
+	<!-- select쿼리 백업용 -->
+	<!-- 
+		SELECT
+		episode_no AS episodeNo
+		, podcast_no AS podCastNo
+		, good_no AS goodNo
+		, listen_no AS listenNo
+		, episode_title AS  episodeTtitle
+		, episode_content AS  episodeContent
+		, episode_audio AS  episodeAudio
+		, (CASE
+			WHEN IFNULL(episode_video, '-') = '-'
+			THEN null
+			ELSE episode_video
+			END
+			) AS episodeVideo 
+		, episode_date AS episodeDate
+	FROM episode
+	WHERE podcast_no='podcast_002'
+	 -->
 </mapper>

@@ -52,6 +52,7 @@ public class PodCastController {
 		return "redirect:/";
 	}
 	
+	//팟캐스트 리스트
 	@RequestMapping(value = "/podCastList", method = RequestMethod.GET)
 	public String selectPodCastByUserNo(Model model, @RequestParam(value = "userNo") String userNo, PodCast podCast)	{
 		System.out.println("userNo : "+userNo);

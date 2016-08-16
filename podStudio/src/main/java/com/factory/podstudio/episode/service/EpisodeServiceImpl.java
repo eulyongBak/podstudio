@@ -1,9 +1,17 @@
 package com.factory.podstudio.episode.service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.factory.podstudio.episode.model.Episode;
+import com.factory.podstudio.episode.repository.EpisodeDaoImpl;
 
 @Service
 public class EpisodeServiceImpl implements IEpisodeService {
+	@Autowired
+	EpisodeDaoImpl episodeDao;
 	
 	@Override
 	public void insertEpisode() {
@@ -11,9 +19,8 @@ public class EpisodeServiceImpl implements IEpisodeService {
 		
 	}
 	@Override
-	public void selectEpisodeByEpisodeNo() {
-		// TODO Auto-generated method stub
-		
+	public List<Episode> selectEpisodeListByPodCastNo(Episode episode) {
+		return episodeDao.selectEpisodeListByPodCastNo(episode);
 	}
 	@Override
 	public void modifyEpisodeByEpisodeNo() {

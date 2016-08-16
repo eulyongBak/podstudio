@@ -1,5 +1,9 @@
 package com.factory.podstudio.episode.repository;
 
-public interface IEpisodeDao {
+import java.util.List;
 
+import com.factory.podstudio.episode.model.Episode;
+
+public interface IEpisodeDao {
+	List<Episode> selectEpisodeListByPodCastNo(Episode episode);
 }

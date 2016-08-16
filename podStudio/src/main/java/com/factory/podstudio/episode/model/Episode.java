@@ -1,19 +1,16 @@
 package com.factory.podstudio.episode.model;
 
-import com.factory.podstudio.good.model.Good;
-import com.factory.podstudio.listen.model.Listen;
-import com.factory.podstudio.podcast.model.PodCast;
 
 public class Episode {
 
 	// 에피소드 번호
 	private String episodeNo;
 	// 팟캐스트번호
-	private PodCast podCast;
+	private String podCastNo;
 	// 좋아요 순위번호
-	private Good good;
+	private String goodNo;
 	// 청취수 순위번호
-	private Listen listen;
+	private String listenNo;
 	// 에피소드 제목
 	private String episodeTitle;
 	// 에피소드 내용
@@ -24,7 +21,7 @@ public class Episode {
 	private String episodeVidio;
 	// 에피소드 등록시간
 	private String episodedate;
-
+	
 	public String getEpisodeNo() {
 		return episodeNo;
 	}
@@ -33,28 +30,28 @@ public class Episode {
 		this.episodeNo = episodeNo;
 	}
 
-	public PodCast getPodCast() {
-		return podCast;
+	public String getPodCastNo() {
+		return podCastNo;
 	}
 
-	public void setPodCast(PodCast podCast) {
-		this.podCast = podCast;
+	public void setPodCastNo(String podCastNo) {
+		this.podCastNo = podCastNo;
 	}
 
-	public Good getGood() {
-		return good;
+	public String getGoodNo() {
+		return goodNo;
 	}
 
-	public void setGood(Good good) {
-		this.good = good;
+	public void setGoodNo(String goodNo) {
+		this.goodNo = goodNo;
 	}
 
-	public Listen getListen() {
-		return listen;
+	public String getListenNo() {
+		return listenNo;
 	}
 
-	public void setListen(Listen listen) {
-		this.listen = listen;
+	public void setListenNo(String listenNo) {
+		this.listenNo = listenNo;
 	}
 
 	public String getEpisodeTitle() {
@@ -99,9 +96,8 @@ public class Episode {
 
 	@Override
 	public String toString() {
-		return "Episode [episodeNo=" + episodeNo + ", podCast=" + podCast + ", episodeTitle=" + episodeTitle
-				+ ", episodeContent=" + episodeContent + ", episodeAudio=" + episodeAudio + ", episodeVidio="
-				+ episodeVidio + ", episodedate=" + episodedate + "]";
+		return "Episode [episodeNo=" + episodeNo + ", podCastNo=" + podCastNo + ", goodNo=" + goodNo + ", listenNo="
+				+ listenNo + ", episodeTitle=" + episodeTitle + ", episodeContent=" + episodeContent + ", episodeAudio="
+				+ episodeAudio + ", episodeVidio=" + episodeVidio + ", episodedate=" + episodedate + "]";
 	}
-
 }
