@@ -42,7 +42,7 @@ public class BannerController {
 			banner.setUserNo(userNo);
 			System.out.println("banner.userNo : "+banner.getUserNo());
 			List<Banner> bannerList = bannerService.selectBannerByUserNo(banner);
-			System.out.println(bannerList.size() + "<-- cmList.size()");
+			System.out.println(bannerList.size() + "<-- bannerList.size()");
 			
 			
 			model.addAttribute("bannerList", bannerList);

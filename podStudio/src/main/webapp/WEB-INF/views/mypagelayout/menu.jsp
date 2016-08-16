@@ -18,7 +18,7 @@
 		<a href="#" class="list-group-item active">제작자정보</a>
 		<a href="/myPodCastInfo" class="list-group-item">내 팟캐스트 정보</a>
 		<a href="/insertPodCast" class="list-group-item">팟캐스트 추가</a>
-		<a href="/podCastList" class="list-group-item">팟캐스트 리스트</a>
+		<a href="/podCastList?userNo=${sessionUser.userNo}" class="list-group-item">팟캐스트 리스트</a>
 		<a href="/insertEpisode" class="list-group-item">에피소드 추가</a>
 		<a href="/episodeList" class="list-group-item">에피소드 리스트</a>
 	</div>

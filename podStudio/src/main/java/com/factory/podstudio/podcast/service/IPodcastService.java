@@ -1,6 +1,8 @@
 package com.factory.podstudio.podcast.service;
 
 
+import java.util.List;
+
 import com.factory.podstudio.podcast.model.PodCast;
 
 public interface IPodcastService {
@@ -8,8 +10,10 @@ public interface IPodcastService {
 
 	void modifyPodcastByPodcastNo();
 
-	PodCast selectPodcastByPodcastNo(PodCast podCast);
-
+	PodCast selectPodcastByPodCastNo(PodCast podCast);
+	
+	List<PodCast> selectPodCastByUserNo(PodCast podCast);
+	
 	void deletePodcastByPodcastNo();
 
 }

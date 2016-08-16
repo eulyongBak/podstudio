@@ -1,5 +1,6 @@
 package com.factory.podstudio.podcast.repository;
 
+import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -20,6 +21,12 @@ public class PodCastDaoImpl implements IPodCastDao {
 	public PodCast selectPodcast(Map<String,Object> map) {
 		
 		return sqlSessionTemplatePodCast.selectOne(NAME_SPACE_PODCAST+".selectPodCast", map);
+	}
+	
+	
+	@Override
+	public List<PodCast> selectPodCastByUserNo(PodCast podCast) {
+		return sqlSessionTemplatePodCast.selectList(NAME_SPACE_PODCAST+".selectPodCastByUserNo", podCast);
 	}
 
 }
