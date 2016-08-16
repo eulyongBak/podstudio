@@ -8,6 +8,9 @@
 		$('#level').change(function() {
 			$('#ul').val($('#level').val());
 		});
+		$('#selectCategoryNo').change(function() {
+			$('#inputCategoryNo').val($('#selectCategoryNo').val());
+		});
 		$('#modifyActionBtn').click(function() {
 			$('#modifyUserForm').attr('action', '/modifyUser');
 			$('#modifyUserForm').attr('method', 'POST');
@@ -24,27 +27,31 @@
 <form id="modifyUserForm">
 	<div>
 		<label>아이디 : </label> <input type="text"
-			value="${ sessionUser.userId }" name="userId" />
+			value="${ sessionUser.userId }" name="userId" readonly="readonly"/>
 	</div>
 	<div>
-		<label></label> <select name="categoryNo">
-			<option value="category_22">서울</option>
-			<option value="category_23">부산</option>
-			<option value="category_24">대구</option>
-			<option value="category_25">인천</option>
-			<option value="category_26">광주</option>
-			<option value="category_27">대전</option>
-			<option value="category_28">울산</option>
-			<option value="category_29">세종</option>
-			<option value="category_30">경기</option>
-			<option value="category_31">강원</option>
-			<option value="category_32">충북</option>
-			<option value="category_33">충남</option>
-			<option value="category_34">전북</option>
-			<option value="category_35">전남</option>
-			<option value="category_36">경북</option>
-			<option value="category_37">경남</option>
-			<option value="category_38">제주</option>
+		<label>지역 : </label> 
+		<input id="inputCategoryNo" type="text"
+			value="${ sessionUser.categoryNo }" name="categoryNo" readonly="readonly"/>
+		<select id="selectCategoryNo">
+			<option value="${ sessionUser.categoryNo }">선택하시오</option>
+			<option value="서울">서울</option>
+			<option value="부산">부산</option>
+			<option value="대구">대구</option>
+			<option value="인천">인천</option>
+			<option value="광주">광주</option>
+			<option value="대전">대전</option>
+			<option value="울산">울산</option>
+			<option value="세종">세종</option>
+			<option value="경기">경기</option>
+			<option value="강원">강원</option>
+			<option value="충북">충북</option>
+			<option value="충남">충남</option>
+			<option value="전북">전북</option>
+			<option value="전남">전남</option>
+			<option value="경북">경북</option>
+			<option value="경남">경남</option>
+			<option value="제주">제주</option>
 		</select>
 	</div>
 	<div>

@@ -63,14 +63,156 @@ public class UserController {
 		User user = (User) session.getAttribute("sessionUser");
 		User resultUser = userService.selectUserByUserNo(user);
 		logger.info("resultUser : {}", resultUser);
+		switch (resultUser.getCategoryNo()) {
+		case "category_22":
+			resultUser.setCategoryNo("서울");
+			break;
+
+		case "category_23":
+			resultUser.setCategoryNo("부산");
+			break;
+
+		case "category_24":
+			resultUser.setCategoryNo("대구");
+			break;
+
+		case "category_25":
+			resultUser.setCategoryNo("인천");
+			break;
+
+		case "category_26":
+			resultUser.setCategoryNo("광주");
+			break;
+
+		case "category_27":
+			resultUser.setCategoryNo("대전");
+			break;
+
+		case "category_28":
+			resultUser.setCategoryNo("울산");
+			break;
+
+		case "category_29":
+			resultUser.setCategoryNo("세종");
+			break;
+
+		case "category_30":
+			resultUser.setCategoryNo("경기");
+			break;
+
+		case "category_31":
+			resultUser.setCategoryNo("강원");
+			break;
+
+		case "category_32":
+			resultUser.setCategoryNo("충북");
+			break;
+
+		case "category_33":
+			resultUser.setCategoryNo("충남");
+			break;
+
+		case "category_34":
+			resultUser.setCategoryNo("전북");
+			break;
+
+		case "category_35":
+			resultUser.setCategoryNo("전남");
+			break;
+
+		case "category_36":
+			resultUser.setCategoryNo("경북");
+			break;
+
+		case "category_37":
+			resultUser.setCategoryNo("경남");
+			break;
+
+		case "category_38":
+			resultUser.setCategoryNo("제주");
+			break;
+
+		}
 		model.addAttribute("user", resultUser);
 		return "mypage/user/userDetailForm";
-	
+
 	}
 
 	// 회원 정보수정폼
 	@RequestMapping(value = "/modifyUser", method = RequestMethod.GET)
-	public String modifyUser() {
+	public String modifyUser(HttpSession session, Model model) {
+		User resultUser = (User) session.getAttribute("sessionUser");
+		switch (resultUser.getCategoryNo()) {
+		case "category_22":
+			resultUser.setCategoryNo("서울");
+			break;
+
+		case "category_23":
+			resultUser.setCategoryNo("부산");
+			break;
+
+		case "category_24":
+			resultUser.setCategoryNo("대구");
+			break;
+
+		case "category_25":
+			resultUser.setCategoryNo("인천");
+			break;
+
+		case "category_26":
+			resultUser.setCategoryNo("광주");
+			break;
+
+		case "category_27":
+			resultUser.setCategoryNo("대전");
+			break;
+
+		case "category_28":
+			resultUser.setCategoryNo("울산");
+			break;
+
+		case "category_29":
+			resultUser.setCategoryNo("세종");
+			break;
+
+		case "category_30":
+			resultUser.setCategoryNo("경기");
+			break;
+
+		case "category_31":
+			resultUser.setCategoryNo("강원");
+			break;
+
+		case "category_32":
+			resultUser.setCategoryNo("충북");
+			break;
+
+		case "category_33":
+			resultUser.setCategoryNo("충남");
+			break;
+
+		case "category_34":
+			resultUser.setCategoryNo("전북");
+			break;
+
+		case "category_35":
+			resultUser.setCategoryNo("전남");
+			break;
+
+		case "category_36":
+			resultUser.setCategoryNo("경북");
+			break;
+
+		case "category_37":
+			resultUser.setCategoryNo("경남");
+			break;
+
+		case "category_38":
+			resultUser.setCategoryNo("제주");
+			break;
+
+		}
+		model.addAttribute("user", resultUser);
 		return "mypage/user/userUpdateForm";
 	}
 
@@ -78,27 +220,19 @@ public class UserController {
 	@RequestMapping(value = "/modifyUser", method = RequestMethod.POST)
 	public String modifyUser(User user) {
 		logger.info("user :::::: {} :::::::", user);
-		// 생년월일 문자열 잘라서 데이터베이스에 넣기
-		String birth = user.getUserBirth(), year, month, day;
-		int x = birth.indexOf("년");
-		int y = birth.indexOf("월");
-		int z = birth.indexOf("일");
-		year = birth.substring(0, x);
-		month = birth.substring(x + 1, y);
-		day = birth.substring(y + 1, z);
-		birth = year + month + day;
-		user.setUserBirth(birth);
 		userService.modifyUserByUserNo(user);
 		return "redirect:/myPage";
 	}
-	//삭제 화면
-			@RequestMapping(value="/deleteUser", method =RequestMethod.GET)
-			public String noticeDeleteForm(){
-				return "mypage/user/userDeleteForm";
-			}
+
+	// 삭제 화면
+	@RequestMapping(value = "/deleteUser", method = RequestMethod.GET)
+	public String noticeDeleteForm() {
+		return "mypage/user/userDeleteForm";
+	}
+
 	// 회원정보 삭제 처리 탈퇴시간을 기록하기 위해서 update문을 사용한다.
 	@RequestMapping(value = "/deleteUser", method = RequestMethod.POST)
-	public String deleteUser(HttpSession session ,User user) {
+	public String deleteUser(HttpSession session, User user) {
 		logger.info("user ::::::::{}", user);
 		userService.deleteUserByUserNo(user);
 		session.invalidate();
