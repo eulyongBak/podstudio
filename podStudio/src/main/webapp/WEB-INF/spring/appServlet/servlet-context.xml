@@ -40,6 +40,10 @@
 		</property>
 	</bean>
 
-
+	<!-- MultipartResolver 설정 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="500000000" />
+        <property name="maxInMemorySize" value="3000000000" />
+    </bean>
 
 </beans>
