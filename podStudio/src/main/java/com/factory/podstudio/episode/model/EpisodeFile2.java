@@ -1,9 +1,9 @@
 package com.factory.podstudio.episode.model;
 
-public class EpisodeFile {
+public class EpisodeFile2 {
 	private int episodeFileNo;
 	private String episodeNo;
-	private String episodeFileName;
+	private String episodePath;
 	
 	public int getEpisodeFileNo() {
 		return episodeFileNo;
@@ -21,17 +21,19 @@ public class EpisodeFile {
 		this.episodeNo = episodeNo;
 	}
 	
-	public String getEpisodeFileName() {
-		return episodeFileName;
+	public String getEpisodePath() {
+		return episodePath;
 	}
 	
-	public void setEpisodeFileName(String episodeFileName) {
-		this.episodeFileName = episodeFileName;
+	public void setEpisodePath(String episodePath) {
+		this.episodePath = episodePath;
 	}
 	
 	@Override
 	public String toString() {
-		return "EpisodeFile [episodeFileNo=" + episodeFileNo + ", episodeNo=" + episodeNo + ", episodeFileName="
-				+ episodeFileName + "]";
+		return "EpisodeFile [episodeFileNo=" + episodeFileNo + ", episodeNo=" + episodeNo + ", episodePath="
+				+ episodePath + "]";
 	}
+	
+	
 }

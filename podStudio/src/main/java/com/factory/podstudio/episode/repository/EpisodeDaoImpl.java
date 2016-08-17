@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.factory.podstudio.episode.model.Episode;
+import com.factory.podstudio.episode.model.EpisodeFile;
 
 @Repository
 public class EpisodeDaoImpl implements IEpisodeDao {
@@ -26,4 +27,8 @@ public class EpisodeDaoImpl implements IEpisodeDao {
 		return sqlSessionTemplateEpisode.selectList(NAME_SPACE_EPISODE+".selectEpisodeListByEpisodeNo", episode);
 	}
 
+	@Override
+	public int insertEpisode(Episode episode) {
+		return sqlSessionTemplateEpisode.insert(NAME_SPACE_EPISODE+".insertEpisode", episode);
+	}
 }

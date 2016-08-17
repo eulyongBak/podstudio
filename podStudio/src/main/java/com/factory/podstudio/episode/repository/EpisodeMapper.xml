@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.factory.podstudio.episode.repository.EpisodeMapper">
+
+	<insert id="insertEpisode" parameterType="com.factory.podstudio.episode.model.Episode">
+		INSERT INTO banner           
+            INSERT INTO board_article(
+                article_tile,
+                article_content,
+                article_writer
+            ) VALUES(
+                #{articleTitle},
+                #{articleContent},
+                #{articleWriter}
+            )
+	</insert>
+	<insert id="insertEpisodeFile" parameterType="com.factory.podstudio.episode.model.Episode">
+            INSERT INTO episode_file
+            	(file_name
+            	, episode_no)
+           	VALUES
+            	(#{fileName}
+            	, #{episodeNo}
+            )
+    </insert>
+
 	<select id="selectEpisodeListByPodCastNo" parameterType="com.factory.podstudio.episode.model.Episode"
 												resultType="com.factory.podstudio.episode.model.Episode">
 		SELECT 

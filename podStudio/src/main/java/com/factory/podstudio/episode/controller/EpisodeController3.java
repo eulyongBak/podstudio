@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,7 +26,7 @@ import com.factory.podstudio.episode.service.EpisodeServiceImpl;
 
 
 @Controller
-public class EpisodeController {
+public class EpisodeController3 {
 	
 	@Autowired
 	EpisodeServiceImpl episodeService;
@@ -36,19 +35,29 @@ public class EpisodeController {
 	
 	//에피소드 등록 처리
 	@RequestMapping(value = "/episodeInsert", method = RequestMethod.GET)
-	public ModelAndView insertEpisode(HttpSession session
-									, @ModelAttribute(value="episode") Episode episode
-									, @RequestParam(value="files") MultipartFile[] files)	{
+	public ModelAndView insertEpisode(@RequestParam(value="files") MultipartFile[] files
+								, EpisodeFileUpload episodeFileUpload
+								, HttpSession session
+								, Model model)	{
 		System.out.println("episodeInsert test!");
-		final String PATH = session.getServletContext().getRealPath("/resources/upload");
-		System.out.println("PATH : "+PATH);
-		episode.setPodCastNo((String) session.getAttribute("podCastNo"));
-		
-		episodeService.insertEpisode(episode, files, PATH);
-		
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("redirect:/");
+		modelAndView.setViewName("/mypage/episode/episodeInsert");
+		final String PATH = session.getServletContext().getRealPath("/resources/upload");
 		
+		
+		// 간단한 설명을 위해 controller layer에서 파일을 저장하였지만,
+        // service layer로 path와 files값을(인수로) 넘겨서 작업을 하는것을 권장
+		for(MultipartFile file : files){
+            File newFile = new File(PATH+"/"+file.getOriginalFilename());
+            try {
+                FileUtils.writeByteArrayToFile(newFile, file.getBytes());
+                modelAndView.addObject("message", "파일업로드 성공!");
+            } catch (IOException e) {
+                e.printStackTrace();
+                modelAndView.addObject("message", "파일업로드 실패!");
+            }
+           
+        }
         return modelAndView;
     }
    

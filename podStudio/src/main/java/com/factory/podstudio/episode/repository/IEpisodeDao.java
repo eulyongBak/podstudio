@@ -5,6 +5,8 @@ import java.util.List;
 import com.factory.podstudio.episode.model.Episode;
 
 public interface IEpisodeDao {
+	int insertEpisode(Episode episode);
+
 	List<Episode> selectEpisodeListByPodCastNo(Episode episode);
 	
 	//에피소드 리스트(controller -> service -> dao -> mapper) - 제작자 권한
