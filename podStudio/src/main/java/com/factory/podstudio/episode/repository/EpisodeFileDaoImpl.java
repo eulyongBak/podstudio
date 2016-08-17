@@ -1,4 +1,4 @@
-package com.factory.podstudio.episode.repository;
+/*package com.factory.podstudio.episode.repository;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,3 +18,4 @@ public class EpisodeFileDaoImpl implements IEpisodeFileDao {
 	}
 	
 }
+*/
