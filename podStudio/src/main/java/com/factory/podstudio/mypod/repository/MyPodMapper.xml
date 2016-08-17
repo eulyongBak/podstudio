@@ -2,4 +2,37 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.factory.podstudio.mypod.repository.MyPodMapper">
 
+	<select id="selectMypodList" parameterType="java.util.Map" 
+									resultType="com.factory.podstudio.mypod.model.MyPod">
+		select
+		mypod.mypod_no AS myPodNo,
+		mypod.user_no AS userNo,
+		mypod.podcast_no AS podCastNo,
+		podcast.podcast_title AS PodCastTitle,
+		mypod.episode_no AS episodeNo,
+		episode.episode_title AS episodeTitle,
+		mypod.category_no AS categoryNo,
+		category.category_main AS categoryMain
+		from mypod
+		inner join podcast
+		inner join episode
+		inner join category
+		on
+		mypod.podcast_no = podcast.podcast_no
+		and mypod.episode_no = episode.episode_no
+		and mypod.category_no = category.category_no
+
+		where mypod.user_no = #{MyPod.userNo}
+		
+		ORDER BY mypod_no DESC
+		LIMIT #{pageHelper.startPage},
+		#{pageHelper.linePerPage}
+	</select>
+
+	<select id="selectTotalCount" resultType="Integer">
+		SELECT
+		COUNT(*)
+		FROM
+		mypod
+	</select>
 </mapper>

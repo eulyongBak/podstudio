@@ -11,40 +11,35 @@
 table, tr, th, td {
 	border: 1px solid #000000;
 }
+
 </style>
 </head>
 <body>
-	
 	<table>
 		<tr>
-			<th>문의 번호</th>
-			<th>닉네임</th>
-			<th>문의사항</th>
-			<th>문의제목</th>	
-			<th>문의시간</th>
+			<th>분야</th>
+			<th>팟캐스트 제목</th>
+			<th>에피소드 제목</th>
 		</tr>
-		<c:forEach var="list" items="${ questionList }">
+		<c:forEach var="list" items="${ myPodList }">
 			<tr>
-				<td>${ list.customercenterNo }</td>
-				<td>${ list.userNickname }</td>
-				<td>${ list.categorySub }</td>
-				<td><a href="/questionDetail?customercenterNo=${list.customercenterNo}">${ list.customercenterTitle }</a></td>
-				<td>${ list.customercenterDate}</td>
-
-				<td></td>
+				<td>${ list.categoryMain }</td>
+				<td>${ list.podCastTitle }</td>
+				<!-- 팟캐스트보기 에피소드가 되면-->
+				<td><a href="/episodeTitle?episodeNo=${list.episodeNo}">${ list.episodeTitle }</a></td>
 			</tr>
 		</c:forEach>
 	</table>
 
 	<div>
 		<c:if test="${ page > 1 }">
-			<a href="/questionList=${ page-1 }">[이전]</a>
+			<a href="/myPodcast?page=${ page-1 }">[이전]</a>
 		</c:if>
 		<c:if test="${ page eq 1 }">
 		[이전]
 		</c:if>
 		<c:if test="${ page < lastPage }">
-			<a href="/questionList=${ page+1 }">[다음]</a>
+			<a href="/myPodcast?page=${ page+1 }">[다음]</a>
 		</c:if>
 		<c:if test="${ page > lastPage }">
 		[다음]
