@@ -43,9 +43,10 @@
 	<!-- MultipartResolver 설정 -->
 	<!-- maxUploadSize : 파일 업로드 시 최대 크기 byte 단위, 최대 50mb로 제한 -->
 	<!-- maxInMemorySize : 메모리 크기 byte 단위, 최대 300mb -->
+	<!-- 
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <!-- <property name="maxUploadSize" value="500000000" />
-        <property name="maxInMemorySize" value="3000000000" /> -->
+        <property name="maxUploadSize" value="500000000" />
+        <property name="maxInMemorySize" value="3000000000" />
     </bean>
-
+	 -->
 </beans>
