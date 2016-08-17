@@ -17,7 +17,7 @@
 	<!-- Transaction Manager -->
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource"/>
+		<property name="dataSource" ref="dataSource" />
 	</bean>
 
 	<!-- mysql sqlSessionFactoryBanner -->
@@ -186,7 +186,8 @@
 
 	<!-- sqlSessionTemplatePodMeetingReply -->
 	<bean id="sqlSessionTemplatePodMeetingReply" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg index="0" ref="sqlSessionFactoryPodMeetingReply" />
+		<constructor-arg index="0"
+			ref="sqlSessionFactoryPodMeetingReply" />
 	</bean>
 
 
@@ -251,7 +252,8 @@
 
 	<!-- sqlSessionTemplateStudioReservation -->
 	<bean id="sqlSessionTemplateStudioReservation" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg index="0" ref="sqlSessionFactoryStudioReservation" />
+		<constructor-arg index="0"
+			ref="sqlSessionFactoryStudioReservation" />
 	</bean>
 
 
@@ -278,5 +280,17 @@
 	<!-- sqlSessionTemplateUser -->
 	<bean id="sqlSessionTemplateUser" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactoryUser" />
+	</bean>
+
+	<!-- mysql sqlSessionFactoryEpisodeFile -->
+	<bean id="sqlSessionFactoryEpisodeFile" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:com/factory/podstudio/user/repository/UserMapper.xml" />
+	</bean>
+
+	<!-- sqlSessionTemplateEpisodeFile -->
+	<bean id="sqlSessionTemplateEpisodeFile" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryEpisodeFile" />
 	</bean>
 </beans>
