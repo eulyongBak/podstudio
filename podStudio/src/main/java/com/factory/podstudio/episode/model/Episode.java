@@ -5,6 +5,8 @@ public class Episode {
 
 	// 에피소드 번호
 	private String episodeNo;
+	// 회원번호 (추가)
+	private String userNo;
 	// 팟캐스트번호
 	private String podCastNo;
 	// 좋아요 순위번호
@@ -18,26 +20,34 @@ public class Episode {
 	// 오디오 파일
 	private String episodeAudio;
 	// 비디오파일
-	private String episodeVidio;
+	private String episodeVideo;
 	// 에피소드 등록시간
-	private String episodedate;
+	private String episodeDate;
 	
 	public String getEpisodeNo() {
 		return episodeNo;
 	}
-
+	
 	public void setEpisodeNo(String episodeNo) {
 		this.episodeNo = episodeNo;
 	}
-
+	
+	public String getUserNo() {
+		return userNo;
+	}
+	
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
+	}
+	
 	public String getPodCastNo() {
 		return podCastNo;
 	}
-
+	
 	public void setPodCastNo(String podCastNo) {
 		this.podCastNo = podCastNo;
 	}
-
+	
 	public String getGoodNo() {
 		return goodNo;
 	}
@@ -45,59 +55,60 @@ public class Episode {
 	public void setGoodNo(String goodNo) {
 		this.goodNo = goodNo;
 	}
-
+	
 	public String getListenNo() {
 		return listenNo;
 	}
-
+	
 	public void setListenNo(String listenNo) {
 		this.listenNo = listenNo;
 	}
-
+	
 	public String getEpisodeTitle() {
 		return episodeTitle;
 	}
-
+	
 	public void setEpisodeTitle(String episodeTitle) {
 		this.episodeTitle = episodeTitle;
 	}
-
+	
 	public String getEpisodeContent() {
 		return episodeContent;
 	}
-
+	
 	public void setEpisodeContent(String episodeContent) {
 		this.episodeContent = episodeContent;
 	}
-
+	
 	public String getEpisodeAudio() {
 		return episodeAudio;
 	}
-
+	
 	public void setEpisodeAudio(String episodeAudio) {
 		this.episodeAudio = episodeAudio;
 	}
-
-	public String getEpisodeVidio() {
-		return episodeVidio;
+	
+	public String getEpisodeVideo() {
+		return episodeVideo;
 	}
-
-	public void setEpisodeVidio(String episodeVidio) {
-		this.episodeVidio = episodeVidio;
+	
+	public void setEpisodeVideo(String episodeVideo) {
+		this.episodeVideo = episodeVideo;
 	}
-
-	public String getEpisodedate() {
-		return episodedate;
+	
+	public String getEpisodeDate() {
+		return episodeDate;
 	}
-
-	public void setEpisodedate(String episodedate) {
-		this.episodedate = episodedate;
+	
+	public void setEpisodeDate(String episodeDate) {
+		this.episodeDate = episodeDate;
 	}
 
 	@Override
 	public String toString() {
-		return "Episode [episodeNo=" + episodeNo + ", podCastNo=" + podCastNo + ", goodNo=" + goodNo + ", listenNo="
-				+ listenNo + ", episodeTitle=" + episodeTitle + ", episodeContent=" + episodeContent + ", episodeAudio="
-				+ episodeAudio + ", episodeVidio=" + episodeVidio + ", episodedate=" + episodedate + "]";
+		return "Episode [episodeNo=" + episodeNo + ", userNo=" + userNo + ", podCastNo=" + podCastNo + ", goodNo="
+				+ goodNo + ", listenNo=" + listenNo + ", episodeTitle=" + episodeTitle + ", episodeContent="
+				+ episodeContent + ", episodeAudio=" + episodeAudio + ", episodeVideo=" + episodeVideo
+				+ ", episodeDate=" + episodeDate + "]";
 	}
 }

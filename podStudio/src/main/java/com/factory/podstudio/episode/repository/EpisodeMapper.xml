@@ -37,4 +37,20 @@
 	FROM episode
 	WHERE podcast_no='podcast_002'
 	 -->
+	 <select id="selectEpisodeListByEpisodeNo" parameterType="com.factory.podstudio.episode.model.Episode"
+	 											resultType="com.factory.podstudio.episode.model.Episode">
+	 	SELECT 
+			episode_no AS episodeNo
+			, user_no AS userNo
+			, podcast_no AS podCastNo
+			, good_no AS goodNo
+			, listen_no AS listenNo
+			, episode_title AS  episodeTitle
+			, episode_content AS  episodeContent
+			, episode_audio AS  episodeAudio
+			, episode_video AS episodeVideo
+			, DATE_FORMAT(episode_date,'%p %Y-%m-%d %h:%i') AS episodeDate
+		FROM episode
+		WHERE user_no = #{userNo}
+	 </select>
 </mapper>

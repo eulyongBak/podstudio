@@ -20,4 +20,10 @@ public class EpisodeDaoImpl implements IEpisodeDao {
 		return sqlSessionTemplateEpisode.selectList(NAME_SPACE_EPISODE+".selectEpisodeListByPodCastNo", episode);
 	}
 
+	//에피소드 리스트(controller -> service -> dao -> mapper) - 제작자 권한
+	@Override
+	public List<Episode> selectEpisodeByUserNo(Episode episode) {
+		return sqlSessionTemplateEpisode.selectList(NAME_SPACE_EPISODE+".selectEpisodeListByEpisodeNo", episode);
+	}
+
 }
