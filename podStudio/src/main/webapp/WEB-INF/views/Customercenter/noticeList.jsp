@@ -12,11 +12,6 @@ table, tr, th, td {
 	border: 1px solid #000000;
 }
 
-body {
-	width: 900px;
-	margin: 0 auto;
-	padding-top: 50px;
-}
 </style>
 </head>
 <body>

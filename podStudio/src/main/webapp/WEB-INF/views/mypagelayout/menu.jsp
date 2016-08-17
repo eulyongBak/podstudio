@@ -3,6 +3,11 @@
 <div class="list-group">
 	<a href="/" class="list-group-item active">집으로</a>
 </div>
+
+<div class="list-group">
+  <a href="#" class="list-group-item active">마이팟</a>
+  <a href="/myPodcast" class="list-group-item">마이 팟캐스트</a>
+</div>
 <div class="list-group">
   <a href="#" class="list-group-item active">회원정보</a>
   <a href="/userDetail" class="list-group-item">회원 정보보기</a>
@@ -20,6 +25,6 @@
 		<a href="/insertPodCast" class="list-group-item">팟캐스트 추가</a>
 		<a href="/podCastList?userNo=${sessionUser.userNo}" class="list-group-item">팟캐스트 리스트</a>
 		<a href="/insertEpisode" class="list-group-item">에피소드 추가</a>
-		<a href="/episodeList" class="list-group-item">에피소드 리스트</a>
+		<a href="/episodeList?userNo=${sessionUser.userNo}" class="list-group-item">에피소드 리스트</a>
 	</div>
 </c:if>
