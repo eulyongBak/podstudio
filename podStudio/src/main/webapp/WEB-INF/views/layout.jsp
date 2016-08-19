@@ -10,6 +10,15 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/layout.css">
 <title><tiles:getAsString name="title" /></title>
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<style>
+.nav-tabs {
+	border-bottom: none;
+}
+
+carousel-example-generic {
+	data-interval: 100;
+}
+</style>
 <script>
 	$(document).ready(function() {
 		$('#back').click(function() {
@@ -18,14 +27,14 @@
 		});
 
 		$('#subEmail').change(function() {
-			if ($('#subEmail').val().length < 1 ) {
+			if ($('#subEmail').val().length < 1) {
 				$('#emailSub').removeAttr("readonly");
 			} else {
 				$('#emailSub').attr("readonly", true);
 			}
 			$('#emailSub').val($('#subEmail').val());
 		});
-		
+
 		$('#sendSignUp').click(function() {
 			$('#signUpForm').attr("action", "/signUp");
 			$('#signUpForm').attr("method", "POST");
@@ -46,7 +55,6 @@
 		});
 
 	});
-
 </script>
 </head>
 <body>

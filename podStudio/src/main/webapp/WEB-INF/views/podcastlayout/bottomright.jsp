@@ -1,52 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<table>
-	<tr>
-		<td>베너1</td>
-	</tr>
-	<tr>
-		<td>베너2</td>
-	</tr>
-	<tr>
-		<td>베너3</td>
-	</tr>
-	<tr>
-		<td>베너4</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-	<tr>
-		<td>베너5</td>
-	</tr>
-</table>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 반응형 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2629306030362799"
+     data-ad-slot="7369655465"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>

@@ -3,12 +3,6 @@
 #wrap {
 	width: 1200px;
 	margin: 0 auto;
-	padding-top: 50px;
-}
-
-.container .row .col-md-12, .col-md-2, .col-md-3, .col-md-8, .col-md-9 {
-	border: 1px solid #000000;
-	border-collapse: collapse;
 }
 
 #wrap .container {
@@ -17,22 +11,30 @@
 
 #wrap .container .row #header {
 	height: 100px;
+	background-color: #F2F2F2;
 }
 
 #wrap .container .row #nav_menu {
 	height: auto;
+	background-color: #E6E6E6;
 }
 
 #wrap .container .row #banner {
+	height: 140px;
+	background-color: #D8D8D8;
+}
+#wrap .container .row #banner #carousel-example-generic .carousel-inner .item img {
 	height: 140px;
 }
 
 #wrap .container .row #login {
 	height: 140px;
+	background-color: #D8D8D8;
 }
 
 #wrap .container .row #left {
-	height: 240px;
+	height: auto;
+	background-color: #BDBDBD;
 }
 
 #wrap .container .row #main {
@@ -40,17 +42,17 @@
 }
 
 #wrap .container .row #right {
-	height: 240px;
+	height: auto;
+	background-color: #BDBDBD;
 }
 
 #wrap .container .row #footer {
 	height: 80px;
+	text-align: center;
+	background-color: #E6E6E6;
 }
-
-#wrap .container .row .col-md-12, .col-md-2, .col-md-4, .col-md-8,
-	.col-md-10 {
-	border: 1px solid #000000;
-	border-collapse: collapse;
+#wrap .container .row #footer #footerText {
+	size: 3px;
 }
 
 #wrap .container .row .col-md-8 {
