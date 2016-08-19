@@ -78,7 +78,7 @@ public class Banner {
 		return performanceNo;
 	}
 	
-	public void setPerformanceNo(String PerformanceNo) {
+	public void setPerformanceNo(String performanceNo) {
 		this.performanceNo = performanceNo;
 	}
 	
