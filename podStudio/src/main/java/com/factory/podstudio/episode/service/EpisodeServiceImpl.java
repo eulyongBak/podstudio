@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.factory.podstudio.episode.model.Episode;
 import com.factory.podstudio.episode.model.EpisodeFile;
-import com.factory.podstudio.episode.model.EpisodeFileUpload;
 import com.factory.podstudio.episode.repository.EpisodeDaoImpl;
 
 @Service

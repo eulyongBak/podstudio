@@ -23,7 +23,9 @@
 	height: 140px;
 	background-color: #D8D8D8;
 }
-#wrap .container .row #banner #carousel-example-generic .carousel-inner .item img {
+
+#wrap .container .row #banner marquee img
+	{
 	height: 140px;
 }
 
@@ -51,6 +53,7 @@
 	text-align: center;
 	background-color: #E6E6E6;
 }
+
 #wrap .container .row #footer #footerText {
 	size: 3px;
 }

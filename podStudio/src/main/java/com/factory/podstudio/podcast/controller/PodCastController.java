@@ -20,14 +20,9 @@ public class PodCastController {
 	
 	//팟캐스트보기
 	@RequestMapping(value = "/podmain", method = RequestMethod.GET)
-	public String podcastEpisode(PodCast podcast, Model model) {
-		System.out.println("PodCast" + podcast);
-		PodCast resultPodCast = podCastService.selectPodcastByPodCastNo(podcast);
-		System.out.println(resultPodCast);
-		model.addAttribute("categoryMain" , resultPodCast.getCategoryMain());
-		model.addAttribute("podcastTitle" ,resultPodCast.getPodCastTitle());
-		model.addAttribute("podcastSubTitle", resultPodCast.getPodCastSubTitle());
-		return "podMain";
+	public String podCast(PodCast podCast) {
+		
+		return "redirect:/podcastEpisode?podCastNo=" + podCast.getPodCastNo();
 	}
 	
 	/*

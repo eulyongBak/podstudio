@@ -32,16 +32,16 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
-					<tiles:insertAttribute name="share" />
-				</div>
-			</div>
-			<div class="row">
 				<div class="col-md-8">
 					<tiles:insertAttribute name="main" />
 				</div>
 				<div class="col-md-4">
 					<tiles:insertAttribute name="right" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<tiles:insertAttribute name="share" />
 				</div>
 			</div>
 			<div class="row">

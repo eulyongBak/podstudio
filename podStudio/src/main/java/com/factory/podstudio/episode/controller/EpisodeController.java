@@ -1,38 +1,52 @@
 package com.factory.podstudio.episode.controller;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.factory.podstudio.episode.model.Episode;
-import com.factory.podstudio.episode.model.EpisodeFileUpload;
 import com.factory.podstudio.episode.service.EpisodeServiceImpl;
+import com.factory.podstudio.podcast.model.PodCast;
+import com.factory.podstudio.podcast.service.PodcastServiceImpl;
 
 
 @Controller
 public class EpisodeController {
 	
 	@Autowired
-	EpisodeServiceImpl episodeService;
+	private EpisodeServiceImpl episodeService;
 	
+	@Autowired
+	private PodcastServiceImpl podCastService;
 	
+	// 에피소드 보기
+	@RequestMapping(value="/podcastEpisode", method= RequestMethod.GET)
+	public String episode(Episode episode, PodCast podCast, Model model) {
+		System.out.println("Episode :" + episode);
+		System.out.println("PodCast :" + podCast);
+		PodCast resultPodCast = podCastService.selectPodcastByPodCastNo(podCast);
+		System.out.println("resultPodCast :" + resultPodCast);
+		podCast.setPodCastNo(resultPodCast.getPodCastNo());
+		
+		model.addAttribute("categoryMain" , resultPodCast.getCategoryMain());
+		model.addAttribute("podcastTitle" ,resultPodCast.getPodCastTitle());
+		model.addAttribute("podcastSubTitle", resultPodCast.getPodCastSubTitle());
+		
+		episode.setPodCastNo(podCast.getPodCastNo());
+		
+		
+		return "podMain";
+	}
 	
 	//에피소드 등록 처리
 	@RequestMapping(value = "/episodeInsert", method = RequestMethod.GET)
