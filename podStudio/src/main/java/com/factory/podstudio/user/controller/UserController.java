@@ -31,7 +31,7 @@ public class UserController {
 	public String insert(User user) {
 		logger.info("{}", user.toString());
 		userService.insertUser(user);
-		return "redirect:/";
+		return "redirect:/home";
 	}
 
 	// 로그인
@@ -44,9 +44,9 @@ public class UserController {
 			// 모델2하고는 가장 비슷한 방법이긴 하나 좋지 않은 방법이다
 			// spring 쓰면서 서블릿이 보이지 않게 만든것인데 서블릿이 보이기 때문
 			logger.info("sessionUser : {}", sessionUser);
-			return "redirect:/";
+			return "redirect:/home";
 		}
-		return "redirect:/";
+		return "redirect:/home";
 
 	}
 
@@ -54,7 +54,7 @@ public class UserController {
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "redirect:/";
+		return "redirect:/home";
 	}
 
 	// 개인 회원정보보기
@@ -98,6 +98,6 @@ public class UserController {
 		logger.info("user ::::::::{}", user);
 		userService.deleteUserByUserNo(user);
 		session.invalidate();
-		return "redirect:/";
+		return "redirect:/home";
 	}
 }

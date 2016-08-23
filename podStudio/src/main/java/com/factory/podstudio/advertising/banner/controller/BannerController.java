@@ -33,7 +33,7 @@ public class BannerController {
 		public String insert(Banner banner) {
 			logger.info("{}", banner.toString());
 			bannerService.insertBanner(banner);
-			return "redirect:/";
+			return "redirect:/home";
 		}
 		
 		@RequestMapping(value = "/detailListBanner", method = RequestMethod.GET)

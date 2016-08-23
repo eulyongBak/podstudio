@@ -33,7 +33,7 @@ public class CMController {
 	@RequestMapping(value = "/insertCM", method = RequestMethod.POST)
 	public String insert(CM cm) {
 		cmService.insertCM(cm);
-		return "redirect:/";
+		return "redirect:/home";
 	}
 	
 	@RequestMapping(value = "/detailListCM", method = RequestMethod.GET)

@@ -19,11 +19,7 @@
 			<input type="text" name="bannerNo" />
 		</label>
 	</div> -->
-	<div>
-		<label>회원번호 : </label>
-		<label>(SQL Session에 있는 값이 Hidden에 담겨 넘어간다)</label>
-		<input type="hidden" name="userNo" value="${ sessionUser.userNo }" />
-	</div>
+	<input type="hidden" name="userNo" value="${ sessionUser.userNo }" />
 	<div>
 		<label>팟캐스트번호 : </label>
 		<input type="text" name="podcastNo" />

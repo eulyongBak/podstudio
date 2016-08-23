@@ -44,7 +44,7 @@ public class PodCastController {
 		System.out.println("podCast.userNo : "+podCast.getUserNo());
 		podCastService.insertPodcast(podCast);
 		System.out.println("podCast.userNo : "+podCast.getUserNo());
-		return "redirect:/";
+		return "redirect:/home";
 	}
 	
 	//팟캐스트 리스트

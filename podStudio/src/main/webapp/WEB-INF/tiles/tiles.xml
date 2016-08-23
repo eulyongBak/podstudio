@@ -29,8 +29,8 @@
 	</definition>
 
 
-	<definition name="*" extends="mainlayout">
-		<put-attribute name="main" value="/WEB-INF/views/{1}.jsp" />
+	<definition name="home" extends="mainlayout">
+		<put-attribute name="main" value="/WEB-INF/views/home.jsp" />
 	</definition>
 
 	<definition name="*/*" extends="mainlayout">

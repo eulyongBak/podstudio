@@ -40,7 +40,7 @@ public class CustommerCenterController {
 	public String addQuestion(Customercenter customercenter){
 		customerCenterservice.insertCustomerCenter(customercenter);
 		System.out.println(customercenter);
-		return "redirect:/";
+		return "redirect:/home";
 	}	
 	//상세보기
 	@RequestMapping(value="/questionDetail", method =RequestMethod.GET)

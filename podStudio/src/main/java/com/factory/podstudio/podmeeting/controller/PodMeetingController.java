@@ -31,7 +31,7 @@ public class PodMeetingController {
 		System.out.println(podMeeting);
 		podMeetingService.insertPodMeeting(podMeeting);
 		// return "redirect:podmeeting/list";
-		return "redirect:/";
+		return "redirect:/home";
 	}
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
