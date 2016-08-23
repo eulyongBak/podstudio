@@ -17,4 +17,6 @@
 			<img src="/resources/imgs/Spring.png">
 			<img src="/resources/imgs/Tiles.png">
 			<img src="/resources/imgs/javascript.png">
+			<img src="/resources/imgs/mvnrepository.png">
+			<img src="/resources/imgs/mysql.png">
 </marquee>

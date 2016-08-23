@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <style>
-table, tr, th, td{
+table, tr, th, td {
 	border: 1px solid #000000;
 	border-collapse: collapse;
 }
@@ -30,26 +30,32 @@ table, tr, th, td{
 	<li role="presentation"><a href="/performanceList?areacode=39">제주</a></li>
 </ul>
 
-	<table>
-		<tr>
-			<th>제목</th>
-			<th>주소</th>
-			<th>행사시작일</th>
-			<th>행사종료일</th>
-			<th>전화번호</th>
-		</tr>
-		<c:forEach var="p" items="${PerpomanceList }">
-			<c:if test="${p.areacode eq areacode}">
-				<tr>
-					<td>${p.title }</td>
-					<td>${p.addr1 }</td>
-					<td>${p.eventstartdate }</td>
-					<td>${p.eventenddate }</td>
-					<td>${p.tel }</td>
-				</tr>
-			</c:if>
-		</c:forEach>
-	</table>
+<table>
+	<tr>
+		<th>제목</th>
+		<th>주소</th>
+		<th>행사시작일</th>
+		<th>행사종료일</th>
+		<th>전화번호</th>
+	</tr>
+	<c:forEach var="p" items="${PerpomanceList }">
+		<c:if test="${p.areacode eq areacode}">
+			<tr>
+				<td>${p.title }</td>
+				<td>${p.addr1 }</td>
+				<td>${p.eventstartdate }</td>
+				<td>${p.eventenddate }</td>
+				<td>${p.tel }</td>
+			</tr>
+		</c:if>
+	</c:forEach>
+</table>
+<c:if test="${startPage > 1 }">
+<a href="/performanceList?startPage=${startPage - 1 }">이전</a>
+</c:if>
+<c:if test="${ startPage < pageSize }">
+<a href="/performanceList?startPage=${startPage + 1 }">다음</a>
+</c:if>
 </body>
 </html>
 

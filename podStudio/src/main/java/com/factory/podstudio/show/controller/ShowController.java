@@ -18,13 +18,15 @@ public class ShowController {
 
 	@RequestMapping(value = "/performanceList", method = RequestMethod.GET)
 	public ModelAndView tourlist(@RequestParam(value = "pageSize", defaultValue = "10") int pageSize,
-			@RequestParam(value = "statPage", defaultValue = "1") int startPage, Performance performance,
+			@RequestParam(value = "startPage", defaultValue = "1") int startPage, Performance performance,
 			@RequestParam(value="areacode", defaultValue="37") int areacode) {
 		ModelAndView mav = new ModelAndView();
 
-		mav.addObject("PerpomanceList", service.listPerformance(pageSize, (pageSize - 10) + startPage));
+		mav.addObject("PerpomanceList", service.listPerformance(pageSize,startPage));
 		mav.setViewName("performance/PerpomanceList");
 		mav.addObject("areacode", areacode);
+		mav.addObject("startPage", startPage);
+		mav.addObject("pageSize", pageSize);
 		return mav;
 	}
 
