@@ -10,27 +10,22 @@ import org.springframework.web.servlet.ModelAndView;
 import com.factory.podstudio.show.model.Performance;
 import com.factory.podstudio.show.service.PerformanceService;
 
-
-
 @Controller
 public class ShowController {
 
 	@Autowired
 	private PerformanceService service;
-	
-	@RequestMapping(value = "/performanceList", method=RequestMethod.GET)
+
+	@RequestMapping(value = "/performanceList", method = RequestMethod.GET)
 	public ModelAndView tourlist(@RequestParam(value = "pageSize", defaultValue = "10") int pageSize,
-			@RequestParam(value = "statPage", defaultValue = "1") int startPage, Performance performance ,@RequestParam(value = "서울", defaultValue="1") int areaCode) {
+			@RequestParam(value = "statPage", defaultValue = "1") int startPage, Performance performance,
+			@RequestParam(value="areacode", defaultValue="37") int areacode) {
 		ModelAndView mav = new ModelAndView();
 
 		mav.addObject("PerpomanceList", service.listPerformance(pageSize, (pageSize - 10) + startPage));
-		
 		mav.setViewName("performance/PerpomanceList");
+		mav.addObject("areacode", areacode);
 		return mav;
 	}
-	
-	@RequestMapping(value = "/performanceCategory" , method=RequestMethod.GET)
-	public String tourCategory(){
-		return "performance/PerpomanceCategory";
-	}
+
 }
