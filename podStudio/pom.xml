@@ -14,6 +14,14 @@
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
 	<dependencies>
+	
+		<!-- XMLPULL Parser -->
+		<!-- https://mvnrepository.com/artifact/net.sf.sociaal/xmlpull-xpp3 -->
+		<dependency>
+			<groupId>net.sf.sociaal</groupId>
+			<artifactId>xmlpull-xpp3</artifactId>
+			<version>3.0.0.20130526</version>
+		</dependency>
 
 		<!-- DBCP -->
 		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
