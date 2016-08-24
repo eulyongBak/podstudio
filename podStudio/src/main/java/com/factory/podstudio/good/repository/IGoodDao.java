@@ -1,5 +1,9 @@
 package com.factory.podstudio.good.repository;
 
-public interface IGoodDao {
+import java.util.List;
 
+import com.factory.podstudio.good.model.Good;
+
+public interface IGoodDao {
+	List<Good> selectGoodRankingByGoodCount(Good good);
 }

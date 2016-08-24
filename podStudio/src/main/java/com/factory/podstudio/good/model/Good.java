@@ -1,86 +1,76 @@
 package com.factory.podstudio.good.model;
 
-import com.factory.podstudio.episode.model.Episode;
-import com.factory.podstudio.podcast.model.PodCast;
-import com.factory.podstudio.user.model.User;
-
 public class Good {
 
 	// 좋아요 번호
 	private String goodNo;
 	// 팟캐스트 번호
-	private PodCast podCast;
+	private String podCastNo;
 	// 에피소드 번호
-	private Episode episode;
+	private String episodeNo;
 	// 회원번호
-	private User user;
+	private String userNo;
 	// 좋아요 누른 횟수
 	private String goodCount;
 	// 좋아요 등록시간
 	private String goodDate;
 	// IP 주소
 	private String goodipAddress;
-
+	// 좋아요 순위
+	private String goodRank;
+	
 	public String getGoodNo() {
 		return goodNo;
 	}
-
 	public void setGoodNo(String goodNo) {
 		this.goodNo = goodNo;
 	}
-
-	public PodCast getPodCast() {
-		return podCast;
+	public String getPodCastNo() {
+		return podCastNo;
 	}
-
-	public void setPodCast(PodCast podCast) {
-		this.podCast = podCast;
+	public void setPodCastNo(String podCastNo) {
+		this.podCastNo = podCastNo;
 	}
-
-	public Episode getEpisode() {
-		return episode;
+	public String getEpisodeNo() {
+		return episodeNo;
 	}
-
-	public void setEpisode(Episode episode) {
-		this.episode = episode;
+	public void setEpisodeNo(String episodeNo) {
+		this.episodeNo = episodeNo;
 	}
-
-	public User getUser() {
-		return user;
+	public String getUserNo() {
+		return userNo;
 	}
-
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
 	}
-
 	public String getGoodCount() {
 		return goodCount;
 	}
-
 	public void setGoodCount(String goodCount) {
 		this.goodCount = goodCount;
 	}
-
 	public String getGoodDate() {
 		return goodDate;
 	}
-
 	public void setGoodDate(String goodDate) {
 		this.goodDate = goodDate;
 	}
-
 	public String getGoodipAddress() {
 		return goodipAddress;
 	}
-
 	public void setGoodipAddress(String goodipAddress) {
 		this.goodipAddress = goodipAddress;
 	}
-
+	public String getGoodRank() {
+		return goodRank;
+	}
+	public void setGoodRank(String goodRank) {
+		this.goodRank = goodRank;
+	}
 	@Override
 	public String toString() {
-		return "Good [goodNo=" + goodNo + ", podCast=" + podCast + ", episode=" + episode + ", user=" + user
-				+ ", goodCount=" + goodCount + ", goodDate=" + goodDate + ", goodipAddress=" + goodipAddress + "]";
+		return "Good [goodNo=" + goodNo + ", podCastNo=" + podCastNo + ", episodeNo=" + episodeNo + ", userNo=" + userNo
+				+ ", goodCount=" + goodCount + ", goodDate=" + goodDate + ", goodipAddress=" + goodipAddress
+				+ ", goodRank=" + goodRank + "]";
 	}
-
 }

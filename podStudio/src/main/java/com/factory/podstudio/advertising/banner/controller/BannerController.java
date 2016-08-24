@@ -29,24 +29,24 @@ public class BannerController {
 	}
 	
 	// 회원가입 처리
-		@RequestMapping(value = "/insertBanner", method = RequestMethod.POST)
-		public String insert(Banner banner) {
-			logger.info("{}", banner.toString());
-			bannerService.insertBanner(banner);
-			return "redirect:/home";
-		}
+	@RequestMapping(value = "/insertBanner", method = RequestMethod.POST)
+	public String insert(Banner banner) {
+		logger.info("{}", banner.toString());
+		bannerService.insertBanner(banner);
+		return "redirect:/home";
+	}
+	
+	@RequestMapping(value = "/detailListBanner", method = RequestMethod.GET)
+	public String  detail(Model model, @RequestParam(value = "userNo") String userNo, Banner banner)	{
+		System.out.println("userNo : "+userNo);
+		banner.setUserNo(userNo);
+		System.out.println("banner.userNo : "+banner.getUserNo());
+		List<Banner> bannerList = bannerService.selectBannerByUserNo(banner);
+		System.out.println(bannerList.size() + "<-- bannerList.size()");
 		
-		@RequestMapping(value = "/detailListBanner", method = RequestMethod.GET)
-		public String  detail(Model model, @RequestParam(value = "userNo") String userNo, Banner banner)	{
-			System.out.println("userNo : "+userNo);
-			banner.setUserNo(userNo);
-			System.out.println("banner.userNo : "+banner.getUserNo());
-			List<Banner> bannerList = bannerService.selectBannerByUserNo(banner);
-			System.out.println(bannerList.size() + "<-- bannerList.size()");
-			
-			
-			model.addAttribute("bannerList", bannerList);
-			
-			return "advertising/bannerDetailList";
-		}
+		
+		model.addAttribute("bannerList", bannerList);
+		
+		return "advertising/bannerDetailList";
+	}
 }

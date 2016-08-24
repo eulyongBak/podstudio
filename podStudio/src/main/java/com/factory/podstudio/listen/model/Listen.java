@@ -1,75 +1,67 @@
 package com.factory.podstudio.listen.model;
 
-import com.factory.podstudio.episode.model.Episode;
-import com.factory.podstudio.podcast.model.PodCast;
-import com.factory.podstudio.user.model.User;
-
 public class Listen {
 	// 청취수순위번호
 	private String listenNo;
 	// 팟캐스트번호
-	private PodCast podCast;
+	private String podCastNo;
 	// 에피소드번호
-	private Episode episode;
+	private String episodeNo;
 	// 회원번호
-	private User user;
+	private String userNo;
 	// 구분 / 스트리밍 / 다운로드
 	private String listenPart;
 	// 청취시간
 	private String listenDate;
-
+	//
+	private String listenRank;
+	
 	public String getListenNo() {
 		return listenNo;
 	}
-
 	public void setListenNo(String listenNo) {
 		this.listenNo = listenNo;
 	}
-
-	public PodCast getPodCast() {
-		return podCast;
+	public String getPodCastNo() {
+		return podCastNo;
 	}
-
-	public void setPodCast(PodCast podCast) {
-		this.podCast = podCast;
+	public void setPodCastNo(String podCastNo) {
+		this.podCastNo = podCastNo;
 	}
-
-	public Episode getEpisode() {
-		return episode;
+	public String getEpisodeNo() {
+		return episodeNo;
 	}
-
-	public void setEpisode(Episode episode) {
-		this.episode = episode;
+	public void setEpisodeNo(String episodeNo) {
+		this.episodeNo = episodeNo;
 	}
-
-	public User getUser() {
-		return user;
+	public String getUserNo() {
+		return userNo;
 	}
-
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
 	}
-
 	public String getListenPart() {
 		return listenPart;
 	}
-
 	public void setListenPart(String listenPart) {
 		this.listenPart = listenPart;
 	}
-
 	public String getListenDate() {
 		return listenDate;
 	}
-
 	public void setListenDate(String listenDate) {
 		this.listenDate = listenDate;
 	}
-
+	public String getListenRank() {
+		return listenRank;
+	}
+	public void setListenRank(String listenRank) {
+		this.listenRank = listenRank;
+	}
 	@Override
 	public String toString() {
-		return "Listen [listenNo=" + listenNo + ", podCast=" + podCast + ", episode=" + episode + ", user=" + user
-				+ ", listenPart=" + listenPart + ", listenDate=" + listenDate + "]";
+		return "Listen [listenNo=" + listenNo + ", podCastNo=" + podCastNo + ", episodeNo=" + episodeNo + ", userNo="
+				+ userNo + ", listenPart=" + listenPart + ", listenDate=" + listenDate + ", listenRank=" + listenRank
+				+ "]";
 	}
-
 }
