@@ -6,7 +6,8 @@
 	<li role="presentation"><a href="/home">홈</a></li>
 	<li role="presentation"><a href="/noticeList">공지사항</a></li>
 	<li role="presentation"><a href="/podmain?podCastNo=podcast_001">팟캐스트 보기</a></li>
-	<li role="presentation"><a href="/insertPodMeeting">단팟 등록</a></li>
+	<li role="presentation"><a href="/insertPodMeeting">단팟등록</a></li>
+	<li role="presentation"><a href="/podMeetingList">단팟리스트</a></li>
 	<li role="presentation"><a href="/performanceList">공연 정보</a></li>
 	<li role="presentation"><a href="/studioList">STUDIO</a></li>
 	

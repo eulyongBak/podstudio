@@ -25,9 +25,9 @@ public class PodMeetingServiceImpl implements IPodMeetingService {
 	
 	@Override
 	public List<PodMeeting> selectPodMeetingByPodMeetingNo(int page, String word) {
-		PageHelper pagehelper = new PageHelper(page, LINE_PER_PAGE);
+		PageHelper pageHelper = new PageHelper(page, LINE_PER_PAGE);
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("pageHelper", pagehelper);
+		map.put("pageHelper", pageHelper);
 		map.put("word", word);
 		return podMeetingDao.selectPodMeeting(map);
 	}

@@ -24,15 +24,15 @@
 		, SYSDATE())
 </insert>
 
-<select id="selectpodMeeting" parameterType="java.util.Map"
+<select id="selectPodMeeting" parameterType="java.util.Map"
 		resultType="com.factory.podstudio.podmeeting.model.PodMeeting">
 		SELECT
-		p.podmeeting_no AS podMeetingNo
-		, p.user_no AS userNo
-		, p.podmeeting_title AS podMeetingTitle
-		, p.podmeeting_content AS podMeetingContent
-		, DATE_FORMAT(p.podmeeting_date,'%p %Y-%m-%d %h:%i') AS podMeetingDate   
-		, u.user_nickname AS userNickname
+			p.podmeeting_no AS podMeetingNo
+			, p.user_no AS userNo
+			, p.podmeeting_title AS podMeetingTitle
+			, p.podmeeting_content AS podMeetingContent
+			, DATE_FORMAT(p.podmeeting_date,'%p %Y-%m-%d %h:%i') AS podMeetingDate   
+			, u.user_nickname AS userNickname
 		FROM podmeeting AS p
 		INNER JOIN user AS u ON
 		p.user_no = u.user_no

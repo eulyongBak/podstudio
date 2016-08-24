@@ -34,7 +34,7 @@ public class PodMeetingController {
 		return "redirect:/home";
 	}
 
-	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	@RequestMapping(value = "/podMeetingList", method = RequestMethod.GET)
 	public String list(Model model, @RequestParam(value = "page", defaultValue = "1") int page, 
 			@RequestParam(value = "word", required = false) String word) {
 		List<PodMeeting> podMeetingList = podMeetingService.selectPodMeetingByPodMeetingNo(page, word);
@@ -43,7 +43,6 @@ public class PodMeetingController {
 		System.out.println(podMeetingList);
 		model.addAttribute("page", page);
 		model.addAttribute("lastPage", podMeetingService.getLastPage());
-		return "podMeeting/podMeetingList";
+		return "podmeeting/podMeetingList";
 	}
-
 }

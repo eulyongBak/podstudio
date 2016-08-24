@@ -19,20 +19,21 @@ h1 {
 </style>
 </head>
 <body>
-
 	<div>
-		<br /> <br />
 		<h1>
 			<a href="/home">팀프로젝트로 이동</a>
 		</h1>
 	</div>
+	<br />
 	<div>
 		<h1>교육기관 소개</h1>
 	</div>
 	<div>
 		<h3 id="h3Inline">- 교육기관 명 :</h3>
-		<label>한국스마트정보교육원</label> <label id="boldLabel"> ( <a
-			href="http://www.ksmart.or.kr/">www.ksmart.or.kr</a> )
+		<label>한국스마트정보교육원</label> <label id="boldLabel">
+			(
+			<a href="http://www.ksmart.or.kr/">www.ksmart.or.kr</a>
+			)
 		</label>
 	</div>
 	<div>
@@ -113,6 +114,5 @@ h1 {
 		<%-- <img src="<c:url value='/resources/imgs/erd.png'/>"/> --%>
 		<!-- <img alt="" src="resources/imgs/erd.png"/> -->
 	</div>
-
 </body>
 </html>
