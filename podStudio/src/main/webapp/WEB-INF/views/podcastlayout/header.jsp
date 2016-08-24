@@ -7,13 +7,14 @@
 
 
 <ol class="breadcrumb">
-  <li><a href="/">홈</a></li>
-  <li><a href="#">후원센터</a></li>
-  
-  <c:if test="${empty sessionUser.userNo}">
-  <li><a href="/">로그인</a></li>
-  </c:if>
-  
-  <li><a href="/myPage">마이페이지</a></li>
-  <li><a href="/noticeList">고객센터</a></li>
+	<li><a href="/home">홈</a></li>
+	<li><a href="#">후원센터</a></li>
+
+	<c:if test="${empty sessionUser.userNo}">
+		<li><a href="/home">로그인</a></li>
+	</c:if>
+	<c:if test="${!empty sessionUser.userNo }">
+		<li><a href="/myPage">마이페이지</a></li>
+	</c:if>
+	<li><a href="/noticeList">고객센터</a></li>
 </ol>

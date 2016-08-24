@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <div class="list-group">
-	<a href="/" class="list-group-item active">집으로</a>
+	<a href="/home" class="list-group-item active">집으로</a>
 </div>
 
 <div class="list-group">

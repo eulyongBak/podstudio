@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!-- 사용자 메뉴 -->
 <ul class="nav nav-tabs">
-	<li role="presentation"><a href="/">홈</a></li>
+	<li role="presentation"><a href="/home">홈</a></li>
 	<li role="presentation"><a href="/noticeList">공지사항</a></li>
 	<li role="presentation"><a href="/podmain?podCastNo=podcast_001">팟캐스트 보기</a></li>
 	<li role="presentation"><a href="/insertPodMeeting">단팟 등록</a></li>

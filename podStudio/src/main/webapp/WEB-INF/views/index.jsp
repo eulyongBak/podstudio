@@ -3,24 +3,36 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-	<title> 팀프로젝트 소개 페이지</title>
-	<style>
-		h1	{color: #0000ff}
-		#h3Inline	{display:inline}
-		#boldLabel	{font-weight: bold}
-	</style>
+<title>팀프로젝트 소개 페이지</title>
+<style>
+h1 {
+	color: #0000ff
+}
+
+#h3Inline {
+	display: inline
+}
+
+#boldLabel {
+	font-weight: bold
+}
+</style>
 </head>
 <body>
+
+	<div>
+		<br /> <br />
+		<h1>
+			<a href="/home">팀프로젝트로 이동</a>
+		</h1>
+	</div>
 	<div>
 		<h1>교육기관 소개</h1>
 	</div>
 	<div>
-		<h3 id="h3Inline">- 교육기관 명 :	</h3>
-		<label>한국스마트정보교육원</label>
-		<label id="boldLabel">
-			(
-			<a href="http://www.ksmart.or.kr/">www.ksmart.or.kr</a>
-			)
+		<h3 id="h3Inline">- 교육기관 명 :</h3>
+		<label>한국스마트정보교육원</label> <label id="boldLabel"> ( <a
+			href="http://www.ksmart.or.kr/">www.ksmart.or.kr</a> )
 		</label>
 	</div>
 	<div>
@@ -29,27 +41,27 @@
 	</div>
 	<div>
 		<h3 id="h3Inline">- 연락처 :</h3>
-		<label>TEL 063-717-1008	/	FAX 063-717-1122</label>
+		<label>TEL 063-717-1008 / FAX 063-717-1122</label>
 	</div>
 	<div>
 		<h3 id="h3Inline">- 대표 / 이메일 :</h3>
 		<label>이형열 / hyoung814@daum.net</label>
 	</div>
-	<br/>
+	<br />
 	<div>
 		<h1>팀프로젝트 소개</h1>
 	</div>
 	<div>
-		<h3 id="h3Inline">- 제목 : </h3>
+		<h3 id="h3Inline">- 제목 :</h3>
 		<label>공연 정보와 지역사회 발전에 도움을 줄 수 있는 팟캐스트 (프로젝트 부제목명 : 팟스튜디오)</label>
 	</div>
-	
+
 	<div>
-		<h3 id="h3Inline">- 참여인원 : </h3>
+		<h3 id="h3Inline">- 참여인원 :</h3>
 		<label>5명 / 박을용(팀장), 김지아, 이은우, 이건주, 고남혁(팀원)</label>
 	</div>
 	<div>
-		<h3 id="h3Inline">- 목적 : </h3>
+		<h3 id="h3Inline">- 목적 :</h3>
 		<ul>
 			<li>기존 시스템이 제작방법, 제작비용 등 어려운 점이 많음</li>
 			<li>이원적으로 분리되어 있는 팟캐스트, 팟호스팅 사이트를 하나로 통합</li>
@@ -65,7 +77,7 @@
 		</ul>
 	</div>
 	<div>
-		<h3 id="h3Inline">- 주요기능 : </h3>
+		<h3 id="h3Inline">- 주요기능 :</h3>
 		<ul>
 			<li></li>
 			<li></li>
@@ -75,7 +87,7 @@
 		</ul>
 	</div>
 	<div>
-		<h3 id="h3Inline">- 개발환경 : </h3>
+		<h3 id="h3Inline">- 개발환경 :</h3>
 		<ul>
 			<li>Spring Tool Suite (Developer Tool)</li>
 			<li>MySQL(DB)</li>
@@ -83,30 +95,24 @@
 			<li>Java(SSL)</li>
 			<li>Javascript, HTML5, CSS(SSL)</li>
 			<li>jQuery, Bootstrap(Framework)</li>
-		</ul>		
+		</ul>
 	</div>
 	<div>
-		<h3 id="h3Inline">- 분석설계문서 : </h3>
+		<h3 id="h3Inline">- 분석설계문서 :</h3>
 		<label>프로젝트 최종 보고서, </label>
 	</div>
 	<div>
 		<h3>
 			<label>- ERD : </label>
 		</h3>
-		<img src="<c:url value='/resources/imgs/erd.png'/>"/>
+		<img src="<c:url value='/resources/imgs/erd.png'/>" />
 		<!-- <img alt="" src="resources/imgs/erd.png"/> -->
 	</div>
 	<div>
-		<h3>- FlowChart : </h3>
+		<h3>- FlowChart :</h3>
 		<%-- <img src="<c:url value='/resources/imgs/erd.png'/>"/> --%>
 		<!-- <img alt="" src="resources/imgs/erd.png"/> -->
 	</div>
-	<div>
-		<br/>
-		<br/>
-		<h1>
-			<a href="/home">팀프로젝트로 이동</a>
-		</h1>
-	</div>
+
 </body>
 </html>

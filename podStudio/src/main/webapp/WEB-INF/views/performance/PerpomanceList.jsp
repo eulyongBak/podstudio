@@ -50,12 +50,6 @@ table, tr, th, td {
 		</c:if>
 	</c:forEach>
 </table>
-<c:if test="${startPage > 1 }">
-<a href="/performanceList?startPage=${startPage - 1 }">이전</a>
-</c:if>
-<c:if test="${ startPage < pageSize }">
-<a href="/performanceList?startPage=${startPage + 1 }">다음</a>
-</c:if>
 </body>
 </html>
 
