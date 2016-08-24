@@ -9,15 +9,17 @@ public class Studio {
 	// 스튜디오번호
 	private String studioNo;
 	// 회원번호
-	private User user;
+	private String userNo;
+	// 회원 닉네임
+	private String userNickname;
 	// 결제번호
-	private Pay pay;
+	private String pay;
 	// 카테고리번호 / 지역
-	private Category category;
+	private String category;
 	// 스튜디오예약번호
-	private StudioReservation studioreservation;
+	private String studioreservation;
 	// 배너번호
-	private Banner banner;
+	private String banner;
 	// 스튜디오명
 	private String studioName;
 	// 스튜디오 내용
@@ -37,43 +39,51 @@ public class Studio {
 		this.studioNo = studioNo;
 	}
 
-	public User getUser() {
-		return user;
+	public String getUserNo() {
+		return userNo;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserNo(String userNo) {
+		this.userNo = userNo;
 	}
 
-	public Pay getPay() {
+	public String getUserNickname() {
+		return userNickname;
+	}
+
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
+	}
+
+	public String getPay() {
 		return pay;
 	}
 
-	public void setPay(Pay pay) {
+	public void setPay(String pay) {
 		this.pay = pay;
 	}
 
-	public Category getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
-	public void setCategory(Category category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 
-	public StudioReservation getStudioreservation() {
+	public String getStudioreservation() {
 		return studioreservation;
 	}
 
-	public void setStudioreservation(StudioReservation studioreservation) {
+	public void setStudioreservation(String studioreservation) {
 		this.studioreservation = studioreservation;
 	}
 
-	public Banner getBanner() {
+	public String getBanner() {
 		return banner;
 	}
 
-	public void setBanner(Banner banner) {
+	public void setBanner(String banner) {
 		this.banner = banner;
 	}
 
@@ -119,10 +129,10 @@ public class Studio {
 
 	@Override
 	public String toString() {
-		return "Studio [studioNo=" + studioNo + ", user=" + user + ", pay=" + pay + ", category=" + category
-				+ ", studioreservation=" + studioreservation + ", banner=" + banner + ", studioName=" + studioName
-				+ ", studioContent=" + studioContent + ", studioImage=" + studioImage + ", studioEdit=" + studioEdit
-				+ ", studioFeedback=" + studioFeedback + "]";
+		return "Studio [studioNo=" + studioNo + ", userNo=" + userNo + ", userNickname=" + userNickname + ", pay=" + pay
+				+ ", category=" + category + ", studioreservation=" + studioreservation + ", banner=" + banner
+				+ ", studioName=" + studioName + ", studioContent=" + studioContent + ", studioImage=" + studioImage
+				+ ", studioEdit=" + studioEdit + ", studioFeedback=" + studioFeedback + "]";
 	}
 
 }

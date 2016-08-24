@@ -55,6 +55,7 @@ public class StudioController {
 	//상세보기
 	@RequestMapping(value= "/studioContent", method = RequestMethod.GET)
 	public String studioContent(Model model , Studio studio){
+		logger.info("Studio ::::::::: {}",studio);
 		Studio resultStudio = studioService.selectOneByStudioNo(studio);
 		model.addAttribute("studioOne", resultStudio);
 		return "studio/studioDetail";

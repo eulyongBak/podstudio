@@ -9,14 +9,14 @@ import org.springframework.stereotype.Service;
 
 import com.factory.podstudio.studio.model.PageHelper;
 import com.factory.podstudio.studio.model.Studio;
-import com.factory.podstudio.studio.repository.IStudioDao;
+import com.factory.podstudio.studio.repository.StudioDaoImpl;
 
 @Service
 public class StudioServiceImpl implements IStudioService {
 	private static final int LINE_PER_PAGE = 10;
 	
 	@Autowired
-	private IStudioDao studioDao;
+	private StudioDaoImpl studioDao;
 	
 	@Override
 	public int insertStudio(Studio studio) {
@@ -44,10 +44,6 @@ public class StudioServiceImpl implements IStudioService {
 	@Override
 	public Studio selectOneByStudioNo(Studio studio) {
 		return studioDao.studioOne(studio);
-	}
-	@Override
-	public int selectStudioByStudioNo(Studio studio) {
-		return 0;
 	}
 	@Override
 	public int getLastPage() {

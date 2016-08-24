@@ -8,6 +8,7 @@
 	<li role="presentation"><a href="/podmain?podCastNo=podcast_001">팟캐스트 보기</a></li>
 	<li role="presentation"><a href="/insertPodMeeting">단팟 등록</a></li>
 	<li role="presentation"><a href="/performanceList">공연 정보</a></li>
+	<li role="presentation"><a href="/studioList">STUDIO</a></li>
 	
 </ul>
 
@@ -21,7 +22,6 @@
 	<li role="presentation"><a href="/detailListCM?userNo=${ sessionUser.userNo }">내CM광고리스트</a></li>
 	<li role="presentation"><a href="/insertBanner?userNo=${ sessionUser.userNo }">배너광고 추가</a></li>
 	<li role="presentation"><a href="/detailListBanner?userNo=${ sessionUser.userNo }">내배너광고리스트</a></li>
-	<li role="presentation"><a href="/studioList">STUDIO</a></li>
 </ul>
 </c:if>
 
@@ -34,11 +34,3 @@
 	<li role="presentation"><a href="/detailListBanner?userNo=${ sessionUser.userNo }">내배너광고리스트</a></li>
 </ul>
 </c:if>
-
-<!-- 제작자 메뉴 -->
-<c:if test="${sessionUser.userLevel eq '제작자'}">
-<ul class="nav nav-tabs">
-	<li role="presentation"><a href="/studioList">STUDIO</a></li>
-</ul>
-</c:if>
-

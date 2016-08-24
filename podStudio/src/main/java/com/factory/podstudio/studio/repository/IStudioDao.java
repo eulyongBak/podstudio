@@ -13,7 +13,6 @@ public interface IStudioDao {
 	
 	int insertStudio(Studio studio);
 	
-	
 	Studio studioOne(Studio studio);
 	
 	int modifyStudio(Studio studio);

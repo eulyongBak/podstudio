@@ -5,14 +5,22 @@
 		resultType="com.factory.podstudio.studio.model.Studio">
 		select
 			studio.studio_no AS studioNo,
+			studio.user_no AS userNo,
+			user.user_nickname AS userNickName,
 			studio.studio_name AS studioName,
 			studio.studio_content AS studioContent,
 			studio.studio_image AS studioImage
 		from studio
+		inner join
+			user
+		on
+			studio.user_no = user.user_no
 		<where>
 			<if test="word != null">
-				studio_name LIKE CONCAT ('%',#{word},'%') OR
-				studio_content LIKE CONCAT ('%',#{word},'%')
+				studio.studio_name LIKE CONCAT ('%',#{word},'%') OR
+				studio.studio_content LIKE CONCAT ('%',#{word},'%') OR
+				studio.studio_no LIKE CONCAT ('%',#{word},'%') OR
+				user.user_nickname LIKE CONCAT ('%',#{word},'%')
 			</if>
 		</where>
 		ORDER BY studio_no DESC
@@ -35,7 +43,7 @@
 		studio_no AS studioNo,
 		studio_name AS studioName,
 		studio_content AS studioContent,
-		studio_image AS studioImage,
+		studio_image AS studioImage
 		from studio where studio_no = '${studioNo}'
 	</select>
 	
@@ -50,8 +58,13 @@
 			, studio_name
 			, studio_content
 			, studio_image)
-		VALUES 
-			(#{studio_no}
+			SELECT (
+			CASE
+			WHEN COUNT(1) = 0
+			THEN 'studio_001'
+			ELSE LPAD(MAX(RIGHT(studio_no,3)) +1, 10, 'studio_00')
+			END
+			)
 			,#{user_no}
 			,#{pay_no}
 			,#{category_no}
@@ -59,21 +72,22 @@
 			,#{banner_no}
 			,#{studio_name}
 			,#{studio_content}
-			,#{studio_image})	
+			,#{studio_image}
+			form studio
 	</insert>
 	
 	<update id="modifyStudio" parameterType="com.factory.podstudio.studio.model.Studio">
 		UPDATE studio
 		SET
-		studio_name='${studioName}',
-		studio_content='${studioContent}',
-		studio_image='${studioImage}'
-		WHERE studio_no='${studioNo}'
+		studio_name=${studioName},
+		studio_content=${studioContent},
+		studio_image=${studioImage}
+		WHERE studio_no=${studioNo}
 	</update>
 	
 	<delete id="deleteStudio" parameterType="com.factory.podstudio.studio.model.Studio">
 		DELETE FROM studio 
-		WHERE studio_no='${studioNo}'
+		WHERE studio_no=${studioNo}
 	</delete>
 
 </mapper>
