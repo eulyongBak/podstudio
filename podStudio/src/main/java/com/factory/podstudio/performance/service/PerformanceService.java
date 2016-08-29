@@ -1,4 +1,4 @@
-package com.factory.podstudio.show.service;
+package com.factory.podstudio.performance.service;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,7 +16,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import com.factory.podstudio.show.model.Performance;
+import com.factory.podstudio.performance.model.Performance;
 
 
 @Service

@@ -1,4 +1,4 @@
-package com.factory.podstudio.show.repository;
+package com.factory.podstudio.performance.repository;
 
 import org.springframework.stereotype.Repository;
 

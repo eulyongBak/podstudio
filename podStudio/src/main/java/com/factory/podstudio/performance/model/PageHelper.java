@@ -1,4 +1,4 @@
-package com.factory.podstudio.show.model;
+package com.factory.podstudio.performance.model;
 
 public class PageHelper {
 

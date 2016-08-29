@@ -1,4 +1,4 @@
-package com.factory.podstudio.show.service;
+package com.factory.podstudio.performance.service;
 
 import org.springframework.stereotype.Service;
 

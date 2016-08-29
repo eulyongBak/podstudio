@@ -1,4 +1,4 @@
-package com.factory.podstudio.show.controller;
+package com.factory.podstudio.performance.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.factory.podstudio.show.model.Performance;
-import com.factory.podstudio.show.service.PerformanceService;
+import com.factory.podstudio.performance.model.Performance;
+import com.factory.podstudio.performance.service.PerformanceService;
 
 @Controller
-public class ShowController {
+public class PerformanceController {
 
 	@Autowired
 	private PerformanceService service;
