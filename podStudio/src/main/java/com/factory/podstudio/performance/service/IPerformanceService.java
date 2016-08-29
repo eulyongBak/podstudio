@@ -1,6 +1,6 @@
 package com.factory.podstudio.performance.service;
 
-public interface IShowService {
+public interface IPerformanceService {
 	void insertShow();
 	
 	void selectShowByShowNo();

@@ -4,6 +4,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public class ShowReplyDaoImpl implements IShowReplyDao {
+public class PerformanceDaoImpl implements IPerformanceDao {
 
 }

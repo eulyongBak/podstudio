@@ -204,29 +204,29 @@
 	</bean>
 
 
-	<!-- mysql sqlSessionFactoryShow -->
-	<bean id="sqlSessionFactoryShow" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<!-- mysql sqlSessionFactoryPerformance -->
+	<bean id="sqlSessionFactoryPerformance" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations"
-			value="classpath:com/factory/podstudio/show/repository/ShowMapper.xml" />
+			value="classpath:com/factory/podstudio/performance/repository/PerformanceMapper.xml" />
 	</bean>
 
-	<!-- sqlSessionTemplateShow -->
-	<bean id="sqlSessionTemplateShow" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg index="0" ref="sqlSessionFactoryShow" />
+	<!-- sqlSessionTemplatePerformance -->
+	<bean id="sqlSessionTemplatePerformance" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryPerformance" />
 	</bean>
 
 
 	<!-- mysql sqlSessionFactoryShowReply -->
-	<bean id="sqlSessionFactoryShowReply" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<bean id="sqlSessionFactoryPerformanceReply" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations"
-			value="classpath:com/factory/podstudio/show/repository/ShowReplyMapper.xml" />
+			value="classpath:com/factory/podstudio/performance/repository/PerformanceReplyMapper.xml" />
 	</bean>
 
 	<!-- sqlSessionTemplateShowReply -->
-	<bean id="sqlSessionTemplateShowReply" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg index="0" ref="sqlSessionFactoryShowReply" />
+	<bean id="sqlSessionTemplatePerformanceReply" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryPerformanceReply" />
 	</bean>
 
 

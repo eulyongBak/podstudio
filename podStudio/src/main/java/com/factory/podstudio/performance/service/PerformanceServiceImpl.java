@@ -4,19 +4,24 @@ import org.springframework.stereotype.Service;
 
 @Service
 
-public class ShowReplyServiceImpl implements IShowReplyService {
+public class PerformanceServiceImpl implements IPerformanceService {
 	@Override
-	public void insertShowReply() {
+	public void insertShow() {
 		// TODO Auto-generated method stub
 		
 	}
 	@Override
-	public void modifyShowReplyByShowReplyNo() {
+	public void selectShowByShowNo() {
 		// TODO Auto-generated method stub
 		
 	}
 	@Override
-	public void deleteShowReplyByShowReplyNo() {
+	public void modifyShowByShowNo() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void deleteShowByShowNo() {
 		// TODO Auto-generated method stub
 		
 	}

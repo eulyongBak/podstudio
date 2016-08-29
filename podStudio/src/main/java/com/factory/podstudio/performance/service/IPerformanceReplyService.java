@@ -1,6 +1,6 @@
 package com.factory.podstudio.performance.service;
 
-public interface IShowReplyService {
+public interface IPerformanceReplyService {
 	void insertShowReply();
 	
 	void modifyShowReplyByShowReplyNo();

@@ -14,7 +14,7 @@ import com.factory.podstudio.performance.service.PerformanceService;
 public class PerformanceController {
 
 	@Autowired
-	private PerformanceService service;
+	private PerformanceService performanceService;
 
 	@RequestMapping(value = "/performanceList", method = RequestMethod.GET)
 	public ModelAndView tourlist(@RequestParam(value = "pageSize", defaultValue = "10") int pageSize,
@@ -22,7 +22,7 @@ public class PerformanceController {
 			@RequestParam(value="areacode", defaultValue="37") int areacode) {
 		ModelAndView mav = new ModelAndView();
 
-		mav.addObject("PerpomanceList", service.listPerformance(pageSize,startPage));
+		mav.addObject("PerpomanceList", performanceService.listPerformance(pageSize,startPage));
 		mav.setViewName("performance/PerpomanceList");
 		mav.addObject("areacode", areacode);
 		mav.addObject("startPage", startPage);
