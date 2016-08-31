@@ -61,6 +61,7 @@
 	});
 </script>
 <h1>회원정보수정</h1>
+<hr>
 <form id="modifyUserForm">
 	<div>
 		<label>아이디 : </label> <input type="text"

@@ -14,15 +14,17 @@
 
 </head>
 <body>
-	<div id="wrap">
+<!-- <div style="background-color: #eeeeee; height: 70px;"> -->
+<%-- 					<tiles:insertAttribute name="header"/> --%>
+<!-- 					</div> -->
+	<div id="wrap" style="padding-top: 100px;">
 		<div class="container">
+<!-- 			<div class="row"> -->
+<!-- 				<div id="myheader" class="col-md-12" style="background-color: #eeeeee;"> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 			<div class="row">
-				<div id="myheader" class="col-md-12">
-					<tiles:insertAttribute name="header" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" style="background-color: #dddddd;  margin-bottom: 50px;">
 					<tiles:insertAttribute name="profile" />
 				</div>
 			</div>

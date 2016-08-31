@@ -20,8 +20,27 @@ public class MyPodController {
 	
 	@Autowired
 	private MyPodServiceImpl myPodService;
-	@RequestMapping(value="/myPodcast", method=RequestMethod.GET )
+	@RequestMapping(value="/myPodcast", method=RequestMethod.POST )
 	public String myPodList(Model model, HttpSession session,MyPod mypod, @RequestParam(value = "page", defaultValue = "1") int page){
+		User user = (User)session.getAttribute("sessionUser");
+		System.out.println("User user ::::" + user);
+		
+		mypod.setUserNo(user.getUserNo());
+		System.out.println("MyPod myPod ::::" + mypod);
+		
+		List<MyPod> myPodList = myPodService.selectMypodByUserNo(page, mypod);
+		
+		model.addAttribute("userNo", mypod.getUserNo());
+		model.addAttribute("myPodList", myPodList);
+		// 값이 제대로 들어오는지
+//		System.out.println(myPodList);
+		model.addAttribute("page", page);
+		model.addAttribute("lastPage", myPodService.getLastPage());
+		return "mypage/myPod/myPodList";
+		
+	}
+	@RequestMapping(value="/myPodcast", method=RequestMethod.GET )
+	public String myPodList2(Model model, HttpSession session,MyPod mypod, @RequestParam(value = "page", defaultValue = "1") int page){
 		User user = (User)session.getAttribute("sessionUser");
 		System.out.println("User user ::::" + user);
 		

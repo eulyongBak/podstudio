@@ -81,13 +81,13 @@ carousel-example-generic {
 			</div>
 			<div class="row">
 				<div class="col-md-2" id="left">
-					<tiles:insertAttribute name="left" />
+<%-- 					<tiles:insertAttribute name="left" /> --%>
 				</div>
 				<div class="col-md-8" id="main">
 					<tiles:insertAttribute name="main" />
 				</div>
 				<div class="col-md-2" id="right">
-					<tiles:insertAttribute name="right" />
+<%-- 					<tiles:insertAttribute name="right" /> --%>
 				</div>
 			</div>
 			<div class="row">

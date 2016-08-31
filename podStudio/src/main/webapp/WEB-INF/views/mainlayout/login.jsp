@@ -29,8 +29,8 @@
 			$('#memberFormAndAction').submit();
 		});
 		$('#myPage').click(function() {
-			$('#memberFormAndAction').attr("action", "/myPage");
-			$('#memberFormAndAction').attr("method", "GET");
+			$('#memberFormAndAction').attr("action", "/myPodcast");
+			$('#memberFormAndAction').attr("method", "POST");
 			$('#memberFormAndAction').submit();
 		});
 	});
