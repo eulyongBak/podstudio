@@ -59,7 +59,13 @@ h1 {
 
 	<div>
 		<h3 id="h3Inline">- 참여인원 :</h3>
-		<label>5명 / 박을용(팀장), 김지아, 이은우, 이건주, 고남혁(팀원)</label>
+		<ul>
+			<li>박을용(팀장) - <a href="http://blog.naver.com/hatsukoi1307">http://blog.naver.com/hatsukoi1307</a></li>
+			<li>김지아(팀원) - <a href="http://blog.naver.com/rahmapoto">http://blog.naver.com/rahmapoto</a></li>
+			<li>이은우(팀원) - <a href="http://blog.naver.com/everydayna">http://blog.naver.com/everydayna</a></li>
+			<li>이건주(팀원) - <a href="http://lkj112900.egloos.com/">http://lkj112900.egloos.com</a></li>
+			<li>고남혁(팀원) - <a href="http://blog.naver.com/qead121">http://blog.naver.com/qead121</a></li>
+		</ul>
 	</div>
 	<div>
 		<h3 id="h3Inline">- 목적 :</h3>
