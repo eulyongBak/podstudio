@@ -13,9 +13,9 @@
   <a href="/userDetail" class="list-group-item">회원 정보보기</a>
   <a href="/modifyUser" class="list-group-item">회원 정보수정</a>
   <a href="/deleteUser" class="list-group-item">회원탈퇴</a>
-  <a href="#" class="list-group-item">제작자 권한신청</a>
-  <a href="#" class="list-group-item">광고주 권한신청</a>
-  <a href="#" class="list-group-item">공연관계자 권한신청</a>
+  <a onclick="alert('회원정보수정화면으로 이동합니다 권한을 변경하시오')" href="/modifyUser" class="list-group-item">제작자 권한신청</a>
+  <a onclick="alert('회원정보수정화면으로 이동합니다 권한을 변경하시오')" href="/modifyUser" class="list-group-item">광고주 권한신청</a>
+  <a onclick="alert('회원정보수정화면으로 이동합니다 권한을 변경하시오')" href="/modifyUser" class="list-group-item">공연관계자 권한신청</a>
 </div>
 <!-- 제작자 메뉴 -->
 <c:if test="${sessionUser.userLevel eq '제작자'}">
