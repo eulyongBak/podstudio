@@ -5,6 +5,8 @@ public class Listen {
 	private String listenNo;
 	// 팟캐스트번호
 	private String podCastNo;
+	// 팟캐스트 제목
+	private String podCastTitle;
 	// 에피소드번호
 	private String episodeNo;
 	// 회원번호
@@ -27,6 +29,12 @@ public class Listen {
 	}
 	public void setPodCastNo(String podCastNo) {
 		this.podCastNo = podCastNo;
+	}
+	public String getPodCastTitle() {
+		return podCastTitle;
+	}
+	public void setPodCastTitle(String podCastTitle) {
+		this.podCastTitle = podCastTitle;
 	}
 	public String getEpisodeNo() {
 		return episodeNo;

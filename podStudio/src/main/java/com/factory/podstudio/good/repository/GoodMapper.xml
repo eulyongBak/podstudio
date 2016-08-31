@@ -3,11 +3,13 @@
 <mapper namespace="com.factory.podstudio.good.repository.GoodMapper">
 	<select id="selectGoodRankingByGoodCount" parameterType="com.factory.podstudio.good.model.Good"
 												resultType="com.factory.podstudio.good.model.Good">
-		SELECT podcast_no AS podCastNo
+		SELECT g1.podcast_no AS podCastNo
+		,p.podcast_title AS podCastTitle
 		, (SELECT COUNT(good_count)
 			FROM good g2
 			WHERE g2.good_count > g1.good_count)+1 goodRank
 		FROM good g1
+		inner join podcast p on g1.podcast_no = p.podcast_no
 		ORDER BY goodRank
 	</select>
 </mapper>

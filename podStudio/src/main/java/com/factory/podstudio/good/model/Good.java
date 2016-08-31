@@ -6,6 +6,8 @@ public class Good {
 	private String goodNo;
 	// 팟캐스트 번호
 	private String podCastNo;
+	// 팟캐스트 제목
+	private String podCastTitle;
 	// 에피소드 번호
 	private String episodeNo;
 	// 회원번호
@@ -30,6 +32,12 @@ public class Good {
 	}
 	public void setPodCastNo(String podCastNo) {
 		this.podCastNo = podCastNo;
+	}
+	public String getPodCastTitle() {
+		return podCastTitle;
+	}
+	public void setPodCastTitle(String podCastTitle) {
+		this.podCastTitle = podCastTitle;
 	}
 	public String getEpisodeNo() {
 		return episodeNo;

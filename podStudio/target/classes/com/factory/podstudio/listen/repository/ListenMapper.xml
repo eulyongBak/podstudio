@@ -3,11 +3,14 @@
 <mapper namespace="com.factory.podstudio.listen.repository.ListenMapper">
 	<select id="selectListenRankingByListenCount" parameterType="com.factory.podstudio.listen.model.Listen"
 												resultType="com.factory.podstudio.listen.model.Listen">
-		SELECT podcast_no AS podCastNo
+		SELECT 
+		l1.podcast_no AS podCastNo
+		,p.podcast_title AS podCastTitle
 		, (SELECT COUNT(listen_count)
 			FROM listen l2
 			WHERE l2.listen_count > l1.listen_count)+1 listenRank
 		FROM listen l1
+		inner join podcast p on l1.podcast_no = p.podcast_no
 		ORDER BY listenRank
 	</select>
 </mapper>
