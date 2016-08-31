@@ -1,31 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Title</title>
-</head>
-<style>
-table, tr, th, td {
-	border: 1px solid #000000;
-}
-</style>
-</head>
-<body>
-	
-	<table>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+	<table class="table table-hover">
 		<tr>
-			<th>¹®ÀÇ ¹øÈ£</th>
-			<th>´Ğ³×ÀÓ</th>
-			<th>¹®ÀÇ»çÇ×</th>
-			<th>¹®ÀÇÁ¦¸ñ</th>	
-			<th>¹®ÀÇ½Ã°£</th>
+			<th>ë¬¸ì˜ ë²ˆí˜¸</th>
+			<th>ë‹‰ë„¤ì„</th>
+			<th>ë¬¸ì˜ì‚¬í•­</th>
+			<th>ë¬¸ì˜ì œëª©</th>	
+			<th>ë¬¸ì˜ì‹œê°„</th>
 		</tr>
 		<c:forEach var="list" items="${ questionList }">
 			<tr>
-				<td>${ list.customercenterNo }</td>
+				<td>${ fn:substring(list.customercenterNo,15,18) }</td>
 				<td>${ list.userNickname }</td>
 				<td>${ list.categorySub }</td>
 				<td><a href="/questionDetail?customercenterNo=${list.customercenterNo}">${ list.customercenterTitle }</a></td>
@@ -38,16 +25,10 @@ table, tr, th, td {
 
 	<div>
 		<c:if test="${ page > 1 }">
-			<a href="/questionList=${ page-1 }">[ÀÌÀü]</a>
-		</c:if>
-		<c:if test="${ page eq 1 }">
-		[ÀÌÀü]
+			<a href="/questionList=${ page-1 }">[ì´ì „]</a>
 		</c:if>
 		<c:if test="${ page < lastPage }">
-			<a href="/questionList=${ page+1 }">[´ÙÀ½]</a>
-		</c:if>
-		<c:if test="${ page > lastPage }">
-		[´ÙÀ½]
+			<a href="/questionList=${ page+1 }">[ë‹¤ìŒ]</a>
 		</c:if>
 	</div>
 

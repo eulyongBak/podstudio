@@ -1,37 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Title</title>
-</head>
-<style>
-table, tr, th, td {
-	border: 1px solid #000000;
-}
-
-</style>
-</head>
-<body>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 	<form action="/noticeList" method="get" accept-charset="euc-kr">
 		<label>검색어 : </label><input type="text" name="word" />
 		<button>검색</button>
 	</form>
-	<table>
-		<tr>
-			<th>noticeNo</th>
-			<th>userNickname</th>
-			<th>noticeTitle</th>
-			<th>noticeDate</th>
+	<table  class="table table-hover">
+		<tr >
+			<th style="text-align: center;">번호</th>
+			<th style="text-align: center;">닉네임</th>
+			<th style="text-align: center;">제목</th>
+			<th style="text-align: center;">작성일자</th>
 		</tr>
 		<c:forEach var="list" items="${ noticeList }">
 			<tr>
-				<td>${ list.noticeNo }</td>
+				<td style="text-align: center;">${ fn:substring(list.noticeNo,7,11) }</td>
 				<td>${ list.userNickname }</td>
 				<td><a href="/noticeContent?noticeNo=${list.noticeNo}">${ list.noticeTitle }</a></td>
-				<td>${ list.noticeDate }</td>
+				<td style="text-align: center;">${ list.noticeDate }</td>
 			</tr>
 		</c:forEach>
 	</table>
@@ -51,5 +38,3 @@ table, tr, th, td {
 		</c:if>
 	</div>
 
-</body>
-</html>

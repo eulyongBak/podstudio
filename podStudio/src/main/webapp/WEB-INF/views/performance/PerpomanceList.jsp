@@ -1,12 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<style>
-table, tr, th, td {
-	border: 1px solid #000000;
-	border-collapse: collapse;
-}
-</style>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/layout.css">
@@ -30,7 +24,7 @@ table, tr, th, td {
 	<li role="presentation"><a href="/performanceList?areacode=39">제주</a></li>
 </ul>
 
-<table>
+<table class="table table-hover">
 	<tr>
 		<th>제목</th>
 		<th>주소</th>

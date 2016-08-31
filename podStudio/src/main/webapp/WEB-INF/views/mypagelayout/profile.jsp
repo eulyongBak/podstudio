@@ -1,2 +1,2 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
-<h1>ÇÁ·ÎÇÊ</h1>
+<h1>Profile</h1>
