@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </script>
 	<form id="cmDetailListFormAndAction">
-	<table border="1">
+	<table class="table table-hover">
 		<thead>
 			<tr>
 				<td>배너광고번호</td>

@@ -58,7 +58,7 @@
 		</div>
 	</div> --%>
 	<form id="cmDetailListFormAndAction">
-	<table border="1">
+	<table class="table table-hover">
 		<thead>
 			<tr>
 				<td>CM광고번호</td>
