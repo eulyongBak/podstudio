@@ -80,22 +80,22 @@ h1 {
 	<div>
 		<h3 id="h3Inline">- 주요기능 :</h3>
 		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li>팟캐스트 (음원/영상)</li>
+			<li>마이팟빵 (즐겨찾기)</li>
+			<li>단팟빵 (동호회)</li>
+			<li>고객센터, Q&A (고객관리)</li>
+			<li>좋아요, 청취수 순위 (순위)</li>
 		</ul>
 	</div>
 	<div>
 		<h3 id="h3Inline">- 개발환경 :</h3>
 		<ul>
 			<li>Spring Tool Suite (Developer Tool)</li>
-			<li>MySQL(DB)</li>
-			<li>Apache-Tomcat(WAS)</li>
-			<li>Java(SSL)</li>
-			<li>Javascript, HTML5, CSS(SSL)</li>
-			<li>jQuery, Bootstrap(Framework)</li>
+			<li>MySQL (DB)</li>
+			<li>Apache-Tomcat (WAS)</li>
+			<li>Java (SL)</li>
+			<li>Javascript, HTML5, CSS (CL)</li>
+			<li>jQuery, Bootstrap (Framework)</li>
 		</ul>
 	</div>
 	<div>
@@ -108,11 +108,11 @@ h1 {
 		</h3>
 		<img src="<c:url value='/resources/imgs/erd.png'/>" />
 		<!-- <img alt="" src="resources/imgs/erd.png"/> -->
-	</div>
+	</div><br/>
 	<div>
-		<h3>- FlowChart :</h3>
-		<%-- <img src="<c:url value='/resources/imgs/erd.png'/>"/> --%>
-		<!-- <img alt="" src="resources/imgs/erd.png"/> -->
+		<h3>- 업무 흐름도 :</h3>
+		<img src="<c:url value='/resources/imgs/serviceFlowChart.png'/>" />
+		<!-- <img alt="" src="resources/imgs/ServiceFlowChart.png"/> -->
 	</div>
 </body>
 </html>
