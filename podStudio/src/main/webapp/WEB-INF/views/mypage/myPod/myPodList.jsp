@@ -14,7 +14,7 @@
 			<td>${ list.categoryMain }</td>
 			<td>${ list.podCastTitle }</td>
 			<!-- 팟캐스트보기 에피소드가 되면-->
-			<td><a href="/episodeTitle?episodeNo=${list.episodeNo}">${ list.episodeTitle }</a></td>
+			<td>${ list.episodeTitle }</td>
 		</tr>
 	</c:forEach>
 </table>
