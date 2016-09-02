@@ -20,7 +20,6 @@ $(document).ready(function() {
 <form id="podCastInsertForm">
 	<div>
 		<label>회원번호 : </label>
-		<label>(SQL Session에 있는 값이 Hidden에 담겨 넘어간다)</label>
 		<input type="hidden" name="userNo" value="${ sessionUser.userNo }" />
 	</div>
 	<div>
@@ -73,6 +72,10 @@ $(document).ready(function() {
 		<label>공개방송가능여부 : </label>
 		<input type="radio" name="podCastPublicBroadCast" value="가능" />가능
 		<input type="radio" name="podCastPublicBroadCast" value="불가능" />불가능
+	</div>
+	<div>
+		<label>파일첨부 : </label>
+		<input type="file" />
 	</div>
 	<div>
 		<button id="sendPodCast">팟캐스트등록</button>

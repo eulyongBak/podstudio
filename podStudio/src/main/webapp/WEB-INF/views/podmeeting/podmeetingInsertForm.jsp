@@ -9,35 +9,61 @@
 <body>
 	<h1>단팟 게시판</h1>
 	<form action="/insertPodMeeting" method="post" accept-charset="UTF-8">
-		<table>
-			<tr>
-				<td>단팟빵번호:<input type="text" name="podMeetingNo"/></td>
-			</tr>
-			<tr>	
-				<td>팟케스트번호:<input type="text" name="podcastNo"/></td>
-			</tr>
-			<tr>
-				<td>에피소드번호:<input type="text" name="episodeNo"/></td>
-			</tr>
-			<tr>
-				<td>회원번호:<input type="text" name="userNo"/></td>
-			</tr>
-			<tr>	
-				<td>카테고리번호:<input type="text" name="categoryNo"/></td>
-				
-			</tr>
-			<tr>
-				<td>제목:<input type="text" name="podMeetingTitle" /></td>
-			</tr>
-			<tr>
-				<td><textarea rows="20" cols="50" name="podMeetingContent"></textarea></td>
-			</tr>
-			<tr>
-				<td>비밀번호: <input type="password" name="podMeetingPw"/></td>
-			</tr>
-			
-		</table>
-
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">팟케스트번호:</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name="podcastNo"/>
+				</div>
+			</div>
+		</div>
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">에피소드번호:</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name="episodeNo"/>
+				</div>
+			</div>
+		</div>
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">회원번호:</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name="userNo"/>
+				</div>
+			</div>
+		</div>
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">카테고리번호:</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name="categoryNo"/>
+				</div>
+			</div>
+		</div>
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">단팟빵 제목:</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name="podMeetingTitle"/>
+				</div>
+			</div>
+		</div>
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">글 내용 : </label>
+				<div class="col-sm-7">
+					<textarea rows="20" cols="50" class="form-control" name="podMeetingContent"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">비밀번호: </label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name="podMeetingPw"/></div>
+			</div>
+		</div>
 		<div>
 			<input type="submit" value="등록" />
 		</div>

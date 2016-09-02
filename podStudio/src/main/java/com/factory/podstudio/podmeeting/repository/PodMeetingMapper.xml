@@ -12,16 +12,16 @@
 		, podmeeting_content
 		, podmeeting_pw
 		, podmeeting_date)
-	VALUES
-		(#{podMeetingNo}
-		, #{podcastNo}
-		, #{episodeNo}
-		, #{userNo}
-		, #{categoryNo}
-		, #{podMeetingTitle}
-		, #{podMeetingContent}
-		, #{podMeetingPw}
-		, SYSDATE())
+			SELECT LPAD(MAX(RIGHT(podmeeting_no,3)) +1,14,'podmeeting_00')
+			, #{podcastNo}
+			, #{episodeNo}
+			, #{userNo}
+			, #{categoryNo}
+			, #{podMeetingTitle}
+			, #{podMeetingContent}
+			, #{podMeetingPw}
+			, SYSDATE()
+			FROM podmeeting
 </insert>
 
 <select id="selectPodMeeting" parameterType="java.util.Map"

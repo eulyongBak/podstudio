@@ -40,13 +40,13 @@
 		<div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label">ID</label>
 			<div class="col-sm-10">
-				<input type="text" class="form-control" name="userId" placeholder="ID">
+				<input type="text" class="form-control" name="userId" placeholder="ID" value="id_001" />
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="inputPassword3" class="col-sm-2 control-label">PW</label>
 			<div class="col-sm-10">
-				<input type="password" class="form-control" name="userPw" placeholder="Password">
+				<input type="password" class="form-control" name="userPw" placeholder="Password" value="pw_001" />
 			</div>
 		</div>
 		<div class="form-group">

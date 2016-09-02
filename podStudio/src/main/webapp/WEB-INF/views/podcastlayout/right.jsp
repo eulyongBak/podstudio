@@ -9,19 +9,11 @@
 	</ul>
 
 	<div class="tab-content">
-		<div id="audio" class="tab-pane fade in active">
-			<c:if test="${ episodeAudio }">
-				<c:forEach var="audio" items="${ episode.episodeAudio }">
-
-				</c:forEach>
-			</c:if>
-		</div>
-		<div id="video" class="tab-pane fade">
-			<c:if test="${ episodeVideo }">
-				<c:forEach var="video" items="${ episode.episodeVideo }">
-
-				</c:forEach>
-			</c:if>
-		</div>
+		<div id="audio" class="tab-pane fade in active">영어 기본개념 및 기초영어 - 03</div>
+		<div id="audio" class="tab-pane fade in active">영어 기본개념 및 기초영어 - 02</div>
+		<div id="audio" class="tab-pane fade in active">영어 기본개념 및 기초영어 - 01</div>
+		<div id="video" class="tab-pane fade">영어 기본개념 및 기초영어 - 03</div>
+		<div id="video" class="tab-pane fade">영어 기본개념 및 기초영어 - 02</div>
+		<div id="video" class="tab-pane fade">영어 기본개념 및 기초영어 - 01</div>
 	</div>
 </div>

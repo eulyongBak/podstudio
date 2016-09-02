@@ -6,39 +6,23 @@
 </form>
 <table>
 	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
+		<td>hatsukoi1307</td>
+		<td>이 컨텐츠 정말 유익하네요.</td>
 	</tr>
 	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
+		<td>lkj112900</td>
+		<td>의미있는 컨텐츠 계속 올려주세요</td>
 	</tr>
 	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
+		<td>rahmaphoto</td>
+		<td>재밌습니다</td>
 	</tr>
 	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
+		<td>everydayna</td>
+		<td>다음화가 기대되요</td>
 	</tr>
 	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
-	</tr>
-	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
-	</tr>
-	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
-	</tr>
-	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
-	</tr>
-	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
-	</tr>
-	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
-	</tr>
-	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
-	</tr>
-	<tr>
-		<td>125rqweopjafjasjdlkasjsfasd</td>
+		<td>qead121</td>
+		<td>저한테는 너무 쉬운 내용만 있는듯요</td>
 	</tr>
 </table>
