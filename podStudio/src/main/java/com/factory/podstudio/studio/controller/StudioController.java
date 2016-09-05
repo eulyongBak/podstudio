@@ -34,23 +34,19 @@ public class StudioController {
 		return "studio/studioList";
 	}
 	
+	//입력화면
 	@RequestMapping(value = "/insertStudio", method = RequestMethod.GET)
 	public String insert(){
 		return "studio/studioInsertForm";
 	}
 	
-	//입력화면
-	@RequestMapping(value = "/studioWrite", method = RequestMethod.GET)
-	public String studioWrite() {
-		return "studio/studioInsertForm";
-	}
 	//입력처리
-	@RequestMapping(value = "/addStudio", method = RequestMethod.POST)
-	public String boardWrite(Studio studio) {
+	@RequestMapping(value = "/insertStudio", method = RequestMethod.POST)
+	public String studioInsert(Studio studio) {
 		// studio에 저장된 값을 보여준다.
 		studioService.insertStudio(studio);
 		System.out.println(studio);
-		return "redirect:studio/studioList";
+		return "redirect:/studio/studioList";
 	}
 	//상세보기
 	@RequestMapping(value= "/studioContent", method = RequestMethod.GET)
@@ -61,7 +57,7 @@ public class StudioController {
 		return "studio/studioDetail";
 	}
 	//수정화면
-	@RequestMapping(value="/studioModifyform", method =RequestMethod.GET)
+	@RequestMapping(value="/studioModify", method = RequestMethod.GET)
 	public String studioModifyForm(Model model, Studio studio){
 		model.addAttribute("studioOne", studioService.selectOneByStudioNo(studio));
 		return "studio/studioModifyForm";
@@ -71,7 +67,7 @@ public class StudioController {
 	@RequestMapping(value="/studioModify", method = RequestMethod.POST)
 	public String studioModify(Model model , Studio studio){
 		studioService.modifyStudioByStudioNo(studio);
-		return "redirect:studio/studioList";
+		return "redirect:/studio/studioList";
 		}
 	//삭제 화면
 	@RequestMapping(value="/studioDeleteForm", method =RequestMethod.GET)
@@ -83,7 +79,7 @@ public class StudioController {
 	@RequestMapping(value="/studioDelete", method= RequestMethod.POST)
 	public String studioDelete(Model model , Studio studio){
 		studioService.deleteStudioByStudioNo(studio);
-		return "redirect:studio/studioList";
+		return "redirect:/studio/studioList";
 	}
 	
 	

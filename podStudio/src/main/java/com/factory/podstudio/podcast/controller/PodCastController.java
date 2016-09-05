@@ -19,18 +19,17 @@ public class PodCastController {
 	private PodcastServiceImpl podCastService;
 	
 	//팟캐스트보기
-	@RequestMapping(value = "/podmain", method = RequestMethod.GET)
-	public String podCast(PodCast podCast) {
-		
-		return "redirect:/podcastEpisode?podCastNo=" + podCast.getPodCastNo();
-	}
+		@RequestMapping(value = "/podmain", method = RequestMethod.GET)
+		public String podCast(PodCast podCast) {
+			
+			return "redirect:/podcastEpisode?podCastNo=" + podCast.getPodCastNo();
+		}
 	
-	/*
+	//내 팟캐스트 정보 - 미구현
 	@RequestMapping(value = "/myPodCastInfo", method = RequestMethod.GET)
 	public String myPodCastInfo(PodCast podCast)	{
 		return "redirect:/myPage";
 	}
-	*/
 	
 	//팟캐스트 등록	
 	@RequestMapping(value = "/insertPodCast", method = RequestMethod.GET)

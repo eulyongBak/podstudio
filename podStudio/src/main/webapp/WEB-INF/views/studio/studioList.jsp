@@ -10,16 +10,70 @@
 	<tr>
 		<th style="text-align: center;">번호</th>
 		<th style="text-align: center;">스튜디오명</th>
-		<th style="text-align: center;">상세설명</th>
+		<th style="text-align: center;">지역</th>
 		<th style="text-align: center;">작성자</th>
 	</tr>
 
 	<c:forEach var="list" items="${ studioList }">
 		<tr>
 			<td id="tableNo">${fn:substring(list.studioNo,7,10) }</td>
-			<td id="tableName"><a
-				href="/studioContent?studioNo=${list.studioNo }">${list.studioName }</a></td>
-			<td id="tableContent">${fn:substring(list.studioContent,0,5)}</td>
+			<td id="tableName">
+				<a href="/studioContent?studioNo=${list.studioNo }">${list.studioName }</a>
+			</td>
+			
+			<c:if test="${list.categoryNo eq 'category_22'}">
+				<td>서울</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_23'}">
+				<td>부산</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_24'}">
+				<td>대구</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_25'}">
+				<td>인천</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_26'}">
+				<td>광주</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_27'}">
+				<td>대전</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_28'}">
+				<td>울산</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_29'}">
+				<td>세종</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_30'}">
+				<td>경기</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_31'}">
+				<td>강원</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_32'}">
+				<td>충북</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_33'}">
+				<td>충남</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_34'}">
+				<td>전북</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_35'}">
+				<td>전남</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_36'}">
+				<td>경북</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_37'}">
+				<td>경남</td>
+			</c:if>
+			<c:if test="${list.categoryNo eq 'category_38'}">
+				<td>제주</td>
+			</c:if>
+			
+			<%-- <td id="tableContent">${fn:substring(list.studioContent,0,5)}</td> --%>
 			<td id="tableUser">${list.userNickname }</td>
 		</tr>
 	</c:forEach>

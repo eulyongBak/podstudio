@@ -3,18 +3,16 @@
 <mapper namespace="com.factory.podstudio.studio.repository.StudioMapper">
 	<select id="selectStudio" parameterType="java.util.Map"
 		resultType="com.factory.podstudio.studio.model.Studio">
-		select
+		SELECT
 			studio.studio_no AS studioNo,
 			studio.user_no AS userNo,
 			user.user_nickname AS userNickName,
 			studio.studio_name AS studioName,
 			studio.studio_content AS studioContent,
-			studio.studio_image AS studioImage
-		from studio
-		inner join
-			user
-		on
-			studio.user_no = user.user_no
+			studio.category_no AS categoryNo
+		FROM studio
+		INNER JOIN	user
+		ON studio.user_no = user.user_no
 		<where>
 			<if test="word != null">
 				studio.studio_name LIKE CONCAT ('%',#{word},'%') OR
@@ -24,10 +22,7 @@
 			</if>
 		</where>
 		ORDER BY studio_no DESC
-		LIMIT #{pageHelper.startPage},
-		#{pageHelper.linePerPage}
-		
-		
+		LIMIT #{pageHelper.startPage}, #{pageHelper.linePerPage}
 	</select>
 	
 	<select id="selectTotalCount" resultType="Integer">
@@ -51,29 +46,15 @@
 		INSERT INTO studio
 			(studio_no
 			, user_no
-			, pay_no
-			, category_no
-			, studioreservation_no
-			, banner_no
 			, studio_name
-			, studio_content
-			, studio_image)
-			SELECT (
-			CASE
-			WHEN COUNT(1) = 0
-			THEN 'studio_001'
-			ELSE LPAD(MAX(RIGHT(studio_no,3)) +1, 10, 'studio_00')
-			END
-			)
-			,#{user_no}
-			,#{pay_no}
-			,#{category_no}
-			,#{studioreservation_no}
-			,#{banner_no}
-			,#{studio_name}
-			,#{studio_content}
-			,#{studio_image}
-			form studio
+			, category_no
+			, studio_content)
+			SELECT LPAD(MAX(RIGHT(studio_no,3)) +1,10,'studio_00')
+			, #{userNo}
+			, #{studioName}
+			, #{categoryNo}
+			, #{studioContent}
+			FROM studio
 	</insert>
 	
 	<update id="modifyStudio" parameterType="com.factory.podstudio.studio.model.Studio">

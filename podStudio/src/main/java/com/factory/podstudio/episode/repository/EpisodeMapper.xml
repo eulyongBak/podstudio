@@ -40,40 +40,22 @@
 		WHERE podcast_no=#{podCastNo}
 	</select>
 	
-	<!-- select쿼리 백업용 -->
-	<!-- 
-		SELECT
-		episode_no AS episodeNo
-		, podcast_no AS podCastNo
-		, good_no AS goodNo
-		, listen_no AS listenNo
-		, episode_title AS  episodeTtitle
-		, episode_content AS  episodeContent
-		, episode_audio AS  episodeAudio
-		, (CASE
-			WHEN IFNULL(episode_video, '-') = '-'
-			THEN null
-			ELSE episode_video
-			END
-			) AS episodeVideo 
-		, episode_date AS episodeDate
-	FROM episode
-	WHERE podcast_no='podcast_002'
-	 -->
-	 <select id="selectEpisodeListByEpisodeNo" parameterType="com.factory.podstudio.episode.model.Episode"
+	<select id="selectEpisodeListByEpisodeNo" parameterType="com.factory.podstudio.episode.model.Episode"
 	 											resultType="com.factory.podstudio.episode.model.Episode">
 	 	SELECT 
-			episode_no AS episodeNo
-			, user_no AS userNo
-			, podcast_no AS podCastNo
-			, good_no AS goodNo
-			, listen_no AS listenNo
-			, episode_title AS  episodeTitle
-			, episode_content AS  episodeContent
-			, episode_audio AS  episodeAudio
-			, episode_video AS episodeVideo
-			, DATE_FORMAT(episode_date,'%p %Y-%m-%d %h:%i') AS episodeDate
-		FROM episode
-		WHERE user_no = #{userNo}
+			e.episode_no AS episodeNo
+			, e.user_no AS userNo
+			, e.podcast_no AS podCastNo
+			, e.episode_title AS episodeTitle
+			, e.episode_content AS episodeContent
+			, e.episode_audio AS episodeAudio
+			, e.episode_video AS episodeVideo
+			, DATE_FORMAT(e.episode_date,'%p %Y-%m-%d %h:%i') AS episodeDate
+			, u.user_nickname AS userNickname
+		FROM episode AS e
+		INNER JOIN user AS u
+		ON e.user_no = u.user_no
+		WHERE e.user_no = #{userNo}
+		ORDER BY e.episode_no DESC
 	 </select>
 </mapper>

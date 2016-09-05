@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<h1 style="text-align: right;">마이팟캐스트</h1>
+<h1 style="text-align: right;">마이팟빵</h1>
 <hr>
 <table class="table table-hover">
 	<tr>

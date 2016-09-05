@@ -49,7 +49,7 @@ public class EpisodeController {
 	}
 	
 	//에피소드 등록 처리
-	@RequestMapping(value = "/episodeInsert", method = RequestMethod.GET)
+	@RequestMapping(value="/episodeInsert", method = RequestMethod.POST)
 	public ModelAndView insertEpisode(HttpSession session
 									, @ModelAttribute(value="episode") Episode episode
 									, @RequestParam(value="files") MultipartFile[] files)	{
@@ -67,51 +67,10 @@ public class EpisodeController {
     }
    
 	//에피소드 등록
-    @RequestMapping(value="/mypage/episode/episodeInsert")
-    public ModelAndView addForm(){
-        return new ModelAndView("/mypage/episode/episodeInsert");
+    @RequestMapping(value="/episodeInsert", method=RequestMethod.GET)
+    public String insert(){
+        return "mypage/episode/episodeInsertForm";
     }
-	
-	
-	
-	/*
-	@RequestMapping(value = "/addArticle", method = RequestMethod.POST)
-	public String addArticle(ArticleCommand article , HttpServletRequest request , Model model) {
-		logger.info("{}",article);
-		Article resultarticle = articleService.addArticle(article, request);
-		// WEB-INF/views/addArticle.jsp
-		model.addAttribute("fileName", resultarticle);
-		return "redirect:/";
-	}
-	*/
-	
-	
-	
-	//팟캐스트 리스트 - 모든 권한(오디오)
-	@RequestMapping(value = "/episodeAudioList", method = RequestMethod.GET)
-	public String selectEpisodetByUserNo(Model model, Episode episode)	{
-		List<Episode> episodeList = episodeService.selectEpisodeListByPodCastNo(episode);
-		System.out.println(episodeList.size() + "<-- episodeList.size()");
-		
-		
-		model.addAttribute("episodeList", episodeList);
-		
-		return "mypage/episode/episodeVideoListForm";
-	}
-	
-	/*
-	//팟캐스트 리스트 - 모든 권한 (비디오)
-	@RequestMapping(value = "/episodeList", method = RequestMethod.GET)
-	public String selectPodCastByUserNo(Model model, Episode episode)	{
-		List<Episode> episodeList = episodeService.selectEpisodeListByPodCastNo(episode);
-		System.out.println(episodeList.size() + "<-- episodeList.size()");
-		
-		
-		model.addAttribute("episodeList", episodeList);
-		
-		return "mypage/episode/episodeListForm";
-	}
-	*/
 	
 	//팟캐스트 리스트 - 제작자 권한
 	@RequestMapping(value = "/episodeList", method = RequestMethod.GET)
